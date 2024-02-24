@@ -92,14 +92,13 @@ nav{
        opacity: 0.85;
        margin: 0;
        justify-content: flex-start;
-       transform: translateX(100%);
+        transform: translateX(-100%);
        transition: all 0.5s ease-in;
        z-index: -1;
 
     
     }
     .nav-active{
-       transform: translateX(0);   
        z-index: -1;
        border-radius: 20px;
        
