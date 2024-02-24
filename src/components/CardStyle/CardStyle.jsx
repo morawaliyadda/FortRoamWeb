@@ -12,6 +12,8 @@ class CardData extends Component {
 
                 <h2>{this.props.heading}</h2>
                 <p>{this.props.description}</p>
+                <button>Read More</button>
+
             </div>
         );
     }
