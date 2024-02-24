@@ -1,0 +1,63 @@
+
+.description-box-activities {
+    background-color: #E25E3E80;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 20px;
+    margin: 40px;
+    box-shadow: 0 4px 8px rgb(246, 244, 244);
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+    
+  }
+  .read-more-button-activities {
+    background-color: #E25E3E;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 920px;
+    margin-bottom: 50px;
+    justify-content: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 120px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .read-more-button-activities:hover {
+    background-color: #E25E3E80;
+  }
+  .place-name {
+    font-size: 20px;
+    line-height: 1.5;
+    color:#E25E3E;
+    margin-left: -870px;
+    margin-top: 60px;
+  }
+  .place-image {
+    width: 300px;
+    height: 350px;
+    margin-left: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+    animation: slideRight 1s ease forwards;
+    
+  }
+  @keyframes slideRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+} 
+  .Activity-place {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    
+  }

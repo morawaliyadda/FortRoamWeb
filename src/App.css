@@ -1,0 +1,52 @@
+/*home page*/
+.GalleFort{
+  margin: 40px 100px;
+}
+.App-main-topic {
+  background-color: #ffff;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 800;
+  color: black;
+}
+
+.description-box {
+  margin: 5px;
+}
+.description-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  color: black;
+  margin: 10px 40PX;
+}
+.read-more-button {
+  background-color: #E25E3E;
+  color: white;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 40px auto;
+  font-size: 20px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.read-more-button:hover {
+  background-color: #E25E3E80;
+}
+
+/* Historical places */
+.historicalPlaces-heading{
+  padding-top: 150px;
+  color: #E25E3E;
+  text-align: center;
+}

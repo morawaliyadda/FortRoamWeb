@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" );
+
+*,*::after , *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 5px 15px 0 rgb(16, 16, 16);
+    width: 98%;
+    border-radius: 13px;
+    position: fixed;
+    margin-top: 0.6%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 999;
+}
+.applogo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-brand{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #E25E3E;;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav-menu {
+    display : flex ;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
+.nav-link{
+    font-size: 20px;
+    display: flex;
+    gap: 8px;
+    font-weight: 700;
+    padding: 10px 15px;
+}
+.nav-link:hover{
+    color: #fff;
+    background-color: #E25E3E;;
+    border-radius: 4px;
+}
+.nav-toggler div{
+    width: 1.6rem;
+    height: 0.15rem;
+    margin: 0.3rem;
+    background: black;
+    transition: 0.4s ease-in;
+}
+.nav-toggler {
+    cursor: pointer;
+    display: none;
+
+}
+
+@media screen and (max-width: 768px){
+    .nav {
+        position: relative; 
+        z-index: 9; 
+
+    }
+    .nav-menu{
+        display: flex;
+       flex-direction: column;
+       background-color: #fff;
+       width: 100%;
+       height: auto;
+       position: absolute;
+       padding: 100px 0 40px 0;
+       top: 0;
+       left: 0;
+       opacity: 0.85;
+       margin: 0;
+       justify-content: flex-start;
+       transform: translateX(100%);
+       transition: all 0.5s ease-in;
+       z-index: -1;
+
+    
+    }
+    .nav-active{
+       transform: translateX(0);   
+       z-index: -1;
+       border-radius: 20px;
+       
+    }
+  
+    .nav-link{
+        font-size: 1.2rem;
+        display: block;
+    
+    }
+    .nav-link:hover{
+        width: 300px;
+        text-align: center;
+    }
+    
+    .nav-toggler{
+        display: block;
+    }
+   
+}
+.nav-active{
+    transform: translateX(0);
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-4px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-4px,-6px);
+}
