@@ -1,45 +1,35 @@
 import React from "react";
 import "../App.css";
-import { Link } from "react-router-dom";
 import SliderPage from "../components/slider/slider";
 import FeaturesData from "../components/FeaturesData/FeaturesData";
 import HistoricalPlaces from "../assets/Historical-Places.png";
+import one from "../assets/1.png";
 
 const HomeScreen = () => {
   return (
     <div>
       <SliderPage />
       <div className="GalleFort">
-        <h1 className="App-main-topic">Galle Fort</h1>
+        <div className="section1">
+          <h1 className="App-main-topic">Galle Fort</h1>
 
-        <div class="description-box">
-          <p class="description-text">
-            Galle Fort, located in the southern coast of Sri Lanka, is a UNESCO
-            World Heritage Site renowned for its historical significance,
-            architectural beauty, and cultural charm. Originally built by the
-            Portuguese in the 16th century, it was later fortified by the Dutch
-            during the 17th century, reflecting a blend of European
-            architectural styles.This fortified city served as a strategic hub
-            for trade and defense, witnessing centuries of colonial influence
-            and maritime commerce. Today, Galle Fort stands as a living
-            testament to Sri Lanka's colonial past, with its well-preserved
-            ramparts, cobblestone streets, and colonial-era buildings.
-          </p>
-          <p class="description-text">
-            Visitors to Galle Fort can explore its narrow alleys lined with
-            boutique shops, art galleries, cafes, and museums. The fort's iconic
-            landmarks include the Galle Lighthouse, Dutch Reformed Church, and
-            the Old Dutch Hospital, which have been repurposed into vibrant
-            cultural spaces.Galle Fort's picturesque setting along the Indian
-            Ocean, coupled with its rich history and architectural splendor,
-            makes it a must-visit destination for travelers seeking to delve
-            into Sri Lanka's diverse heritage and experience its enchanting
-            coastal beauty.
-          </p>
+          <div class="description-box">
+            <p class="description-text">
+              Galle Fort, located in the southern coast of Sri Lanka, is a UNESCO
+              World Heritage Site renowned for its historical significance,
+              architectural beauty, and cultural charm. Originally built by the
+              Portuguese in the 16th century, it was later fortified by the Dutch
+              during the 17th century, reflecting a blend of European
+              architectural styles.This fortified city served as a strategic hub
+              for trade and defense, witnessing centuries of colonial influence
+              and maritime commerce. Today, Galle Fort stands as a living
+              testament to Sri Lanka's colonial past, with its well-preserved
+              ramparts, cobblestone streets, and colonial-era buildings.
+            </p>
+            <img className="decor-line" src={one} alt="Galle Fort" />
+          </div>
         </div>
-        <div class="read-more-button">
-          <Link to="/activity">Read More</Link>
-        </div>
+
         <FeaturesData
           className="main-des"
           heading="Historical Places"

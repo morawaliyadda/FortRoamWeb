@@ -2,6 +2,13 @@
 .GalleFort{
   margin: 40px 100px;
 }
+.section1{
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .App-main-topic {
   background-color: #ffff;
   min-height: 100px;
@@ -16,6 +23,7 @@
 
 .description-box {
   margin: 5px;
+
 }
 .description-text {
   font-size: 16px;
@@ -25,32 +33,27 @@
   color: black;
   margin: 10px 40PX;
 }
-.read-more-button {
-  background-color: #E25E3E;
-  color: white;
-  padding: 15px;
-  align-items: center;
-  justify-content: center;
+.decor-line{
+  width: 50%;
+  height: 60px;
   display: flex;
-  margin: 40px auto;
-  font-size: 20px;
-  width: 150px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  margin-left: 300px;
 }
-
-.read-more-button:hover {
-  background-color: #E25E3E80;
+@media screen and (max-width: 768px) {
+  .decor-line{
+    width: 70%;
+    height: 60px;
+    display: flex;
+    margin-left: 80px;
+  }
+  
 }
-
 /* Historical places */
 .historical-place {
   padding: 20px;
 }
 
 .historicalPlaces-heading{
-  padding-top: 140px;
   font-size: 2rem;
   font-weight: 800;
   color: #E25E3E;
