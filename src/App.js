@@ -4,6 +4,7 @@ import {BrowserRouter, Route,Routes } from 'react-router-dom';
 import HomeScreen from './screens/homescreens';
 import NavBar from "./components/NavBar/navBar";
 import HistoricalPlaces from "./screens/HistoricalPlaces";
+import AboutPage from "./screens/About";
 
 
 
@@ -16,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeScreen/>} />
           <Route path="/historicalplaces" element={<HistoricalPlaces/>}/>
-
+          <Route path="/about" element={<AboutPage/>}/>
 
          
         </Routes>

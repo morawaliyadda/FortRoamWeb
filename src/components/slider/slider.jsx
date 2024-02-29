@@ -3,9 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./slider.css";
-import image_slider1 from "../../assets/img3.webp";
-import image_slider2 from "../../assets/image2.png";
-import image_slider3 from "../../assets/image3.jpg";
+import image_slider1 from "../../assets/image1.jpg";
+import image_slider2 from "../../assets/image4.jpg";
+import image_slider3 from "../../assets/image5.jpg";
 import SearchBar from "../searchBar/search";
 
 const SliderPage = () => {
