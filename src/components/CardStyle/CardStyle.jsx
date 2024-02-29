@@ -1,6 +1,7 @@
 import "./CardStyle.css"
-import React ,{ Component } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 class CardData extends Component {
     render() {
@@ -9,10 +10,12 @@ class CardData extends Component {
                 <div className="card-image">
                     <img src={this.props.image} alt="" />
                 </div>
-
                 <h2>{this.props.heading}</h2>
                 <p>{this.props.description}</p>
-                <button>Read More</button>
+                <Link to="/detail-page">
+                    <button>Read More</button>
+                </Link>
+
 
             </div>
         );
