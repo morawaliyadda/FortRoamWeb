@@ -35,12 +35,15 @@
     position: relative;
     border-radius: 20px;
     z-index: 1;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .rows {
     display: flex;
     flex-direction: row;
-    gap: 300px;
+    gap: 150px;
     align-items: center;
     justify-content: center;
 }
@@ -52,13 +55,15 @@
 .column h5 {
     color: #333;
     font-size: 18px;
-    margin: 20px;
+    margin: 30px;
+    text-align: center;
 }
 
 .column h6 {
     font-size: 15px;
     font-weight: 400;
     color: #555;
+    text-align: justify;
 }
 
 .column p {
@@ -67,7 +72,8 @@
 
 .column ul {
     list-style: none;
-    padding: 0;
+    padding: 10px;
+    text-align: center;
 }
 
 .column ul li {
@@ -85,6 +91,8 @@
 
 .column address {
     color: #555;
+    width: 200px;
+    text-align: left;
 }
 
 .column p {
@@ -105,17 +113,17 @@
 }
 
 @media screen and (max-width: 768px) {
-    .container {
-        align-items: center;
-        justify-content: center;
-        margin-left: 100px;
-    }
     .rows {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
     }
     .column {
         width: 100%;
+    }
+    .column address {
+        width: auto;
+        text-align: center;
     }
 }

@@ -7,6 +7,7 @@ import HistoricalPlaces from "./screens/HistoricalPlaces";
 import AboutPage from "./screens/About";
 import Footer from "./components/Footer/Footer";
 import Detail_Page from "./screens/Detail_Page";
+import BeyondHistory from "./screens/Beyond_history_page";
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/historicalplaces" element={<HistoricalPlaces/>}/>
           <Route path="/about" element={<AboutPage/>}/>
           <Route path="/detail-page" element={<Detail_Page/>}/>
+          <Route path="/beyondhistory" element={<BeyondHistory/>}/>
         </Routes>
       </main>
       <Footer/>

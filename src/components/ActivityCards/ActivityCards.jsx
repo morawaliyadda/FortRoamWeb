@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import './ActivityCard.css';
 import { Link } from 'react-router-dom';
 
@@ -21,3 +21,4 @@ function ActivityCard({ imageUrl, placeName, description }) {
 }
 
 export default ActivityCard;
+*/

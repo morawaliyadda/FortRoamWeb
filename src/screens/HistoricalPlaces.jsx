@@ -7,6 +7,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import image1 from '../assets/image1.jpg';
+import image2 from '../assets/image2.jpg';
+import image3 from '../assets/image3.jpg';
+import image4 from '../assets/image4.jpg';
+import image5 from '../assets/image5.jpg';
 
 const NextArrow = (props) => {
     const { onClick } = props;
@@ -27,6 +32,38 @@ const PrevArrow = (props) => {
 };
 
 const HistoricalPlaces = () => {
+    const places = [
+        {
+            category: "Category 1",
+            data: [
+                { id: 1, heading: "Place 1", description: "Description 1", image: image1 },
+                { id: 2, heading: "Place 2", description: "Description 2", image: image2 },
+                { id: 3, heading: "Place 3", description: "Description 3", image: image3 },
+                { id: 4, heading: "Place 4", description: "Description 4", image: image4 },
+                { id: 5, heading: "Place 5", description: "Description 5", image: image5 }
+            ]
+        },
+        {
+            category: "Category 2",
+            data: [
+                { id: 1, heading: "Place 1", description: "Description 1", image: image1 },
+                { id: 2, heading: "Place 2", description: "Description 2", image: image2 },
+                { id: 3, heading: "Place 3", description: "Description 3", image: image3 },
+                { id: 4, heading: "Place 4", description: "Description 4", image: image4 },
+                { id: 5, heading: "Place 5", description: "Description 5", image: image5 }
+            ]
+        },
+        {
+            category: "Category 3",
+            data: [
+                { id: 1, heading: "Place 1", description: "Description 1", image: image1 },
+                { id: 2, heading: "Place 2", description: "Description 2", image: image2 },
+                { id: 3, heading: "Place 3", description: "Description 3", image: image3 },
+                { id: 4, heading: "Place 4", description: "Description 4", image: image4 },
+                { id: 5, heading: "Place 5", description: "Description 5", image: image5 }
+            ]
+        }
+    ];
     const settings = {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
@@ -54,120 +91,22 @@ const HistoricalPlaces = () => {
         <div className="historical-place">
             <h1 className="historicalPlaces-heading">Historical Insights</h1>
             <div className="Categorical-type">
-                <h1>Category1</h1>
-                <Slider {...settings}>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name1"
-                            description="Description1"
-                        />
-                    </div>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name2"
-                            description="Description2"
-                        />
-                    </div>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name3"
-                            description="Description3"
-                        />
-                    </div>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name4"
-                            description="Description4"
-                        />
-                    </div>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name5"
-                            description="Description5"
-                        />
-                    </div>
-                </Slider>
-                <h1>Category2</h1>
-                <Slider {...settings}>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name1"
-                            description="Description1"
-                        />
-                    </div>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name2"
-                            description="Description2"
-                        />
-                    </div>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name3"
-                            description="Description3"
-                        />
-                    </div>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name4"
-                            description="Description4"
-                        />
-                    </div>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name5"
-                            description="Description5"
-                        />
-                    </div>
-                </Slider>
-                <h1>Category3</h1>
-                <Slider {...settings}>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name1"
-                            description="Description1"
-                        />
-                    </div>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name2"
-                            description="Description2"
-                        />
-                    </div>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name3"
-                            description="Description3"
-                        />
-                    </div>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name4"
-                            description="Description4"
-                        />
-                    </div>
-                    <div>
-                        <CardData
-                            image={HistoricalPlace}
-                            heading="Name5"
-                            description="Description5"
-                        />
-                    </div>
-                </Slider>
+            {places.map((placeCategory, index) => (
+                    <React.Fragment key={index}>
+                        <h1>{placeCategory.category}</h1>
+                        <Slider {...settings}>
+                            {placeCategory.data.map(place => (
+                                <div key={place.id}>
+                                    <CardData
+                                        image={place.image}
+                                        heading={place.heading}
+                                        description={place.description}
+                                    />
+                                </div>
+                            ))}
+                        </Slider>
+                    </React.Fragment>
+                ))}
             </div >
             
         </div >
