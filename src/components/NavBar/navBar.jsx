@@ -7,6 +7,7 @@ import {
   FaHome,
   FaInfoCircle,
 } from "react-icons/fa";
+import SearchBar from "../searchBar/search";
 
 function NavBar() {
   const [active, setActive] = useState("nav-menu");
@@ -52,10 +53,13 @@ function NavBar() {
           </a>
         </li>
         <li className="nav-item">
-          <a href="/SupportCenter" className="nav-link">
+          <a href="/profile" className="nav-link">
             <FaUser />
-            Support Center
+            Profile
           </a>
+        </li>
+        <li className="searc-bar">
+          <SearchBar />
         </li>
       </ul>
       <div onClick={navToggle} className={toggleIcon}>

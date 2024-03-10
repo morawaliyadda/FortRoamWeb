@@ -35,19 +35,9 @@ const SliderPage = () => {
           </div>
         </Slider>
       </div>
-      <div className="slider-text">
-        <h1>A Tranquil Haven of Heritage</h1>
-        <p>
-          Discover the magic of Galle Fort, where history comes alive amidst
-          quaint streets and charming shops. Explore centuries-old architecture
-          and immerse yourself in a world where the past meets the present in
-          perfect harmony.
-        </p>
-        <button className="btn">
-          GET STARTED <AiOutlineSwapRight className="icon" /> 
-        </button>
-        <SearchBar/>
-      </div>
+     
+      
+     
     </div>
   );
 };
