@@ -3,7 +3,7 @@ import "../App.css";
 import SliderPage from "../components/slider/slider";
 import FeaturesData from "../components/FeaturesData/FeaturesData";
 import HistoricalPlaces from "../assets/Historical-Places.png";
-import one from "../assets/1.png";
+import Middle from "../components/Middle/Middle";
 
 const HomeScreen = () => {
   return (
@@ -26,28 +26,15 @@ const HomeScreen = () => {
               testament to Sri Lanka's colonial past, with its well-preserved
               ramparts, cobblestone streets, and colonial-era buildings.
             </p>
-            <img className="decor-line" src={one} alt="Galle Fort" />
           </div>
         </div>
+
+        <Middle />
 
         <FeaturesData
           className="main-des"
           heading="Historical Places"
-          description="Nestled on the southern coast of Sri Lanka, Galle Fort stands as a
-        testament to the island's rich history and cultural diversity.
-        This fortified city, with its blend of European, Asian, and Arabic
-        influences, tells a captivating story of centuries gone by. Begin
-        your journey through Galle Fort at the imposing Galle Lighthouse,
-        a symbol of maritime heritage that has guided sailors for
-        generations. As you wander through the cobblestone streets, you'll
-        encounter a treasure trove of colonial architecture, from the
-        grand mansions of the Dutch East India Company officials to the
-        quaint cafes housed in centuries-old buildings.Step into the past
-        as you explore the meticulously preserved Dutch Reformed Church,
-        with its striking gabled facade and tranquil interior. Nearby, the
-        Maritime Museum offers a fascinating glimpse into the seafaring
-        history of Sri Lanka, showcasing artifacts and exhibits that
-        chronicle the island's maritime trade routes and naval prowess."
+          description="Embark on a journey through time with our curated selection of historical places. From iconic landmarks to hidden gems, each destination holds a unique story waiting to be discovered. Immerse yourself in the rich tapestry of history as you explore ancient ruins, majestic castles, and sacred sites. Whether you're a history enthusiast or an avid traveler, our collection of historical places offers an unforgettable glimpse into the past and a deeper appreciation for the world's cultural heritage."
           images={[HistoricalPlaces, HistoricalPlaces]}
           location="/historicalplaces"
         />
@@ -55,43 +42,17 @@ const HomeScreen = () => {
         <FeaturesData
           className="main-des-reverse"
           heading="Support Center"
-          description="Nestled on the southern coast of Sri Lanka, Galle Fort stands as a
-          testament to the island's rich history and cultural diversity.
-          This fortified city, with its blend of European, Asian, and Arabic
-          influences, tells a captivating story of centuries gone by. Begin
-          your journey through Galle Fort at the imposing Galle Lighthouse,
-          a symbol of maritime heritage that has guided sailors for
-          generations. As you wander through the cobblestone streets, you'll
-          encounter a treasure trove of colonial architecture, from the
-          grand mansions of the Dutch East India Company officials to the
-          quaint cafes housed in centuries-old buildings.Step into the past
-          as you explore the meticulously preserved Dutch Reformed Church,
-          with its striking gabled facade and tranquil interior. Nearby, the
-          Maritime Museum offers a fascinating glimpse into the seafaring
-          history of Sri Lanka, showcasing artifacts and exhibits that
-          chronicle the island's maritime trade routes and naval prowess."
+          description="Welcome to our Support Center! Our dedicated team is here to assist you with any questions, concerns, or issues you may encounter. Whether you need help navigating our services, troubleshooting technical problems, or simply seeking guidance, we're committed to providing prompt and personalized support tailored to your needs. Your satisfaction is our priority, and we strive to ensure a seamless and enjoyable experience for every customer. Feel free to reach out to us anytime – we're here to help!"
           images={[HistoricalPlaces, HistoricalPlaces]}
           location="/supportcenter"
+
         />
+
 
         <FeaturesData
           className="main-des"
           heading="Logical Delights"
-          description="Nestled on the southern coast of Sri Lanka, Galle Fort stands as a
-        testament to the island's rich history and cultural diversity.
-        This fortified city, with its blend of European, Asian, and Arabic
-        influences, tells a captivating story of centuries gone by. Begin
-        your journey through Galle Fort at the imposing Galle Lighthouse,
-        a symbol of maritime heritage that has guided sailors for
-        generations. As you wander through the cobblestone streets, you'll
-        encounter a treasure trove of colonial architecture, from the
-        grand mansions of the Dutch East India Company officials to the
-        quaint cafes housed in centuries-old buildings.Step into the past
-        as you explore the meticulously preserved Dutch Reformed Church,
-        with its striking gabled facade and tranquil interior. Nearby, the
-        Maritime Museum offers a fascinating glimpse into the seafaring
-        history of Sri Lanka, showcasing artifacts and exhibits that
-        chronicle the island's maritime trade routes and naval prowess."
+          description="Explore the world of 'Logical Delights,' where intellect meets inspiration. Dive into thought-provoking ideas and innovative concepts that challenge the mind. From scientific discoveries to philosophical musings, join us on a journey of curiosity and exploration."
           images={[HistoricalPlaces, HistoricalPlaces]}
           location="/logicaldelights"
         />
@@ -99,21 +60,7 @@ const HomeScreen = () => {
         <FeaturesData
           className="main-des-reverse"
           heading="Beyond History"
-          description="Nestled on the southern coast of Sri Lanka, Galle Fort stands as a
-          testament to the island's rich history and cultural diversity.
-          This fortified city, with its blend of European, Asian, and Arabic
-          influences, tells a captivating story of centuries gone by. Begin
-          your journey through Galle Fort at the imposing Galle Lighthouse,
-          a symbol of maritime heritage that has guided sailors for
-          generations. As you wander through the cobblestone streets, you'll
-          encounter a treasure trove of colonial architecture, from the
-          grand mansions of the Dutch East India Company officials to the
-          quaint cafes housed in centuries-old buildings.Step into the past
-          as you explore the meticulously preserved Dutch Reformed Church,
-          with its striking gabled facade and tranquil interior. Nearby, the
-          Maritime Museum offers a fascinating glimpse into the seafaring
-          history of Sri Lanka, showcasing artifacts and exhibits that
-          chronicle the island's maritime trade routes and naval prowess."
+          description="Explore the wonders of 'Beyond History,' where ancient secrets and untold stories await. Uncover the mysteries of past civilizations and embark on a journey through time. From archaeological marvels to cultural treasures, dive into the richness of human heritage and discover the stories that shape our world."
           images={[HistoricalPlaces, HistoricalPlaces]}
           location="/beyondhistory"
         />

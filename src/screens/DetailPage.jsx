@@ -1,6 +1,6 @@
 import React from "react";
 
-const Detail_Page = () => {
+const DetailPage = () => {
     return (
         <div>
             <h1>Detail Page</h1>
@@ -8,4 +8,4 @@ const Detail_Page = () => {
     );
 };
 
-export default Detail_Page;
+export default DetailPage;

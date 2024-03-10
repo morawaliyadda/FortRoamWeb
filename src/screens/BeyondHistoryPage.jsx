@@ -4,7 +4,6 @@ import image2 from '../assets/image2.jpg';
 import image3 from '../assets/image3.jpg';
 import image4 from '../assets/image4.jpg';
 import image5 from '../assets/image5.jpg';
-
 import '../App.css';
 import videoAbout from '../assets/sunrise.mp4';
 
@@ -42,7 +41,10 @@ const BeyondHistory = () => {
                     {activities.map((activity) => (
                         <div key={activity.id} className="activity">
                             <img src={activity.image} alt={activity.name} className="BeyondHistory-image" />
-                            <div className="BeyondHistory-name">{activity.name}</div>
+                            <div>
+                                <div className="BeyondHistory-name">{activity.name}</div>
+                            </div>
+                            
                         </div>
                     ))}
                 </div>

@@ -30,7 +30,7 @@ const PrevArrow = (props) => {
     );
 };
 
-const HistoricalPlaces = () => {
+const LogicalDelights = () => {
     const places = [
         {
             category: "Category 1",
@@ -88,7 +88,7 @@ const HistoricalPlaces = () => {
     return (
 
         <div className="Categorical-place">
-            <h1 className="Categorical-heading">Historical Insights</h1>
+            <h1 className="Categorical-heading">Logical Delights</h1>
             <div className="Categorical-type">
             {places.map((placeCategory, index) => (
                     <React.Fragment key={index}>
@@ -113,4 +113,4 @@ const HistoricalPlaces = () => {
 
 };
 
-export default HistoricalPlaces;
+export default LogicalDelights;

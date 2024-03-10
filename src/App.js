@@ -6,8 +6,10 @@ import NavBar from "./components/NavBar/navBar";
 import HistoricalPlaces from "./screens/HistoricalPlaces";
 import AboutPage from "./screens/About";
 import Footer from "./components/Footer/Footer";
-import Detail_Page from "./screens/Detail_Page";
-import BeyondHistory from "./screens/Beyond_history_page";
+import DetailPage from "./screens/DetailPage";
+import BeyondHistory from "./screens/BeyondHistoryPage";
+import LogicalDelights from "./screens/LogicalDelights";
+import SupportCenterPage from "./screens/SupportCenterPage";
 
 
 
@@ -21,8 +23,10 @@ function App() {
           <Route path="/" element={<HomeScreen/>} />
           <Route path="/historicalplaces" element={<HistoricalPlaces/>}/>
           <Route path="/about" element={<AboutPage/>}/>
-          <Route path="/detail-page" element={<Detail_Page/>}/>
+          <Route path="/detail-page" element={<DetailPage/>}/>
           <Route path="/beyondhistory" element={<BeyondHistory/>}/>
+          <Route path="/logicaldelights" element={<LogicalDelights/>}/>
+          <Route path="/supportcenter" element={<SupportCenterPage/>}/>
         </Routes>
       </main>
       <Footer/>

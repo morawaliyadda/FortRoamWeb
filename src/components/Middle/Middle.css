@@ -1,0 +1,44 @@
+.middle-section {
+    background-color: #f8f8f8; 
+    padding: 50px 0; 
+  }
+  
+  .secContainer {
+    max-width: 1200px; 
+    margin: 0 auto; 
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+  }
+  
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer; 
+  transition: transform 0.3s ease;
+  }
+  .flex:hover {
+    transform: translateY(-5px); 
+  }
+  .flex h1 {
+    font-size: 36px; 
+    margin-bottom: 10px; 
+  }
+  
+  .flex p {
+    font-size: 18px; 
+    color: #888; 
+  }
+
+  @media screen and (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column width for smaller screens */
+    }
+  }
+  

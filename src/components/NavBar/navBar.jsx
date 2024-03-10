@@ -52,9 +52,9 @@ function NavBar() {
           </a>
         </li>
         <li className="nav-item">
-          <a href="/profile" className="nav-link">
+          <a href="/SupportCenter" className="nav-link">
             <FaUser />
-            Profile
+            Support Center
           </a>
         </li>
       </ul>

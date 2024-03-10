@@ -7,6 +7,7 @@ import image_slider1 from "../../assets/image1.jpg";
 import image_slider2 from "../../assets/image4.jpg";
 import image_slider3 from "../../assets/image5.jpg";
 import SearchBar from "../searchBar/search";
+import { AiOutlineSwapRight } from "react-icons/ai"; 
 
 const SliderPage = () => {
   const settings = {
@@ -42,6 +43,9 @@ const SliderPage = () => {
           and immerse yourself in a world where the past meets the present in
           perfect harmony.
         </p>
+        <button className="btn">
+          GET STARTED <AiOutlineSwapRight className="icon" /> 
+        </button>
         <SearchBar/>
       </div>
     </div>
