@@ -48,11 +48,8 @@ nav{
     display : flex ;
     align-items: center;
     justify-content: space-around;
-<<<<<<< Updated upstream
-    gap: 3rem;
-=======
     gap: 2rem;
->>>>>>> Stashed changes
+
 }
 .nav-link{
     font-size: 15px;
@@ -63,7 +60,7 @@ nav{
 }
 .nav-link:hover{
     color: #fff;
-    background-color: #E25E3E;;
+    background-color: #E25E3E;
     border-radius: 4px;
 }
 .nav-toggler div{
@@ -138,12 +135,7 @@ nav{
 }
 .toggle .line3{
     transform: rotate(45deg) translate(-4px,-6px);
-<<<<<<< Updated upstream
 }
-=======
-}
-
-
 .search-bar {
     display: flex;
     align-items: center;
@@ -196,4 +188,3 @@ nav{
         display: none;
     }
   }
->>>>>>> Stashed changes

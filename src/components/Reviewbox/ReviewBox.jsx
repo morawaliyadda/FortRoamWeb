@@ -6,6 +6,25 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './ReviewBox.css';
 import person1 from '../../assets/person1.jpg';
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+
+const NextArrow = (props) => {
+    const { onClick } = props;
+    return (
+        <div className="slick-arrow slick-next " onClick={onClick}>
+            <IoIosArrowForward/>
+        </div>
+    );
+};
+
+const PrevArrow = (props) => {
+    const { onClick } = props;
+    return (
+        <div className="slick-arrow slick-prev" onClick={onClick}>
+            <IoIosArrowBack/>
+        </div>
+    );
+};
 
 const ReviewBox = () => {
     const reviews = [
@@ -15,7 +34,9 @@ const ReviewBox = () => {
     ];
 
     const settings = {
-        dots: true,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,

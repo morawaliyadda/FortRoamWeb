@@ -8,6 +8,7 @@ import {
   FaInfoCircle,
   FaLandmark,
 } from "react-icons/fa";
+import SearchBar from "../searchBar/search";
 
 function NavBar() {
   const [active, setActive] = useState("nav-menu");
@@ -55,25 +56,18 @@ function NavBar() {
           </a>
         </li>
         <li className="nav-item">
-<<<<<<< Updated upstream
           <a href="/SupportCenter" className="nav-link">
             <FaUser />
             Support Center
           </a>
         </li>
-=======
-          <a href="/supportcenter" className="nav-link">
-            <FaUser />
-            Support Center
-          </a>
-        </li> 
         <li className="nav-item">
           <a href="/location" className="nav-link">
             <FaLandmark/>
             Location
           </a>
         </li> 
->>>>>>> Stashed changes
+        
       </ul>
       <div className="search-bar">
       <SearchBar />

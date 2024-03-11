@@ -1,0 +1,34 @@
+.MostPopular{
+margin-top:100px;
+}
+.MostPopular h1{
+    padding: 40px;
+    font-size: 45px;
+    font-weight: 800;
+    text-align: center;
+}
+.MostPopular h1 strong{
+    color: #E25E3E;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+.most-popular-btn{
+    background-color: #fff;
+    padding: 20px;
+    cursor: pointer;
+    border-width: 0cap;
+    font-size: large;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content:end;
+}
+.most-popular-btn:hover {
+    color: #E25E3E;
+}
+ 
+@media screen and (max-width: 768px) {
+    .most-popular-btn{
+        padding-right: 40px;
+    }
+}
