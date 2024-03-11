@@ -6,6 +6,7 @@ import {
   FaUser,
   FaHome,
   FaInfoCircle,
+  FaLandmark,
 } from "react-icons/fa";
 
 function NavBar() {
@@ -29,6 +30,8 @@ function NavBar() {
           FortRoam
         </a>
       </div>
+      
+      
 
       <ul className={active}>
         <li className="nav-item">
@@ -52,12 +55,29 @@ function NavBar() {
           </a>
         </li>
         <li className="nav-item">
+<<<<<<< Updated upstream
           <a href="/SupportCenter" className="nav-link">
             <FaUser />
             Support Center
           </a>
         </li>
+=======
+          <a href="/supportcenter" className="nav-link">
+            <FaUser />
+            Support Center
+          </a>
+        </li> 
+        <li className="nav-item">
+          <a href="/location" className="nav-link">
+            <FaLandmark/>
+            Location
+          </a>
+        </li> 
+>>>>>>> Stashed changes
       </ul>
+      <div className="search-bar">
+      <SearchBar />
+      </div>
       <div onClick={navToggle} className={toggleIcon}>
         <div className="line1"></div>
         <div className="line2"></div>

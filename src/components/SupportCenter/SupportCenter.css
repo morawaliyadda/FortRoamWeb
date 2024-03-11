@@ -30,4 +30,8 @@
     line-height: 1.6;
     margin: 0;
   }
-  
+  @media screen and (max-width: 768px) {
+    .support-center{
+      margin: 20px;
+    }
+  }

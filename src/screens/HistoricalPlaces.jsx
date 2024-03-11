@@ -6,11 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import image1 from '../assets/image1.jpg';
-import image2 from '../assets/image2.jpg';
-import image3 from '../assets/image3.jpg';
-import image4 from '../assets/image4.jpg';
-import image5 from '../assets/image5.jpg';
+import data from "../components/places/places.jsx"; 
 
 const NextArrow = (props) => {
     const { onClick } = props;
@@ -31,38 +27,6 @@ const PrevArrow = (props) => {
 };
 
 const HistoricalPlaces = () => {
-    const places = [
-        {
-            category: "Category 1",
-            data: [
-                { id: 1, heading: "Place 1", description: "Description 1", image: image1 },
-                { id: 2, heading: "Place 2", description: "Description 2", image: image2 },
-                { id: 3, heading: "Place 3", description: "Description 3", image: image3 },
-                { id: 4, heading: "Place 4", description: "Description 4", image: image4 },
-                { id: 5, heading: "Place 5", description: "Description 5", image: image5 }
-            ]
-        },
-        {
-            category: "Category 2",
-            data: [
-                { id: 1, heading: "Place 1", description: "Description 1", image: image1 },
-                { id: 2, heading: "Place 2", description: "Description 2", image: image2 },
-                { id: 3, heading: "Place 3", description: "Description 3", image: image3 },
-                { id: 4, heading: "Place 4", description: "Description 4", image: image4 },
-                { id: 5, heading: "Place 5", description: "Description 5", image: image5 }
-            ]
-        },
-        {
-            category: "Category 3",
-            data: [
-                { id: 1, heading: "Place 1", description: "Description 1", image: image1 },
-                { id: 2, heading: "Place 2", description: "Description 2", image: image2 },
-                { id: 3, heading: "Place 3", description: "Description 3", image: image3 },
-                { id: 4, heading: "Place 4", description: "Description 4", image: image4 },
-                { id: 5, heading: "Place 5", description: "Description 5", image: image5 }
-            ]
-        }
-    ];
     const settings = {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
@@ -70,10 +34,7 @@ const HistoricalPlaces = () => {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
-        swipeToSlide: true, 
-        /*
-        autoplay: true,
-        autoplaySpeed: 2000,*/
+        swipeToSlide: true,
         responsive: [
             {
                 breakpoint: 768,
@@ -84,33 +45,41 @@ const HistoricalPlaces = () => {
         ],
     };
 
-    
-    return (
+    const groupedPlaces = data.place.reduce((acc, place) => {
+        if (place.type === 'historical') {
+            if (!acc[place.subtype]) {
+                acc[place.subtype] = [];
+            }
+            acc[place.subtype].push(place);
+        }
+        return acc;
+    }, {});
 
+    return (
         <div className="Categorical-place">
             <h1 className="Categorical-heading">Historical Insights</h1>
             <div className="Categorical-type">
-            {places.map((placeCategory, index) => (
-                    <React.Fragment key={index}>
-                        <h1>{placeCategory.category}</h1>
+                {Object.entries(groupedPlaces).map(([subtype, places]) => (
+                    <div key={subtype}>
+                        <h2 className="subtype">{subtype}</h2>
                         <Slider {...settings}>
-                            {placeCategory.data.map(place => (
-                                <div key={place.id}>
+                            {places.map((place, index) => (
+                                <div key={index}>
                                     <CardData
-                                        image={place.image}
-                                        heading={place.heading}
+                                        image={require(`../assets/placeImages/${place.image}`)}
+                                        heading={place.title}
+                                        location= {place.street}
                                         description={place.description}
+                                        
                                     />
                                 </div>
                             ))}
                         </Slider>
-                    </React.Fragment>
+                    </div>
                 ))}
-            </div >
-            
-        </div >
-    )
-
+            </div>
+        </div>
+    );
 };
 
 export default HistoricalPlaces;

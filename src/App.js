@@ -8,8 +8,9 @@ import AboutPage from "./screens/About";
 import Footer from "./components/Footer/Footer";
 import DetailPage from "./screens/DetailPage";
 import BeyondHistory from "./screens/BeyondHistoryPage";
-import LogicalDelights from "./screens/LogicalDelights";
+import LocalDelights from "./screens/LocalDelights";
 import SupportCenterPage from "./screens/SupportCenterPage";
+import Favourite from "./screens/favourite";
 
 
 
@@ -25,8 +26,9 @@ function App() {
           <Route path="/about" element={<AboutPage/>}/>
           <Route path="/detail-page" element={<DetailPage/>}/>
           <Route path="/beyondhistory" element={<BeyondHistory/>}/>
-          <Route path="/logicaldelights" element={<LogicalDelights/>}/>
+          <Route path="/localdelights" element={<LocalDelights/>}/>
           <Route path="/supportcenter" element={<SupportCenterPage/>}/>
+          <Route path="/favourites" element={<Favourite/>}/>
         </Routes>
       </main>
       <Footer/>

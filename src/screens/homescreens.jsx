@@ -51,10 +51,10 @@ const HomeScreen = () => {
 
         <FeaturesData
           className="main-des"
-          heading="Logical Delights"
+          heading="Local Delights"
           description="Explore the world of 'Logical Delights,' where intellect meets inspiration. Dive into thought-provoking ideas and innovative concepts that challenge the mind. From scientific discoveries to philosophical musings, join us on a journey of curiosity and exploration."
           images={[HistoricalPlaces, HistoricalPlaces]}
-          location="/logicaldelights"
+          location="/localdelights"
         />
 
         <FeaturesData
