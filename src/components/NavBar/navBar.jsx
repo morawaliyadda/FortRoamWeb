@@ -6,21 +6,34 @@ import {
   FaUser,
   FaHome,
   FaInfoCircle,
-  FaLandmark,
+  FaSignInAlt, // Import the admin login icon
 } from "react-icons/fa";
+//import Landing from "../Landing"; // Import the Landing component for admin login
 
 function NavBar() {
   const [active, setActive] = useState("nav-menu");
   const [toggleIcon, setToggleIcon] = useState("nav-toggler");
-  const navToggle = () => {
-    active === "nav-menu"
-      ? setActive("nav-menu nav-active")
-      : setActive("nav-menu");
+ // const [showLogin, setShowLogin] = useState(false); // State to control the visibility of admin login modal
 
-    toggleIcon === "nav-toggler"
-      ? setToggleIcon("nav-toggler toggle")
-      : setToggleIcon("nav-toggler");
+  const navToggle = () => {
+    setActive(active === "nav-menu" ? "nav-menu nav-active" : "nav-menu");
+    setToggleIcon(
+      toggleIcon === "nav-toggler" ? "nav-toggler toggle" : "nav-toggler"
+    );
   };
+
+  const [modal1, setModal1] = useState(false);
+    const [modal2, setModal2] = useState(false);
+  const toggleModal1 = () => {
+    setModal1(!modal1);
+};
+const toggleModal2 = () => {
+  setModal1(!modal1)
+  setModal2(!modal2);
+};
+
+
+ 
 
   return (
     <nav className="nav">
@@ -30,8 +43,6 @@ function NavBar() {
           FortRoam
         </a>
       </div>
-      
-      
 
       <ul className={active}>
         <li className="nav-item">
@@ -47,7 +58,7 @@ function NavBar() {
             Favourites
           </a>
         </li>
-    
+
         <li className="nav-item">
           <a href="/about" className="nav-link">
             <FaInfoCircle />
@@ -55,34 +66,67 @@ function NavBar() {
           </a>
         </li>
         <li className="nav-item">
-<<<<<<< Updated upstream
           <a href="/SupportCenter" className="nav-link">
             <FaUser />
             Support Center
           </a>
         </li>
-=======
-          <a href="/supportcenter" className="nav-link">
-            <FaUser />
-            Support Center
-          </a>
-        </li> 
+
+        {/* Admin Login icon */}
         <li className="nav-item">
-          <a href="/location" className="nav-link">
-            <FaLandmark/>
-            Location
-          </a>
-        </li> 
->>>>>>> Stashed changes
+          <button className="nav-link" onClick={toggleModal1}>
+            <FaSignInAlt />
+            
+          </button>
+        </li>
       </ul>
-      <div className="search-bar">
-      <SearchBar />
-      </div>
       <div onClick={navToggle} className={toggleIcon}>
         <div className="line1"></div>
         <div className="line2"></div>
         <div className="line3"></div>
       </div>
+
+      {modal1 && (
+            <div className="login-container">
+                <div className="overlay"></div>
+                <form className='login-form'>
+                    <button className='login-close' onClick={toggleModal1}> close
+                        <i id="user" className="fas fa-close"></i>
+                    </button>
+                    <h1 className="sub-title">Log In</h1>
+                    <div>
+                        <input   className="login-input" 
+                        name="userName" placeholder="User Name" autoComplete='off' ></input>
+                        <input   className="login-input" 
+                        name="password" placeholder="Password" autoComplete='off' type="password"></input>
+                    </div>
+                    <button  type="submit" class="btn">Log In</button>
+                    <p>Don't have an account</p>
+                    <button onClick={toggleModal2} type="submit" class="login-btn">Sign In </button>
+                </form>
+            </div>
+        )}
+        {modal2 && (
+            <div className="login-container">
+                <div className="overlay"></div>
+                <form className='login-form'>
+                <button className='login-close' onClick={toggleModal1}> close
+                        <i id="user" className="fas fa-close"></i>
+                    </button>
+                    <h1 className="sub-title">Sign In</h1>
+                    <div className='input-container'>
+                        <input   className="login-input"
+                         name="email" placeholder="Email Address" autoComplete='off' />
+                        <input   className="login-input"
+                         name="userName" placeholder="User Name" autoComplete='off' />
+                        <input  className="login-input" 
+                         name="password" placeholder="Password" autoComplete='off' type="password"/>
+                    </div>
+                    <button  type="submit" class="btn">Sign In </button>
+                </form>
+            </div>
+        )}
+        
     </nav>
   );
 }
