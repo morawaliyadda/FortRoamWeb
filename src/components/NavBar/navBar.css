@@ -47,7 +47,7 @@ nav{
     display : flex ;
     align-items: center;
     justify-content: space-around;
-    gap: 3rem;
+
 }
 .nav-link{
     font-size: 15px;
@@ -58,7 +58,7 @@ nav{
 }
 .nav-link:hover{
     color: #fff;
-    background-color: #E25E3E;;
+    background-color: #E25E3E;
     border-radius: 4px;
 }
 .nav-toggler div{

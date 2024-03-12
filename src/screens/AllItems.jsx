@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import CardData from "../components/CardStyle/CardStyle";
+import React from "react";
+import CardData from "../components/CardStyle/CardStyle.jsx";
 import data from "../components/places/places.jsx";
 
 const AllItems = () => {
-  
-
   return (
     <div className="Categorical-place">
-      <h1 className="Categorical-heading">Favorites</h1>
+      <h1 className="Categorical-heading">Most Popular Places</h1>
       <div className="type">
         {data.place.map((place, index) => (
           <CardData

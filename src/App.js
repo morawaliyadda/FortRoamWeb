@@ -11,6 +11,7 @@ import BeyondHistory from "./screens/BeyondHistoryPage";
 import LocalDelights from "./screens/LocalDelights";
 import SupportCenterPage from "./screens/SupportCenterPage";
 import Favourite from "./screens/favourite";
+import AllItems from "./screens/AllItems";
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/localdelights" element={<LocalDelights/>}/>
           <Route path="/supportcenter" element={<SupportCenterPage/>}/>
           <Route path="/favourites" element={<Favourite/>}/>
+          <Route path="/all-items" element={<AllItems/>}/>
         </Routes>
       </main>
       <Footer/>

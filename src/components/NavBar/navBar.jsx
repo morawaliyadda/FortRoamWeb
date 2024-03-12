@@ -8,7 +8,7 @@ import {
   FaInfoCircle,
   FaSignInAlt, // Import the admin login icon
 } from "react-icons/fa";
-//import Landing from "../Landing"; // Import the Landing component for admin login
+
 
 function NavBar() {
   const [active, setActive] = useState("nav-menu");
@@ -72,13 +72,6 @@ const toggleModal2 = () => {
           </a>
         </li>
 
-        {/* Admin Login icon */}
-        <li className="nav-item">
-          <button className="nav-link" onClick={toggleModal1}>
-            <FaSignInAlt />
-            
-          </button>
-        </li>
       </ul>
       <div onClick={navToggle} className={toggleIcon}>
         <div className="line1"></div>

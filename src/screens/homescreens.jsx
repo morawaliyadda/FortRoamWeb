@@ -4,6 +4,7 @@ import SliderPage from "../components/slider/slider";
 import FeaturesData from "../components/FeaturesData/FeaturesData";
 import HistoricalPlaces from "../assets/Historical-Places.png";
 import Middle from "../components/Middle/Middle";
+import PopularPlaces from "../components/PopularPlaces/PopularPlaces";
 
 const HomeScreen = () => {
   return (
@@ -30,6 +31,7 @@ const HomeScreen = () => {
         </div>
 
         <Middle />
+        <PopularPlaces/>
 
         <FeaturesData
           className="main-des"
