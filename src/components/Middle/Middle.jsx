@@ -1,9 +1,29 @@
 import React from "react";
 import './Middle.css';
+import { motion } from "framer-motion";
+
 
 const Middle = () => {
+      
+    const variant ={
+        visible: {scale: 1, opacity: 1},
+        hidden: {scale: 0, opacity: 0} 
+      }
+
+      const transitionTime = {
+        duration: 0.6,
+        ease: "easeInOut",
+      };
+
+
+
     return (
-        <div className="middle-section">
+        <motion.div className="middle-section"
+        variants={variant}
+        initial="hidden"
+        whileInView="visible"
+        transition={transitionTime}
+        >
             <div className="secContainer Container">
                 <div className="grid">
                     <span className="flex">
@@ -27,7 +47,7 @@ const Middle = () => {
                     </span>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 export default Middle;
