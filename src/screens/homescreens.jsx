@@ -1,15 +1,21 @@
 import React from "react";
 import "../App.css";
-import SliderPage from "../components/slider/slider";
 import FeaturesData from "../components/FeaturesData/FeaturesData";
 import HistoricalPlaces from "../assets/Historical-Places.png";
 import Middle from "../components/Middle/Middle";
 import PopularPlaces from "../components/PopularPlaces/PopularPlaces";
+import mainvedio from '../assets/frontvedio.mp4';
 
 const HomeScreen = () => {
   return (
     <div>
-      <SliderPage />
+      <div className='main-video'>
+                <video className="video-bg" autoPlay loop muted>
+                    <source src={mainvedio} type="video/mp4" />
+                </video>
+                <h1 className="image-text"></h1>
+            </div>
+      
       <div className="GalleFort">
         <div className="section1">
           <h1 className="App-main-topic">Galle Fort</h1>

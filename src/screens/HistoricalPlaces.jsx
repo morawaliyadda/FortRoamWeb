@@ -28,8 +28,8 @@ const PrevArrow = (props) => {
 
 const HistoricalPlaces = () => {
     const settings = {
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
+        nextArrow: <NextArrow/>,
+        prevArrow: <PrevArrow/>,
         infinite: true,
         speed: 500,
         slidesToShow: 4,

@@ -6,7 +6,6 @@ import {
   FaUser,
   FaHome,
   FaInfoCircle,
-  FaLandmark,
 } from "react-icons/fa";
 import SearchBar from "../searchBar/search";
 
@@ -31,8 +30,6 @@ function NavBar() {
           FortRoam
         </a>
       </div>
-      
-      
 
       <ul className={active}>
         <li className="nav-item">
@@ -48,7 +45,7 @@ function NavBar() {
             Favourites
           </a>
         </li>
-    
+
         <li className="nav-item">
           <a href="/about" className="nav-link">
             <FaInfoCircle />
@@ -56,22 +53,15 @@ function NavBar() {
           </a>
         </li>
         <li className="nav-item">
-          <a href="/SupportCenter" className="nav-link">
+          <a href="/profile" className="nav-link">
             <FaUser />
-            Support Center
+            Profile
           </a>
         </li>
-        <li className="nav-item">
-          <a href="/location" className="nav-link">
-            <FaLandmark/>
-            Location
-          </a>
-        </li> 
-        
+        <div className="search-bar">
+          <SearchBar />
+        </div>
       </ul>
-      <div className="search-bar">
-      <SearchBar />
-      </div>
       <div onClick={navToggle} className={toggleIcon}>
         <div className="line1"></div>
         <div className="line2"></div>
