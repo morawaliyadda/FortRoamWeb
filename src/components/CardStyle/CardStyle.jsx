@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 
+
+
 class CardData extends Component {
     constructor(props) {
         super(props);

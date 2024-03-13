@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: column;
     width: calc(100% - 20px);
-    max-width: 350px;
+    max-width: 20rem;
     text-align: start;
-    height: 430px;
+    height: 30rem;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: 10px;
+    border-radius: 0.8rem;
+    margin: 0.8rem;
 
 }
 
@@ -20,19 +20,19 @@
 .heart-icon{
   color: black;
   position: absolute;
-  font-size:25px;
-  margin-right: -220px;
-  margin-top: 12px;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 .heart-icon.liked {
   color: red; 
 }
 
 .card-image {
-    height: 300px;
+    height: 18rem;
     overflow: hidden;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
     width: 100%;
 }
 
@@ -49,32 +49,29 @@
 
 .card h2 {
     font-size: 1.3rem;
-    padding-left: 10px;
-    padding-top: 10px;
+    padding-top: 0.8rem;
+    text-align: center;
 }
 .location{
   font-style: italic;
-  font-size: 16px;
-  padding-left: 10px;
-   
-
+  font-size: 1rem;
 }
 .card p {
-    margin-bottom: 10px;
-    font-size: 14px;
-    padding-left: 10px;
-    padding-top: 10px;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    padding: 0.8rem;
     text-align: center;
   }
   .card button {
     background-color: #E25E3E;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 0.6rem 1.4rem;
+    border-radius: 0.4rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 15px 10px;
+    display: flex;
+    margin: 1rem auto;
 
   }
   .card button:hover {
@@ -84,20 +81,41 @@
 @media screen and (max-width: 768px) {
     .card {
         width: 100%;
-        margin-bottom: 20px;
+        height: auto;
+        max-width: auto;
+        margin: 1rem;
     }
 
 }
-.slick-prev, .slick-next {
-    font-size: 25px;
-    color: #E25E3E; 
-    z-index: 1; 
-  }
+
+
+.slick-arrow.slick-next {
+  position: absolute;
+  right: -15px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  z-index: 9; 
+  cursor: pointer; 
+
+}
+
+
+.slick-arrow.slick-prev {
+  position: absolute;
+  left: -25px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  z-index: 9; 
+  cursor: pointer; 
   
-  .slick-prev {
-    left: -30px; 
-  }
+}
+
+
+.slick-arrow svg {
+  fill: #E25E3E;
+  width: 30px; 
+  height: 30px;
   
-  .slick-next {
-    right: -30px; 
-  }
+}
+
+  

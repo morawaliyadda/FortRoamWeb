@@ -7,12 +7,12 @@ import {
   FaHome,
   FaInfoCircle,
 } from "react-icons/fa";
+import SearchBar from "../searchBar/search";
 
 
 function NavBar() {
   const [active, setActive] = useState("nav-menu");
   const [toggleIcon, setToggleIcon] = useState("nav-toggler");
- // const [showLogin, setShowLogin] = useState(false); // State to control the visibility of admin login modal
 
   const navToggle = () => {
     setActive(active === "nav-menu" ? "nav-menu nav-active" : "nav-menu");

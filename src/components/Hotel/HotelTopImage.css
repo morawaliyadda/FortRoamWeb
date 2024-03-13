@@ -42,17 +42,35 @@
   
   .image2 {
     width: 30%;
-    height: 0rem; /* Adjust as needed */
+    height: 0rem; 
     height: auto;
+    padding: 1rem;
   }
   .text-box {
     text-align: justify;
-    width: 40%; /* Adjust as needed */
-    word-break: break-word; /* Break long words */
-    overflow-wrap: break-word; /* Wrap words to the next line if they exceed the width */
-    line-height: 1.5; /* Adjust the line-height to control spacing between lines */
+    max-width: 40%; 
+    word-break: break-word; 
+    overflow-wrap: break-word;
+    line-height: 1.5; 
+    padding: auto;
+    padding-bottom: 4rem;
   }
   
   
-  /* Add or modify styles for HotelCard as needed */
+  @media screen and (max-width: 768px){
+    .section{
+      padding-inline: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .text-box{
+      text-align: center;
+      max-width: 80%;
+      
+    }
+    .image2{
+      width: 60%;
+      height: 25rem ;
+    }
+  } 
   

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 170px;
+  margin-top: 12rem;
 }
 
 .main-des-reverse {
@@ -10,17 +10,17 @@
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
-  margin-top: 170px;
+  margin-top: 12rem;
 }
 
 .des-text {
   width: 45%;
   text-align: start;
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
 .des-text h2 {
-  font-size: 30px;
+  font-size: 2rem;
   padding-bottom: 1rem;
 }
 
@@ -41,9 +41,9 @@
 
 .front-page-image img {
   width: 49%;
-  height: 350px;
+  height: 20rem;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 0.6rem;
   box-shadow: -1px 1px 62px -18px rgba(212, 127, 41, 0.75);
 }
 
@@ -56,19 +56,19 @@
 @media screen and (max-width: 768px) {
 
   .App-main-topic {
-    font-size: 30px;
+    font-size: 2rem;
   }
 
   .main-des {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 150px;
+    margin-top: 4rem;
   }
 
   .main-des-reverse {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 150px;
+    margin-top: 4rem;
 
   }
 
@@ -79,11 +79,11 @@
 
   .front-page-image {
     width: 100%;
-    margin: 10px 0;
+    margin: 0.8rem 0;
   }
 
   .front-page-image img {
-    height: 200px;
+    height: 15rem;
   }
 
   .read-more-button2 {
@@ -94,15 +94,14 @@
 
 .read-more-button2 {
   background-color: #E25E3E;
-  padding: 15px;
+  padding: 0.8rem;
   display: flex;
   justify-content: center;
-
-  margin-top: 30px;
-  font-size: 20px;
-  width: 150px;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  width: 9rem;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 0.4rem;
   transition: background-color 0.3s;
 }
 
