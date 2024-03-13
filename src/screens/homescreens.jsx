@@ -5,10 +5,25 @@ import HistoricalPlaces from "../assets/Historical-Places.png";
 import Middle from "../components/Middle/Middle";
 import PopularPlaces from "../components/PopularPlaces/PopularPlaces";
 import mainvedio from '../assets/frontvedio.mp4';
+import { motion } from "framer-motion";
+import VideoOne from "../components/slider/Parallax";
+
 
 const HomeScreen = () => {
+   
+  const variant ={
+    visible: {scale: 1, opacity: 1},
+    hidden: {scale: 0, opacity: 0} 
+  }
+
+  const transitionTime = {
+    duration: 0.6,
+    ease: "easeInOut",
+  };
+
   return (
     <div>
+
       <div className='main-video'>
                 <video className="video-bg" autoPlay loop muted>
                     <source src={mainvedio} type="video/mp4" />
@@ -16,12 +31,18 @@ const HomeScreen = () => {
                 <h1 className="image-text"></h1>
             </div>
       
+
+      <SliderPage/>
       <div className="GalleFort">
         <div className="section1">
           <h1 className="App-main-topic">Galle Fort</h1>
 
           <div class="description-box">
-            <p class="description-text">
+            <motion.p class="description-text"
+              variants={variant}
+              initial="hidden"
+              whileInView="visible"
+              transition={transitionTime}>
               Galle Fort, located in the southern coast of Sri Lanka, is a UNESCO
               World Heritage Site renowned for its historical significance,
               architectural beauty, and cultural charm. Originally built by the
@@ -32,7 +53,7 @@ const HomeScreen = () => {
               and maritime commerce. Today, Galle Fort stands as a living
               testament to Sri Lanka's colonial past, with its well-preserved
               ramparts, cobblestone streets, and colonial-era buildings.
-            </p>
+            </motion.p>
           </div>
         </div>
 

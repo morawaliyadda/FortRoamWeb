@@ -72,6 +72,113 @@ nav{
 
 }
 
+
+/* Login/Signin */
+
+
+/* .sub-title{
+    font-size: 4rem;
+    color: #024C5D;
+    margin-bottom: 2rem;
+} */
+
+.login-form p{
+    margin-top: 4rem;
+    font-size: 2rem;
+    color: #024C5D; 
+}
+
+.login-input{
+    margin-top: 30px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    /* padding:1.5rem; */
+    padding: 20px 20px;
+    padding-left: 30px;
+    /* margin: 1.5rem ; */
+    background: rgba(28, 155, 161, 0.5);
+    color: #023540;
+    text-transform: none;
+    font-size: 2rem;
+    width:80%;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.login-input::placeholder{
+    font-size: 2rem;
+    color: rgb(2, 53, 64, 0.5);
+}
+
+.input-container{
+    margin-bottom: 3.5rem;
+}
+
+.login-container, .overlay{
+    width: 100vw;
+    /* height: 100vh; */
+   position: absolute;
+   margin-top: 900px;
+}
+
+
+
+
+/* .overlay-nav{
+    position: fixed;
+}
+
+body.nav-active {
+    overflow-y: hidden;
+} */
+
+.overlay {
+    background: rgb(2, 53, 64,0.8);
+}
+
+.login-form {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 2;
+    background: #f1f1f1;
+    /* padding: 14px 28px; */
+    border-radius: 2rem;
+    width: 40rem;
+    height: 50rem;
+}
+
+.login-btn{
+    padding:.7rem 3rem;
+    background:transparent;
+    color:var(--lightgreen2);
+    cursor: pointer;
+    margin-top: 0;
+    font-size: 2.5rem;
+    border-radius: 5rem;
+}
+
+.login-btn:hover{
+    color: var(--darkgreen2);
+}
+
+.login-close{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+.login-close i{
+    font-size: 3rem;
+    color: #4FABB0;
+}
+
+.login-close i:hover{
+    color: black;
+}
+
 @media screen and (max-width: 768px){
     .nav {
         position: fixed; 
@@ -95,7 +202,6 @@ nav{
        transition: all 0.5s ease-in;
        z-index: -1;
        gap: 1.5rem;
-
     
     }
     .nav-active{

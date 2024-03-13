@@ -1,9 +1,11 @@
 import React from "react";
+import HotelTopImage from '../components/Hotel/HotelTopImage'
+
 
 const DetailPage = () => {
     return (
         <div>
-            <h1>Detail Page</h1>
+            <HotelTopImage/>
         </div>
     );
 };
