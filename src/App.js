@@ -31,6 +31,7 @@ function App() {
           <Route path="/supportcenter" element={<SupportCenterPage/>}/>
           <Route path="/favourites" element={<Favourite/>}/>
           <Route path="/all-items" element={<AllItems/>}/>
+          
         </Routes>
       </main>
       <Footer/>

@@ -32,6 +32,10 @@
     font-weight: bold;
     margin: 20px 0;
   }
+  .card-text{
+    color: #6d6b6b;
+    
+  }
   @media screen and (max-width: 768px) {
     .row{
       display: flex;
