@@ -74,6 +74,7 @@ const toggleModal2 = () => {
         <div className="search-bar">
           <SearchBar />
         </div>
+        <button className="btn" title='Login or Signup' onClick={toggleModal1}>Shop Now</button>
 
       </ul>
       <div onClick={navToggle} className={toggleIcon}>
