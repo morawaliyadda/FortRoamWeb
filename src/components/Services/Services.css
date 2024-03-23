@@ -1,53 +1,78 @@
-.main-title {
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
-    
-  }
+.services-container{
+  margin: 4rem 5rem;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.subsection{
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.subsection h2{
+  font-size: 25px;
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+  color: black;
+  text-align: center;
+}
   .row{
     display: flex;
-    gap: 40px;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
   }
   .service-card {
-    width: 300px;
+    width: 16rem;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    margin-top: 30px;
-    margin-bottom: 50px;
     text-align: center;
     align-items: center;
     justify-content: center;
-    height: auto;
-    padding: 24px;
+    height: 21rem;
+
+ 
   }
   .service-card:hover {
     transform: scale(1.05);
   }
-  
+  .service-card img{
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
   .card-title{
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
-    margin: 20px 0;
+    margin: 0.2rem 0;
+    padding: 0.5rem;
   }
   .card-text{
     color: #6d6b6b;
+    font-size: 0.8rem;
+    margin: 0.9rem 0.8rem;
+    text-align: left;
     
   }
+  .service-icon{
+    margin: 0 0.2rem;
+  }
+
   @media screen and (max-width: 768px) {
+  
     .row{
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-    .service-card {
-      width: 90%;
-      margin-bottom: 10px;
-    }
-    
+
     
   }
-     

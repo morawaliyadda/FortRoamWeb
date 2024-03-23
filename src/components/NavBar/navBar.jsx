@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import "./navBar.css";
 import AppLogo from "../../assets/App-Logo.png";
-import {
-  FaHeart,
-  FaUser,
-  FaHome,
-  FaInfoCircle,
-} from "react-icons/fa";
+import { FaHeart, FaUser, FaHome, FaInfoCircle } from "react-icons/fa";
 import SearchBar from "../searchBar/search";
-
+import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import image_slider1 from "../../assets/placeImages/amangalla_hotel.jpg";
+import image_slider2 from "../../assets/placeImages/galleheritage_hotel.jpg";
 
 function NavBar() {
   const [active, setActive] = useState("nav-menu");
@@ -22,20 +20,24 @@ function NavBar() {
   };
 
   const [modal1, setModal1] = useState(false);
-    const [modal2, setModal2] = useState(false);
+  const [modal2, setModal2] = useState(false);
   const toggleModal1 = () => {
     setModal1(!modal1);
-};
-const toggleModal2 = () => {
-  setModal1(!modal1)
-  setModal2(!modal2);
-};
+
+  };
+  const toggleModal2 = () => {
+    setModal1(!modal1)
+    setModal2(!modal2);
+
+  };
 
 
- 
+
+
 
   return (
     <nav className="nav">
+       
       <div className="applogo">
         <img src={AppLogo} alt=" " height="40" width="40" />
         <a href="/" className="nav-brand">
@@ -64,18 +66,14 @@ const toggleModal2 = () => {
             About
           </a>
         </li>
+
         <li className="nav-item">
-          <a href="/Blog" className="nav-link">
+          <a className="nav-link" onClick={toggleModal1}>
             <FaUser />
             Blog
           </a>
         </li>
-        <li className="nav-item">
-          <a href="/supportcenter" className="nav-link">
-            <FaUser />
-            Contact Us
-          </a>
-        </li>
+
 
         <div className="search-bar">
           <SearchBar />
@@ -89,46 +87,69 @@ const toggleModal2 = () => {
       </div>
 
       {modal1 && (
-            <div className="login-container">
-                <div className="overlay"></div>
-                <form className='login-form'>
-                    <button className='login-close' onClick={toggleModal1}> close
-                        <i id="user" className="fas fa-close"></i>
-                    </button>
-                    <h1 className="sub-title">Log In</h1>
-                    <div>
-                        <input   className="login-input" 
-                        name="userName" placeholder="User Name" autoComplete='off' ></input>
-                        <input   className="login-input" 
-                        name="password" placeholder="Password" autoComplete='off' type="password"></input>
-                    </div>
-                    <button  type="submit" class="btn">Log In</button>
-                    <p>Don't have an account</p>
-                    <button onClick={toggleModal2} type="submit" class="login-btn">Sign In </button>
-                </form>
+        <div className="login-container">
+          <div className="overlay"></div>
+          <form className="section">
+            <div className="login-form">
+              <div className="image-container">
+              <img className="slider-image" src={image_slider1} alt="Slide 3" />
+              </div>
+              <div>
+                <button className='login-close' onClick={toggleModal1}>
+                  <FontAwesomeIcon icon={faClose} />
+                </button>
+
+                <h1 className="sub-title">Log In</h1>
+                <div>
+                  <input className="login-input"
+                    name="userName" placeholder="User Name" autoComplete='off' ></input>
+                  <input className="login-input"
+                    name="password" placeholder="Password" autoComplete='off' type="password"></input>
+                </div>
+                <button type="submit" class="submit-btn">Log In</button>
+                <p>If you don't have an account</p>
+                <button onClick={toggleModal2} type="submit-btn" class="login-btn">Sign Up </button>
+              </div>
+
             </div>
-        )}
-        {modal2 && (
-            <div className="login-container">
-                <div className="overlay"></div>
-                <form className='login-form'>
-                <button className='login-close' onClick={toggleModal1}> close
-                        <i id="user" className="fas fa-close"></i>
-                    </button>
-                    <h1 className="sub-title">Sign In</h1>
-                    <div className='input-container'>
-                        <input   className="login-input"
-                         name="email" placeholder="Email Address" autoComplete='off' />
-                        <input   className="login-input"
-                         name="userName" placeholder="User Name" autoComplete='off' />
-                        <input  className="login-input" 
-                         name="password" placeholder="Password" autoComplete='off' type="password"/>
-                    </div>
-                    <button  type="submit" class="btn">Sign In </button>
-                </form>
+
+          </form>
+        </div>
+      )}
+      {modal2 && (
+        <div className="login-container">
+          <div className="overlay"></div>
+          <form className="section">
+            <div className="login-form">
+              <div className="image-container">
+               
+              <img className="slider-image" src={image_slider2} alt="Slide 3" />
+              </div>
+              <div>
+                <button className='login-close' onClick={toggleModal1}>
+                  <FontAwesomeIcon icon={faClose} />
+                </button>
+                <h1 className="sub-title">Sign Up</h1>
+                <div className='input-container'>
+                  <input className="login-input"
+                    name="email" placeholder="Email Address" autoComplete='off' />
+                  <input className="login-input"
+                    name="userName" placeholder="User Name" autoComplete='off' />
+                  <input className="login-input"
+                    name="password" placeholder="Password" autoComplete='off' type="password" />
+                </div>
+                <button type="submit" class="submit-btn">Sign Up </button>
+                <p>If you already have an account</p>
+                <button onClick={toggleModal2} type="submit-btn" class="login-btn">Sign In</button>
+
+              </div>
+
             </div>
-        )}
-        
+
+          </form>
+        </div>
+      )}
+
     </nav>
   );
 }

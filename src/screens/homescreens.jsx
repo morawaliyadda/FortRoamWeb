@@ -7,7 +7,9 @@ import LocalDelights1 from "../assets/placeImages/bartizan_hotel.jpg";
 import LocalDelights2 from "../assets/placeImages/kkboutique_shop.jpg";
 import BeyondHistory1 from "../assets/placeImages/sithuvili_gallery.jpg";
 import BeyondHistory2 from "../assets/placeImages/walking_path.jpg";
-import Middle from "../components/Middle/Middle";
+import services1 from "../assets/services/Laundry.png";
+import services2 from "../assets/services/BOC.jpg";
+import Badges from "../components/Badges/Badges";
 import PopularPlaces from "../components/PopularPlaces/PopularPlaces";
 import mainvedio from '../assets/frontvedio.mp4';
 import { motion } from "framer-motion";
@@ -55,7 +57,7 @@ const HomeScreen = () => {
         </div>
 
 
-        <Middle />
+        <Badges />
         <PopularPlaces />
 
         <FeaturesData
@@ -65,19 +67,8 @@ const HomeScreen = () => {
           images={[HistoricalPlaces1, HistoricalPlaces2]}
           location="/historicalplaces"
         />
-
         <FeaturesData
           className="main-des-reverse"
-          heading="Support Center"
-          description="Welcome to our Support Center! Our dedicated team is here to assist you with any questions, concerns, or issues you may encounter. Whether you need help navigating our services, troubleshooting technical problems, or simply seeking guidance, we're committed to providing prompt and personalized support tailored to your needs. Your satisfaction is our priority, and we strive to ensure a seamless and enjoyable experience for every customer. Feel free to reach out to us anytime – we're here to help!"
-          images={[HistoricalPlaces1, HistoricalPlaces1]}
-          location="/supportcenter"
-
-        />
-
-
-        <FeaturesData
-          className="main-des"
           heading="Local Delights"
           description="Explore the world of 'Logical Delights,' where intellect meets inspiration. Dive into thought-provoking ideas and innovative concepts that challenge the mind. From scientific discoveries to philosophical musings, join us on a journey of curiosity and exploration."
           images={[LocalDelights1, LocalDelights2]}
@@ -85,14 +76,23 @@ const HomeScreen = () => {
         />
 
         <FeaturesData
-          className="main-des-reverse"
+          className="main-des"
           heading="Beyond History"
           description="Explore the wonders of 'Beyond History,' where ancient secrets and untold stories await. Uncover the mysteries of past civilizations and embark on a journey through time. From archaeological marvels to cultural treasures, dive into the richness of human heritage and discover the stories that shape our world."
           images={[BeyondHistory1, BeyondHistory2]}
           location="/beyondhistory"
         />
+         <FeaturesData
+          className="main-des-reverse"
+          heading="Services"
+          description="Welcome to our Services! Our team is ready to assist with any inquiries, troubleshooting, or guidance you need. Count on us for prompt, personalized support tailored to your requirements. Your satisfaction is our priority. Reach out anytime – we're here to help!"
+          images={[services1, services2]}
+          location="/services"
+
+        />
 
       </div>
+
     </div>
   );
 };

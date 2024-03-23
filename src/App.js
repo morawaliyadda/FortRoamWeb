@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 import DetailPage from "./screens/DetailPage";
 import BeyondHistory from "./screens/BeyondHistoryPage";
 import LocalDelights from "./screens/LocalDelights";
-import SupportCenterPage from "./screens/SupportCenterPage";
+import ServicesPage from "./screens/ServicesPage";
 import Favourite from "./screens/favourite";
 import AllItems from "./screens/AllItems";
 
@@ -28,7 +28,7 @@ function App() {
           <Route path="/detail-page" element={<DetailPage/>}/>
           <Route path="/beyondhistory" element={<BeyondHistory/>}/>
           <Route path="/localdelights" element={<LocalDelights/>}/>
-          <Route path="/supportcenter" element={<SupportCenterPage/>}/>
+          <Route path="/services" element={<ServicesPage/>}/>
           <Route path="/favourites" element={<Favourite/>}/>
           <Route path="/all-items" element={<AllItems/>}/>
           

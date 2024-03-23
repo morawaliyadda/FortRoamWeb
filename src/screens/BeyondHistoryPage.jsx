@@ -61,7 +61,7 @@ const BeyondHistory = () => {
 
     return (
         <div className="Categorical-place">
-            <h1 className="Categorical-heading">Historical Insights</h1>
+            <h1 className="Categorical-heading">Beyond <strong>History</strong></h1>
             <div className="Categorical-type">
                 {Object.entries(groupedPlaces).map(([subtype, places]) => (
                     <div key={subtype}>

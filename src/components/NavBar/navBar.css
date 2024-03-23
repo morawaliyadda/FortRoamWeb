@@ -42,11 +42,14 @@ nav{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
+
 .nav-menu {
     display : flex ;
     align-items: center;
     justify-content: space-around;
-    gap: 2rem;
+    gap: 1.4rem;
+
+    
 }
 .nav-link{
     font-size: 15px;
@@ -54,6 +57,8 @@ nav{
     gap: 8px;
     font-weight: 400;
     padding: 10px 15px;
+    cursor: pointer;
+   
 }
 .nav-link:hover{
     color: #fff;
@@ -73,112 +78,143 @@ nav{
 
 }
 
+/*login*/
+.login-container {
+    z-index: 999; /* Ensure it's above other content */
+}
+.section {
+    position: absolute;
+    left: 50%;
+    top: 60%;
 
-/* Login/Signin */
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 2rem; 
+    width: 48rem;
+    height: 12rem;
+}
 
+.image-container {
+    display: flex;
+    float: left;
+    /* margin-right: 20px; */
+    
+  }
+  
+  .slider-image {
+    width: 24rem; 
+    height: 29.55rem; 
+    border-radius: 2rem 0rem 0rem 2rem;
+  }
+.login-form {
+    display: flex;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-bottom: 50px;
+    transform: translate(-50%, -50%);
+    line-height: 2;
+    background: #fff;
+    border-radius: 2rem;
+    width: 48rem;
+    height: 22rem;
 
-/* .sub-title{
-    font-size: 4rem;
-    color: #024C5D;
-    margin-bottom: 2rem;
-} */
+}
+.login-close{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    border: none;
+    color: #45180d;
+    background-color: #fff;
+}
+
+.login-close :hover{
+    color: #E25E3E;
+}
+.sub-title{
+    color: #45180d;
+    padding: 1rem;
+    margin-top: 1.2rem;
+    font-size: 2rem;
+}
 
 .login-form p{
-    margin-top: 4rem;
-    font-size: 2rem;
-    color: #024C5D; 
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #E25E3E; 
 }
 
 .login-input{
-    margin-top: 30px;
-    /* margin-left: 20px;
-    margin-right: 20px; */
-    /* padding:1.5rem; */
-    padding: 20px 20px;
-    padding-left: 30px;
-    /* margin: 1.5rem ; */
-    background: rgba(28, 155, 161, 0.5);
-    color: #023540;
+    padding: 0.6rem;
+    padding-left: 3rem;
+    background: #e4dedc;
+    margin: 0.4rem;
     text-transform: none;
-    font-size: 2rem;
+    font-size: 1rem;
     width:80%;
     align-items: center;
     border-radius: .5rem;
+    border-color: #E25E3E;
+    
 }
 
 .login-input::placeholder{
-    font-size: 2rem;
-    color: rgb(2, 53, 64, 0.5);
+    font-size: 1rem;
+    color: #dd7a61;
+    
 }
 
 .input-container{
-    margin-bottom: 3.5rem;
+    margin-bottom: 1rem;
+    position: fixed;
+    
+}
+
+.login-container {
+   margin-top: 820px;
 }
 
 .login-container, .overlay{
     width: 100vw;
-    /* height: 100vh; */
-   position: absolute;
-   margin-top: 900px;
-}
-
-
-
-
-/* .overlay-nav{
+    height: 100vh;
     position: fixed;
+    margin-left: -20px;
 }
 
-body.nav-active {
-    overflow-y: hidden;
-} */
 
-.overlay {
-    background: rgb(2, 53, 64,0.8);
-}
-
-.login-form {
-    text-align: center;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 2;
-    background: #f1f1f1;
-    /* padding: 14px 28px; */
-    border-radius: 2rem;
-    width: 40rem;
-    height: 50rem;
-}
-
-.login-btn{
-    padding:.7rem 3rem;
+.submit-btn{
+    padding: 0.4rem 1rem;
     background:transparent;
-    color:var(--lightgreen2);
+    color: #45180d;
     cursor: pointer;
-    margin-top: 0;
-    font-size: 2.5rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
     border-radius: 5rem;
 }
 
+.submit-btn:hover{
+    color: #fff;
+    background-color: #E25E3E;
+    border-color: #fff;
+}
+.login-btn{
+    padding: 0.4rem 1rem;
+    background:transparent;
+    color: #45180d;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 5rem;
+}
 .login-btn:hover{
-    color: var(--darkgreen2);
+    color: #fff;
+    background-color: #E25E3E;
+    border-color: #fff;
 }
 
-.login-close{
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-}
 
-.login-close i{
-    font-size: 3rem;
-    color: #4FABB0;
-}
-
-.login-close i:hover{
-    color: black;
-}
 
 @media screen and (max-width: 768px){
     .nav {
