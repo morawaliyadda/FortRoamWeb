@@ -2,7 +2,7 @@ import "./CardStyle.css"
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaStar } from "react-icons/fa";
 
 
 
@@ -17,7 +17,7 @@ class CardData extends Component {
 
     toggleLike() {
         this.setState(prevState => ({
-            liked: !prevState.liked 
+            liked: !prevState.liked
         }));
     }
 
@@ -34,6 +34,10 @@ class CardData extends Component {
                 <h2>{this.props.heading}</h2>
                 <p className="location">{this.props.location}</p>
                 <p>{this.props.description}</p>
+                <p>
+                    Review :s <FaStar className="star-icon" /> {this.props.review} 
+                </p>
+
                 <Link to="/detail-page">
                     <button>View More</button>
                 </Link>
@@ -46,6 +50,7 @@ CardData.propTypes = {
     location: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     images: PropTypes.string.isRequired,
+    review: PropTypes.string.isRequired,
 
 };
 export default CardData;

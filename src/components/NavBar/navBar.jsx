@@ -65,9 +65,15 @@ const toggleModal2 = () => {
           </a>
         </li>
         <li className="nav-item">
-          <a href="/profile" className="nav-link">
+          <a href="/Blog" className="nav-link">
             <FaUser />
-            Profile
+            Blog
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="/supportcenter" className="nav-link">
+            <FaUser />
+            Contact Us
           </a>
         </li>
 

@@ -61,6 +61,7 @@ const PopularPlaces = () => {
                         heading={place.title}
                         location={place.street}
                         description={place.description}
+                        review={place.review}
                     />
                 ))}
             </Slider>

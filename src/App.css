@@ -78,13 +78,10 @@
   width: 100%;
   height: 500px;
   margin-top: 1rem;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
   position: relative;
 }
 
 .video-bg-about {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -93,7 +90,7 @@
 }
 
 .image-text {
-  position: absolute;
+position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -103,33 +100,10 @@
   text-align: center;
 }
 
-.image-text2 {
-  position: absolute;
-  top: 64%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffff;
-  font-size: 30px;
-  font-weight: 200;
-  z-index: 1;
-  text-align: center;
-
-}
-
-.image-about {
-  top: 60%;
-
-}
-
 .about-content {
-  position: absolute;
-  top: 80%;
-  background-color: #e1dede;
-  border-radius: 30px;
+  top: 75%;
   height: auto;
-  padding: 40px;
-  width: 70%;
-  left: 15%;
+  margin: 20px 180px;
 }
 
 .about-content h2 {
@@ -139,20 +113,30 @@
 }
 
 .about-content h3 {
-  font-size: 18px;
+  font-size: 17px;
   text-align: center;
+  font-weight: 500;
 }
 
 .mission {
-  margin-top: 200px;
+  margin-top: 13rem;
   margin-bottom: 100px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 90px 15%;
-  background-color: bisque;
+  
 
 }
+.mission-text h1{
+  text-align: center;
+  margin: 2rem 40rem;
+  
+}
+.mission-text h3{
+  text-align: center;
+  font-weight: 500;
+  color: #6d6b6b;
+}
+
+
 
 .mission-image {
   width: 25%;
@@ -160,19 +144,7 @@
   border-radius: 30px;
 }
 
-.mission-text {
-  padding-left: 60px;
-}
 
-.mission-text h1 {
-  padding-bottom: 10px;
-  text-align: center;
-
-}
-
-.mission-text h3 {
-  text-align: center;
-}
 .mission-and-vission{
   margin-top: 50px;
 }
@@ -182,7 +154,11 @@
   .mission {
     display: flex;
     flex-direction: column;
-    margin-top: 500px;
+    margin-top: 15rem;
+  }
+  .mission-text h1{
+    margin: 2rem 4rem;
+    
   }
 
   .mission-image {
@@ -201,7 +177,6 @@
 .contact-container {
   display: flex;
   flex-direction: row;
-  background-color: bisque;
   height: 500px;
 }
 

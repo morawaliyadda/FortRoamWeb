@@ -52,15 +52,19 @@
     padding-top: 0.8rem;
     text-align: center;
 }
-.location{
+.card .location{
   font-style: italic;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
 }
 .card p {
-    margin-bottom: 0.3rem;
+    margin: 0.01rem 1rem;
     font-size: 0.9rem;
-    padding: 0.8rem;
-    text-align: center;
+    padding: 0.4rem;
+    text-align: justify;
+  }
+  .card .star-icon{
+    color: rgb(247, 247, 11);
   }
   .card button {
     background-color: #E25E3E;

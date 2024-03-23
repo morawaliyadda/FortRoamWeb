@@ -26,7 +26,6 @@ const AboutPage = () => {
             </div>
 
             <div className="mission">
-                <img className="mission-image" src={image_mission} alt=" " />
                 <div className="mission-text">
                     <div >
                         <h1>Our Mission</h1>

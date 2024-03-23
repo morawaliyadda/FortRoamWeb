@@ -55,13 +55,17 @@ const LocalDelights = () => {
         return acc;
     }, {});
 
+    const capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+
     return (
         <div className="Categorical-place">
             <h1 className="Categorical-heading">Local Delights</h1>
             <div className="Categorical-type">
                 {Object.entries(groupedPlaces).map(([subtype, places]) => (
                     <div key={subtype}>
-                        <h2 className="subtype">{subtype}</h2>
+                        <h2 className="subtype">{capitalizeFirstLetter(subtype)}</h2>
                         <Slider {...settings}>
                             {places.map((place, index) => (
                                 <div key={index}>
@@ -70,6 +74,7 @@ const LocalDelights = () => {
                                         heading={place.title}
                                         location= {place.street}
                                         description={place.description}
+                                        review={place.review}
                                     />
                                 </div>
                             ))}
