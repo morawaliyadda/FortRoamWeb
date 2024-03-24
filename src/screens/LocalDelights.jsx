@@ -61,7 +61,7 @@ const LocalDelights = () => {
 
     return (
         <div className="Categorical-place">
-            <h1 className="Categorical-heading">Local Delights</h1>
+            <h1 className="Categorical-heading">Local <strong>Delights</strong> </h1>
             <div className="Categorical-type">
                 {Object.entries(groupedPlaces).map(([subtype, places]) => (
                     <div key={subtype}>

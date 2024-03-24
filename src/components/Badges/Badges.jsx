@@ -1,9 +1,9 @@
 import React from "react";
-import './Middle.css';
+import './Badges.css';
 import { motion } from "framer-motion";
 
 
-const Middle = () => {
+const Badges = () => {
       
     const variant ={
         visible: {scale: 1, opacity: 1},
@@ -50,4 +50,4 @@ const Middle = () => {
         </motion.div>
     );
 }
-export default Middle;
+export default Badges;

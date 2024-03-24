@@ -27,7 +27,6 @@ const ContactUs = () => {
             <h2>Contact <strong> Us</strong> </h2>
             <div className='Contact-section'>
                 <div className="contact-info">
-                    <h2>Contact Information</h2>
                     <div className="info-item">
                         <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
                         <p>Galle Heritage Foundation, 12 Rampart St, Galle 80000</p>

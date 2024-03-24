@@ -35,7 +35,7 @@ class CardData extends Component {
                 <p className="location">{this.props.location}</p>
                 <p>{this.props.description}</p>
                 <p>
-                    Review :s <FaStar className="star-icon" /> {this.props.review} 
+                    Review :<FaStar className="star-icon" /> {this.props.review} 
                 </p>
 
                 <Link to="/detail-page">
