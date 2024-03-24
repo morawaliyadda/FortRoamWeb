@@ -68,7 +68,7 @@ function NavBar() {
         </li>
 
         <li className="nav-item">
-          <a className="nav-link" onClick={toggleModal1}>
+          <a className="nav-link" href="/blog">
             <FaUser />
             Blog
           </a>
