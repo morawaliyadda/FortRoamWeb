@@ -193,7 +193,21 @@ nav{
     font-size: 1.2rem;
     border-radius: 5rem;
 }
-
+.submit-btn-signup{
+    padding: 0.4rem 1rem;
+    background:transparent;
+    color: #45180d;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    border-radius: 5rem;
+}
+.submit-btn-signup :hover{
+    color: #fff;
+    background-color: #E25E3E;
+    border-color: #fff;
+    
+}
 .submit-btn:hover{
     color: #fff;
     background-color: #E25E3E;

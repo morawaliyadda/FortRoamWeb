@@ -27,8 +27,10 @@ function Blog() {
       <Link to="/write">
         <button className="">Write</button>
       </Link>
+      <button className="">login</button>
       <Posts posts={posts}/>
       {/* <Posts/> */}
+      
     </div>
   );
 }
