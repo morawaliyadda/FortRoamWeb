@@ -1,14 +1,15 @@
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 import './singlePost.css'
-import{useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { FaEdit, FaTrash } from 'react-icons/fa';
+import Posts from './posts'; 
+
 export default function SinglePost() {
-   // const PF = "C:/Users/wijeb/Documents/GitHub/FortRoamWeb-Server/src/images/";
-    
     const [blog, setBlog] = useState({});
     const location = useLocation();
-   // console.log(location.pathname.split("/")[2]);
     const path = location.pathname.split("/")[2];
+    const [allPosts, setAllPosts] = useState([]);
 
     useEffect(() => {
         const getPost = async () => {
@@ -17,28 +18,48 @@ export default function SinglePost() {
         }
         getPost();
     }, [path]);
+
+    useEffect(() => {
+        const fetchAllPosts = async () => {
+            try {
+                const res = await axios.get('http://localhost:3010/blog');
+                setAllPosts(res.data);
+            } catch (error) {
+                console.error('Error fetching posts:', error);
+            }
+        };
+
+        fetchAllPosts();
+    }, []);
+
+    const recentPosts = allPosts.slice(0, 3);
+
     return (
         <div className="singlePost">
             <div className="singlePostWrapper">
-            {/* {blog.image && <img className="postImg" src={PF + blog.image} alt="" />} */}
-            {blog.image && (
+                {blog.image && (
                     <img src={`http://localhost:3010/src/images/${blog.image}`} alt="Blog" className="singlePostImg" />
                 )}
                 <h1 className="singlePostTitle">
-                    {blog.title} 
-                    <div className="singlePostEdit">
-
+                    {blog.title}
+                    <div className="singlePostEditndlt">
+                        <FaEdit className="editIcon" />
+                        <FaTrash className="deleteIcon" />
                     </div>
                 </h1>
 
                 <div className="singlePostInfo">
                     <span className="singlePostAuthor">
                         Author: <b>{blog.username}</b>
-                     </span>
+                    </span>
                     <span className="singlePostDate">{new Date(blog.createdAt).toDateString()}</span>
 
                 </div>
                 <p className="singlePostDesc">{blog.description}</p>
+            </div>
+            <div className="recentPostsContainer">
+                <h2>Recent Posts</h2>
+                <Posts posts={recentPosts} /> 
             </div>
         </div>
     );

@@ -23,11 +23,11 @@ function Blog() {
 
   return (
     <div className="blog-page">
-      <h1>Blog</h1>
+      <h1>The <strong>Blog</strong></h1>
       <Link to="/write">
-        <button className="">Write</button>
+        <button className="blogwrite-btn">Write Your Own Blog</button>
       </Link>
-      <button className="">login</button>
+      {/* <button className="blogwrite-btn">login</button> */}
       <Posts posts={posts}/>
       {/* <Posts/> */}
       

@@ -1,65 +1,101 @@
 .singlePost{
-    flex:9
+    padding-top:  2rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 0rem 3rem 4rem;
+    flex-direction: row;
 }
 
 .singlePostWrapper{
-    /* display:flex; */
-    /* justify-content:space-between; */
-    margin:20px;
-    padding:20px;
-    border-radius:10px;
-    background-color:white;
-    box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+    /* margin:20px; */
+    padding: 10px;
     object-fit: cover;
+    width: 70%;
+    
 }
-
+.singlePostImg{
+    border-radius: 0.6rem;
+    width: 100%;
+}
 .singlePostTitle{
     text-align: center;
-    font-size: 30px;
-    margin: 10px;
-    font-family: 'Lora', serif;
-
+    font-size: 2rem;
+    margin: 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.singlePostEdit{
-    float: right;
-    font-size: 16px;
+.singlePostEditndlt{
+    display: flex;
+    margin: 0.8rem;
 }
-
-.singlePostIcon{
-   
-    margin-left: 10px;
+.editIcon{
+    font-size: 1.4rem;
+    margin-left: 0.8rem;
     cursor: pointer;
+    color: blue;
+}
+.deleteIcon {
+    font-size: 1.4rem;
+    margin-left: 0.8rem;
+    cursor: pointer;
+    color: red;
 }
 
-.singlePostIcon:first-child{
-    margin-left: 0;
-    color: teal;
+.editIcon:hover {
+    color: black; 
 }
-
-.singlePostIcon:last-child{
-    color: tomato;
+.deleteIcon:hover {
+    color: black; 
 }
 
 .singlePostInfo{
-    margin: 20px;
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
-    color: blueviolet;
+    font-size: 1.1rem;
+    margin: 2rem 0;
+    color: var(--main-color);
     font-family: 'Varela Round', sans-serif;
 }
 
 .singlePostDesc{
-    margin: 20px;
-    font-size: 18px;
-    color: #555;
+    font-size: 1.2rem;
+    color: #333;
     font-family: 'Lora', serif;
     line-height: 25px;
+    text-align: justify;
 }
 .singlePostDesc::first-letter{
     font-size: 30px;
     font-weight: bold;
-    margin-left: 20px;
+    margin-left: 1rem;
     min-width: 600px;
 }
+
+.recentPostsContainer {
+    width: 32%; 
+}
+.recentPostsContainer h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+/* @media screen and (min-width: 768px) {
+    .recentPostsContainer {
+        display: none;
+    }
+    .singlePost {
+        flex-direction: row;
+    }
+
+    .singlePostWrapper {
+        width: 70%;
+    }
+
+    .recentPostsContainer {
+        width: 30%;
+        margin-top: 0;
+        margin-left: 2rem; 
+    }
+} */

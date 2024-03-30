@@ -67,7 +67,7 @@
     color: rgb(247, 247, 11);
   }
   .card button {
-    background-color: #E25E3E;
+    background-color: var(--main-color);
     color: #fff;
     border: none;
     padding: 0.6rem 1.4rem;
@@ -116,7 +116,7 @@
 
 
 .slick-arrow svg {
-  fill: #E25E3E;
+  fill: var(--main-color);
   width: 30px; 
   height: 30px;
   

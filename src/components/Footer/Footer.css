@@ -87,7 +87,7 @@
 }
 
 .column ul li a:hover {
-    color: #E25E3E;
+    color: var(--main-color);
 }
 
 .column address {
@@ -110,7 +110,7 @@
     width: 100px;
     padding-top: 30px;
     margin: 2px auto;
-    border-bottom: 2px solid #E25E3E;;
+    border-bottom: 2px solid var(--main-color);
 }
 
 @media screen and (max-width: 768px) {

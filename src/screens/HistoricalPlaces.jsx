@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import data from "../components/places/places.jsx"; 
 
+
 const NextArrow = (props) => {
     const { onClick } = props;
     return (
@@ -88,3 +89,76 @@ const HistoricalPlaces = () => {
 };
 
 export default HistoricalPlaces;
+
+
+// import React from "react";
+// import "../App.css";
+// import "../components/CardStyle/CardStyle.css";
+// import CardData from "../components/CardStyle/CardStyle";
+// import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+// import data from "../components/places/places.jsx";
+// import HorizontalScroll from 'react-horizontal-scrolling-menu';
+// import { ScrollMenu } from 'react-horizontal-scrolling-menu';
+
+
+// const NextArrow = (props) => {
+//     const { onClick } = props;
+//     return (
+//         <div className="slick-arrow slick-next " onClick={onClick}>
+//             <IoIosArrowForward/>
+//         </div>
+//     );
+// };
+
+// const PrevArrow = (props) => {
+//     const { onClick } = props;
+//     return (
+//         <div className="slick-arrow slick-prev" onClick={onClick}>
+//             <IoIosArrowBack/>
+//         </div>
+//     );
+// };
+
+// const HistoricalPlaces = () => {
+//     const groupedPlaces = data.place.reduce((acc, place) => {
+//         if (place.type === 'historical') {
+//             if (!acc[place.subtype]) {
+//                 acc[place.subtype] = [];
+//             }
+//             acc[place.subtype].push(place);
+//         }
+//         return acc;
+//     }, {});
+
+//     const capitalizeFirstLetter = (string) => {
+//         return string.charAt(0).toUpperCase() + string.slice(1);
+//     };
+
+//     return (
+//         <div className="Categorical-place">
+//             <h1 className="Categorical-heading">Historical <strong>Insights</strong> </h1>
+//             <div className="Categorical-type">
+//                 {Object.entries(groupedPlaces).map(([subtype, places]) => (
+//                     <div key={subtype}>
+//                         <h2 className="subtype">{capitalizeFirstLetter(subtype)}</h2>
+//                         <ScrollMenu>
+//                             {places.map((place, index) => (
+//                                 <CardData
+//                                     key={index}
+//                                     image={require(`../assets/placeImages/${place.image}`)}
+//                                     heading={place.title}
+//                                     location={place.street}
+//                                     description={place.description}
+//                                     review={place.review}
+//                                 />
+//                             ))}
+//                         </ScrollMenu>
+//                     </div>
+//                 ))}
+//             </div>
+//         </div>
+//     );
+// };
+
+
+// export default HistoricalPlaces;
