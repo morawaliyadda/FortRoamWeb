@@ -1,46 +1,46 @@
 /* Add or modify styles as needed */
 
-.header {
+.header-detailpage {
     position: relative;
     width: 100%;
     height: 1000px;
   }
   
-  .image {
+  .main-image-detailpage {
     width: 100%;
     height: 100%;
     object-fit: cover;
     padding-bottom: 5rem; /* Ensure the image covers the entire container */
   }
   
-  .title-container {
+  .title-container-detailpage {
     text-align: center;
     font-size: 2rem;
   }
   
  
-  .title-container2 {
+  .title-container2-detailpage {
     text-align: center;
     padding: 2rem;
     font-size: 1.5rem;
     font-family:monospace;
   }
  
-  .title {
+  .title-detailpage {
     color: black;
     font-weight: bold;
     padding: 1rem;
  
   }
   
-  .section {
+  .section-detailpage {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-inline: 15rem;
   }
   
-  .image2 {
+  .image2-detailpage {
     width: 30%;
     height: 0rem; 
     height: auto;

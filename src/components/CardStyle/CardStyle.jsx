@@ -27,18 +27,25 @@ class CardData extends Component {
                 <div className="card-image">
                     <img src={this.props.image} alt="" />
                 </div>
-                <FaHeart
-                    className={`heart-icon ${this.state.liked ? 'liked' : ''}`}
-                    onClick={this.toggleLike}
-                />
-                <h2>{this.props.heading}</h2>
+                <div className="heading-card">
+                    <h2>{this.props.heading}</h2>
+                    <FaHeart
+                        className={`heart-icon ${this.state.liked ? 'liked' : ''}`}
+                        onClick={this.toggleLike}
+                    />
+
+                </div>
+
                 <p className="location">{this.props.location}</p>
                 <p>{this.props.description}</p>
                 <p>
-                    Review :<FaStar className="star-icon" /> {this.props.review} 
+                    Review :<FaStar className="star-icon" /> {this.props.review}
                 </p>
 
-                <Link to="/detail-page">
+                {/* <Link to={`/detail-page/${this.props.id}`}>
+                    <button>View More</button>
+                </Link> */}
+                <Link to={`/detail-page`}>
                     <button>View More</button>
                 </Link>
             </div>

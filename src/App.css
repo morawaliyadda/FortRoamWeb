@@ -1,4 +1,17 @@
 /*home page*/
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" );
+
+*,*::after , *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+}
+:root {
+  --main-color: #E25E3E; 
+}
+
+
 .GalleFort {
   margin: 40px 170px; 
 }
@@ -15,7 +28,7 @@
 }
 
 .description-text {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
   line-height: 1.5;
   text-align: center;
@@ -49,8 +62,10 @@
 }
 
 /* Historical places */
+
 .Categorical-place {
   padding: 20px;
+
 }
 
 .Categorical-heading {
@@ -62,6 +77,7 @@
 
 .Categorical-type {
   margin: 80px;
+ 
 
 }
 
@@ -70,6 +86,22 @@
   font-weight: 800;
   margin-bottom: 25px;
   margin-top: 80px;
+
+
+}
+.choose-item {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scrollbar-color: transparent;
+  user-select: none;
+  background-color: #fff;
+
+}
+.choose-item::-webkit-scrollbar {
+  display: none;
+
 
 }
 
@@ -85,16 +117,16 @@
     margin-bottom: 3rem;
 }
 .main-text strong{
-  color: #E25E3E;
+  color: var(--main-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+} 
 
 /*favourite */
 .Categorical-heading{
   margin: 2rem;
 }
 .Categorical-heading strong{
-  color: #E25E3E;
+  color: var(--main-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 

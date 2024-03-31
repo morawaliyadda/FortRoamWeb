@@ -12,25 +12,25 @@ const HotelTopImage = () => (
   
 
   <div>
-    <div className='header'>
-      <img src={FortPrinters} className='image' alt="The Fort Printers"></img>
+    <div className='header-detailpage'>
+      <img src={FortPrinters} className='main-image-detailpage' alt="The Fort Printers"></img>
     </div>
 
-    <div className='title-container'>
-      <h1 className='title'>The Fort Printers</h1>
+    <div className='title-container-detailpage'>
+      <h1 className='title-detailpage'>The Fort Printers</h1>
     </div>
 
-    <div className='section'>
+    <div className='section-detailpage'>
       <TextBox />
-      <img src={FortPrinters2} className='image2' alt="Fort Printers 2"></img>
+      <img src={FortPrinters2} className='image2-detailpage' alt="Fort Printers 2"></img>
     </div>
 
-    <div className='title-container2'>
-      <h1 className='title'>Our Services</h1>
+    <div className='title-container2-detailpage'>
+      <h1 className='title-detailpage'>Our Services</h1>
     </div>
 
 
-    <div className='section'>
+    <div className='section-detailpage'>
     <HotelCard
         title="Accomodation"
         subtitle="Subtitle 1"

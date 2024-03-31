@@ -11,7 +11,7 @@ margin: 20px;
     text-align: center;
 }
 .MostPopular h1 strong{
-    color: #E25E3E;
+    color: var(--main-color);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     
 }
@@ -27,7 +27,7 @@ margin: 20px;
     justify-content:end;
 }
 .most-popular-btn:hover {
-    color: #E25E3E;
+    color: var(--main-color);
 }
  
 @media screen and (max-width: 768px) {

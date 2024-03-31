@@ -93,7 +93,7 @@
 }
 
 .read-more-button2 {
-  background-color: #E25E3E;
+  background-color: var(--main-color);
   padding: 0.8rem;
   display: flex;
   justify-content: center;

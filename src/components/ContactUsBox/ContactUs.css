@@ -11,7 +11,7 @@
     margin-bottom: 3rem;
   }
   .contact-us-container h2 strong{
-    color: #E25E3E;
+    color: var(--main-color);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
@@ -44,7 +44,7 @@
   .info-item .icon {
     margin-right: 10px;
     font-size: 20px;
-    color: #E25E3E;
+    color: var(--main-color);
   }
   
   .info-item p {
@@ -87,7 +87,7 @@
   .btn-submit {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #E25E3E;
+    background-color: var(--main-color);
     color: #fff;
     border: none;
     border-radius: 5px;

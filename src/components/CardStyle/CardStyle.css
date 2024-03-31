@@ -1,8 +1,8 @@
 .card {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 20px);
     max-width: 20rem;
+    width: 20rem;
     text-align: start;
     height: 30rem;
     overflow: hidden;
@@ -17,16 +17,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     transform: scale(1.02);
 }
-.heart-icon{
-  color: black;
-  position: absolute;
-  font-size: 1.6rem;
-  margin-top: 1rem;
-  margin-left: 1rem;
-}
-.heart-icon.liked {
-  color: red; 
-}
+
 
 .card-image {
     height: 18rem;
@@ -46,16 +37,26 @@
 .card-image:hover img {
     transform: scale(1.01);
 }
-
+.heading-card{
+  display: flex;
+  margin: 1rem 1rem 0 1rem;
+}
 .card h2 {
     font-size: 1.3rem;
-    padding-top: 0.8rem;
-    text-align: center;
+}
+.heart-icon{
+  color: black;
+  font-size: 1.3rem;
+  margin-left: auto;
+ 
+}
+.heart-icon.liked {
+  color: var(--main-color); 
 }
 .card .location{
   font-style: italic;
   font-size: 0.9rem;
-  text-align: center;
+  
 }
 .card p {
     margin: 0.01rem 1rem;
@@ -67,7 +68,7 @@
     color: rgb(247, 247, 11);
   }
   .card button {
-    background-color: #E25E3E;
+    background-color: var(--main-color);
     color: #fff;
     border: none;
     padding: 0.6rem 1.4rem;
@@ -116,7 +117,7 @@
 
 
 .slick-arrow svg {
-  fill: #E25E3E;
+  fill: var(--main-color);
   width: 30px; 
   height: 30px;
   

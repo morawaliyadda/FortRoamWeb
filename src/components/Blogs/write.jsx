@@ -51,15 +51,20 @@ export default function Write() {
                 <div className='writeFormGroupmain'>
                     <h1 className='writeTitle'>Write Your Blog Here</h1>
                     <div className='fileInputbox'>
-                        <h4>add a image...</h4>
-                        <label htmlFor='fileInput'>
-                            <FontAwesomeIcon icon={faPlus} className='writeIcon' />
-                        </label>
+                        <div className='addimage-text'>
+                            <label htmlFor='fileInput'>
+                                <FontAwesomeIcon icon={faPlus} className='writeIcon' />
+                            </label>
+                            <h4>add a image...</h4>
+                        </div>
+
                         {file && (
                             <img className='writeImg' src={URL.createObjectURL(file)} alt='' />
                         )}
                         <input type='file' id='fileInput' style={{ display: 'none' }} onChange={e => setFile(e.target.files[0])} />
+
                     </div>
+
 
                 </div>
                 <div className='writeFormGroup'>
@@ -67,7 +72,7 @@ export default function Write() {
                         onChange={e => setTitle(e.target.value)} />
                     <button className='writeSubmit' type='submit' >Publish</button>
                 </div>
-                <div >
+                <div className='writeTextbox'>
                     <textarea placeholder='Tell your story...' type='text' className='writeText'
                         onChange={e => setDesc(e.target.value)}></textarea>
 
