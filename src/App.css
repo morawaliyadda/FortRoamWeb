@@ -89,7 +89,21 @@
 
 
 }
+.choose-item {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scrollbar-color: transparent;
+  user-select: none;
+  background-color: #fff;
 
+}
+.choose-item::-webkit-scrollbar {
+  display: none;
+
+
+}
 
 .main-container {
   margin-top: 7rem;

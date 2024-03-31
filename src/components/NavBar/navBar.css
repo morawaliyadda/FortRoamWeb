@@ -73,18 +73,17 @@ nav{
 
 /*login*/
 .login-container {
-    z-index: 999; /* Ensure it's above other content */
+    z-index: 999; 
 }
 .section {
     position: absolute;
     left: 50%;
     top: 60%;
-
     transform: translate(-50%, -50%);
     background: #fff;
     border-radius: 2rem; 
     width: 48rem;
-    height: 12rem;
+    height: 18.5rem;
 }
 
 .image-container {
@@ -175,7 +174,15 @@ nav{
     position: fixed;
     margin-left: -20px;
 }
-
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
 
 .submit-btn{
     padding: 0.4rem 1rem;

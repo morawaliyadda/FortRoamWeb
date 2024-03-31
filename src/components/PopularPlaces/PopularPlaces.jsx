@@ -4,6 +4,8 @@ import CardData from "../CardStyle/CardStyle";
 import "../CardStyle/CardStyle.css";
 import data from "../places/places";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 

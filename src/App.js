@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import {BrowserRouter, Route,Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomeScreen from './screens/homescreens';
 import NavBar from "./components/NavBar/navBar";
 import HistoricalPlaces from "./screens/HistoricalPlaces";

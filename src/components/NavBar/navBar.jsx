@@ -170,7 +170,7 @@ const handleSignupSubmit = (event) => {
                   <FontAwesomeIcon icon={faClose} />
                 </button>
                 <h1 className="sub-title">Sign Up</h1>
-                <div className='input-container'>
+                <div >
                   <input className="login-input" onChange={handleChange1} value={newUser.email}
                     name="email" placeholder="Email Address" autoComplete='off' />
                   <input className="login-input" onChange={handleChange1} value={newUser.userName}
