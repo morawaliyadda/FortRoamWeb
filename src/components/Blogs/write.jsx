@@ -1,18 +1,20 @@
 import './write.css';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { Context } from '../../context/Context';
 
 
 export default function Write() {
     const [title, setTitle] = useState('');
     const [description, setDesc] = useState('');
     const [file, setFile] = useState(null);
+    const {user} = useContext(Context);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const newPost = { username: 'admin', title, description };
+        const newPost = { username: user.username, title, description };
         //console.log(newPost);
         if (file) {
             const data = new FormData();

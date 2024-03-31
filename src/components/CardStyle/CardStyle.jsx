@@ -49,7 +49,7 @@ CardData.propTypes = {
     heading: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    images: PropTypes.string.isRequired,
+   images: PropTypes.string.isRequired,
     review: PropTypes.string.isRequired,
 
 };
