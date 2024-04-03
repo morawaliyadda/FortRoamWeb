@@ -16,6 +16,7 @@ const AboutPage = () => {
             <div>
                 <ContactUs/>
             </div>
+            
         </div>
 
 
