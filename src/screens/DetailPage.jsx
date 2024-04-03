@@ -1,11 +1,41 @@
 import React from "react";
 import HotelTopImage from '../components/Hotel/HotelTopImage'
-
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 const DetailPage = () => {
+
+    const [place, setPlace] = useState({});
+    const location = useLocation();
+    const path = location.pathname.split("/")[2];
+
+    useEffect(() => {
+        const getPost = async () => {
+            const res = await axios.get(`http://localhost:3010/place/${path}`);
+            setPlace(res.data);
+        }
+        getPost();
+    }, [path]);
+
+// Meke place dot ghla oni place ekka detail ekak call krnna puluwan
+
+
     return (
         <div>
-            <HotelTopImage/>
+            {/* <HotelTopImage/> */}
+            <div className="placeDetail">
+
+                <h1>{place.title}</h1>
+
+                <div>
+                    <p>{place.description}</p>
+                </div>
+            </div>
+
+
+
+
         </div>
     );
 };

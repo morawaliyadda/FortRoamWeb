@@ -41,7 +41,7 @@ const HistoricalPlaces = () => {
 
     return (
         <div className="Categorical-place">
-            <h1 className="Categorical-heading">Local <strong>Delights</strong> </h1>
+            <h1 className="Categorical-heading">Historical <strong>Places</strong> </h1>
             <div className="Categorical-type">
                 {Object.entries(groupedPlaces).map(([subtype, places]) => (
                     <div key={subtype}>
@@ -55,7 +55,7 @@ const HistoricalPlaces = () => {
                                         location= {place.street}
                                         description={place.description}
                                         review ={place.review}
-                                        
+                                        id={place._id}
                                     />
                                 </div>
                             ))}
