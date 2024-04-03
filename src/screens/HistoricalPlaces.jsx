@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React from "react";
 // import "../App.css";
 // import "../components/CardStyle/CardStyle.css";
@@ -82,20 +83,36 @@ import React, { useState, useEffect } from "react";
 import CardData from "../components/CardStyle/CardStyle";
 import "../App.css";
 import "../components/CardStyle/CardStyle.css";
+=======
+
+
+import React, { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+import "../App.css";
+import "../components/CardStyle/CardStyle.css";
+import CardData from "../components/CardStyle/CardStyle";
+
+
+>>>>>>> 881aa9849b87c3d176b9f50922b99a0759d1dcda
 
 
 const HistoricalPlaces = () => {
-
-    const [places, setPlaces] = useState([]);
+    const [places, setPlaces] = useState({ place: [] });
 
     useEffect(() => {
+<<<<<<< HEAD
 
         fetch("http://localhost:3010/place/type/historical")
             .then(response => response.json())
             .then(data => {
 
+=======
+        fetch("http://localhost:3010/place/type/historical")
+            .then(response => response.json())
+            .then(data => {
+>>>>>>> 881aa9849b87c3d176b9f50922b99a0759d1dcda
                 if (Array.isArray(data)) {
-                    setPlaces(data);
+                    setPlaces({ place: data }); // Ensure data is assigned properly
                 } else {
                     console.error("Data fetched is not an array:", data);
                 }
@@ -103,19 +120,29 @@ const HistoricalPlaces = () => {
             .catch(error => console.error("Error fetching places:", error));
     }, []);
 
-    // Group places by subtype
-    const groupedPlaces = places.reduce((acc, place) => {
-        acc[place.subtype] = [...(acc[place.subtype] || []), place];
+    const groupedPlaces = places.place ? places.place.reduce((acc, place) => {
+        if (place.type === 'historical') {
+            if (!acc[place.subtype]) {
+                acc[place.subtype] = [];
+            }
+            acc[place.subtype].push(place);
+        }
         return acc;
-    }, {});
+    }, {}) : {};
 
+<<<<<<< HEAD
     
-
+=======
+    const capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+>>>>>>> 881aa9849b87c3d176b9f50922b99a0759d1dcda
 
     return (
         <div className="Categorical-place">
-            <h1 className="Categorical-heading">Historical <strong>Insights</strong> </h1>
+            <h1 className="Categorical-heading">Historical <strong>Places</strong> </h1>
             <div className="Categorical-type">
+<<<<<<< HEAD
 
               
                 {/* Render museums */}
@@ -184,26 +211,41 @@ const HistoricalPlaces = () => {
                 {/* </Slider> */}
 
                 {/* {Object.entries(groupedPlaces).map(([subtype, places]) => (
+=======
+                {Object.entries(groupedPlaces).map(([subtype, places]) => (
+>>>>>>> 881aa9849b87c3d176b9f50922b99a0759d1dcda
                     <div key={subtype}>
                         <h2 className="subtype">{capitalizeFirstLetter(subtype)}</h2>
                         <div className="choose-item">
                             {places.map((place, index) => (
                                 <div key={index}>
                                     <CardData
+<<<<<<< HEAD
                                        // image={require(`../assets/placeImages/${place.image}`)}
+=======
+                                      //  image={require(`../assets/placeImages/${place.image}`)}
+>>>>>>> 881aa9849b87c3d176b9f50922b99a0759d1dcda
                                         heading={place.title}
                                         location={place.street}
                                         description={place.description}
+<<<<<<< HEAD
                                         review={place.review}
 
+=======
+                                        review ={place.review}
+                                        id={place._id}
+>>>>>>> 881aa9849b87c3d176b9f50922b99a0759d1dcda
                                     />
                                 </div>
                             ))}
                         </div>
-
                     </div>
+<<<<<<< HEAD
                 ))} */}
 
+=======
+                ))}
+>>>>>>> 881aa9849b87c3d176b9f50922b99a0759d1dcda
             </div>
         </div>
     );

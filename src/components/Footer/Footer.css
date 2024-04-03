@@ -37,6 +37,7 @@
     z-index: 1;
     justify-content: center;
     align-items: center;
+   
 
 }
 
@@ -46,14 +47,17 @@
     gap: 150px;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
 }
 
 .column {
     width: 200px;
+    
 }
 .footer-about-heding{
     display: flex;
     gap: 0rem;
+    justify-content: center;
     
 }
 .footer-about-heding img{
@@ -71,6 +75,7 @@
     font-weight: 400;
     color: #555;
     text-align: justify;
+    justify-content: center;
 }
 
 .column p {
@@ -133,4 +138,9 @@
         width: auto;
         text-align: center;
     }
+    .container{
+        margin-right: 3rem;
+        margin-left:  3rem;
+    }
+    
 }

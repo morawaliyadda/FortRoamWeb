@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 import "../components/CardStyle/CardStyle.css";
 import CardData from "../components/CardStyle/CardStyle";
-import data from "../components/places/places.jsx"; 
+
 
 
 
 const BeyondHistory = () => {
+    const [places, setPlaces] = useState({ place: [] });
 
-    const groupedPlaces = data.place.reduce((acc, place) => {
+    useEffect(() => {
+        fetch("http://localhost:3010/place/")
+            .then(response => response.json())
+            .then(data => {
+                if (Array.isArray(data)) {
+                    setPlaces({ place: data }); // Ensure data is assigned properly
+                } else {
+                    console.error("Data fetched is not an array:", data);
+                }
+            })
+            .catch(error => console.error("Error fetching places:", error));
+    }, []);
+
+    const groupedPlaces = places.place ? places.place.reduce((acc, place) => {
         if (place.type === 'activities') {
             if (!acc[place.subtype]) {
                 acc[place.subtype] = [];
@@ -16,7 +30,7 @@ const BeyondHistory = () => {
             acc[place.subtype].push(place);
         }
         return acc;
-    }, {});
+    }, {}) : {};
 
     const capitalizeFirstLetter = (string) => {
         return string.charAt(0).toUpperCase() + string.slice(1);
@@ -33,12 +47,12 @@ const BeyondHistory = () => {
                         {places.map((place, index) => (
                                 <div key={index}>
                                     <CardData
-                                        image={require(`../assets/placeImages/${place.image}`)}
+                                       // image={require(`../assets/placeImages/${place.image}`)}
                                         heading={place.title}
                                         location= {place.street}
                                         description={place.description}
                                         review ={place.review}
-                                        
+                                        id={place._id}
                                     />
                                 </div>
                             ))}
