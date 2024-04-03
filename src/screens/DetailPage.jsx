@@ -1,8 +1,11 @@
 import React from "react";
-import HotelTopImage from '../components/Hotel/HotelTopImage'
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation ,Link } from 'react-router-dom';
+import { FaPhone, FaMapMarkerAlt, FaGlobe } from "react-icons/fa";
 import axios from 'axios';
+import detailImage from '../assets/HotelPhoto/fortprinters.jpg';
+import ContactCard from '../components/detailContact/detailContact';
+import StarRating from "../components/StarRating/StarRating";
 
 const DetailPage = () => {
 
@@ -18,24 +21,42 @@ const DetailPage = () => {
         getPost();
     }, [path]);
 
-// Meke place dot ghla oni place ekka detail ekak call krnna puluwan
-
 
     return (
         <div>
-            {/* <HotelTopImage/> */}
             <div className="placeDetail">
-
+                <img src={detailImage} />
                 <h1>{place.title}</h1>
-
                 <div>
                     <p>{place.description}</p>
                 </div>
+                <div className="detail-contact-container">
+                    <h1>Contact Us</h1>
+                    <div className="detail-contact-cards">
+                        <ContactCard
+                            title="Phone Number"
+                            value="123-456-7890"
+                            icon={<FaPhone />}
+                        />
+                        <ContactCard
+                            title="Address"
+                            value="123 Main St, City, Country"
+                            icon={<FaMapMarkerAlt />}
+                        />
+                        <ContactCard
+                            title="Facebook"
+                            value="www.example.com"
+                            icon={<FaGlobe />}
+                        />
+                    </div>
+                </div>
+                <div className="detail-review">
+                    <StarRating rating={place.review} />
+                </div>
+                <div className="view-more-button">
+                    <Link to='https://en.wikipedia.org/wiki/Galle_Fort' className="view-more-link">View More Details</Link>
+                </div>
             </div>
-
-
-
-
         </div>
     );
 };

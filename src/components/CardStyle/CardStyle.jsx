@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 import { FaHeart, FaStar } from "react-icons/fa";
 
 
-
 class CardData extends Component {
+
+
     constructor(props) {
         super(props);
         this.state = {
@@ -20,6 +21,8 @@ class CardData extends Component {
             liked: !prevState.liked
         }));
     }
+
+    
 
     render() {
         return (

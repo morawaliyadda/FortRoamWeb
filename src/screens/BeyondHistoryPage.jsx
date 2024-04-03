@@ -36,6 +36,14 @@ const BeyondHistory = () => {
         return string.charAt(0).toUpperCase() + string.slice(1);
     };
 
+    const truncateDescription = (description, maxLength) => {
+        if (description.length <= maxLength) {
+            return description;
+        } else {
+            return description.substring(0, maxLength) + "...";
+        }
+    };
+
     return (
         <div className="Categorical-place">
             <h1 className="Categorical-heading">Beyond <strong>History</strong></h1>
@@ -50,7 +58,7 @@ const BeyondHistory = () => {
                                        // image={require(`../assets/placeImages/${place.image}`)}
                                         heading={place.title}
                                         location= {place.street}
-                                        description={place.description}
+                                        description={truncateDescription(place.description, 100)}
                                         review ={place.review}
                                         id={place._id}
                                     />

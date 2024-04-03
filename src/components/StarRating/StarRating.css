@@ -1,0 +1,102 @@
+.star-rating {
+    align-items: center;
+    margin: 2rem;
+    justify-content: center;
+  }
+  .star-rating h2{
+    margin: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .star-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .star-icon:hover {
+    color: orange; 
+    
+  }
+  
+ 
+  .comment-box {
+    margin-top: 20px;
+  }
+  
+  .comment-box h2 {
+    margin-bottom: 10px;
+  }
+  
+  .comment-box textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 5px;
+    resize: none;
+  }
+  
+  .comment-box button {
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .comment-box button:hover {
+    background-color: var(--main-color);
+  }
+  
+  .comment-list {
+    margin-top: 4rem;
+    /* width: 800px;
+    overflow-x: auto;  */
+  }
+  
+  .comment-list ul {
+    display: flex;
+    padding: 10px;
+  }
+  
+  .comment-list li {
+    margin-right: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+
+  }
+  
+  .comment-list li:last-child {
+    margin-right: 10px; 
+  }
+
+
+  .review-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .review-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .review-text {
+    margin-bottom: 10px;
+  }
+  
+  .star-rating-display {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star-icon-display {
+    font-size: 24px;
+  }
+  
+  .star-icon-display.filled {
+    color: orange;
+  }

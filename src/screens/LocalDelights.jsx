@@ -36,6 +36,15 @@ const LocalDelights = () => {
     const capitalizeFirstLetter = (string) => {
         return string.charAt(0).toUpperCase() + string.slice(1);
     };
+    const truncateDescription = (description, maxLength) => {
+        if (description && description.length <= maxLength) {
+            return description;
+        } else if (description) {
+            return description.substring(0, maxLength) + "...";
+        } else {
+            return "";
+        }
+    };
 
     return (
         <div className="Categorical-place">
@@ -51,7 +60,8 @@ const LocalDelights = () => {
                                       //  image={require(`../assets/placeImages/${place.image}`)}
                                         heading={place.title}
                                         location= {place.street}
-                                        description={place.description}
+                                        // description={place.description}
+                                        description={truncateDescription(place.description, 100)}
                                         review ={place.review}
                                         id={place._id}
                                     />
