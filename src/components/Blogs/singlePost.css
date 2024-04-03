@@ -81,7 +81,7 @@
     margin: 1rem;
 }
 
-/* @media screen and (min-width: 768px) {
+@media screen and (max-width: 768px){
     .recentPostsContainer {
         display: none;
     }
@@ -90,12 +90,12 @@
     }
 
     .singlePostWrapper {
-        width: 70%;
+        width: 90%;
     }
 
     .recentPostsContainer {
         width: 30%;
         margin-top: 0;
-        margin-left: 2rem; 
+        margin-left: 1rem; 
     }
-} */
+} 

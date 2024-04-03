@@ -50,7 +50,7 @@ const BeyondHistory = () => {
                                         location= {place.street}
                                         description={place.description}
                                         review ={place.review}
-                                        
+                                        id={place._id}
                                     />
                                 </div>
                             ))}

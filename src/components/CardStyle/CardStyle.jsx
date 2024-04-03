@@ -45,7 +45,7 @@ class CardData extends Component {
                 {/* <Link to={`/detail-page/${this.props.id}`}>
                     <button>View More</button>
                 </Link> */}
-                <Link to={`/detail-page`}>
+                <Link to={`/detail-page/${this.props.id}`} className='link'>
                     <button>View More</button>
                 </Link>
             </div>
@@ -58,6 +58,7 @@ CardData.propTypes = {
     description: PropTypes.string.isRequired,
    images: PropTypes.string.isRequired,
     review: PropTypes.string.isRequired,
+    id:PropTypes.string.isRequired
 
 };
 export default CardData;

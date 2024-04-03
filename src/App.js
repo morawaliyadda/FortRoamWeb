@@ -28,7 +28,7 @@ function App() {
           <Route path="/" element={<HomeScreen/>} />
           <Route path="/historicalplaces" element={<HistoricalPlaces/>}/>
           <Route path="/about" element={<AboutPage/>}/>
-          <Route path="/detail-page" element={<DetailPage/>}/>
+          <Route path="/detail-page/:id" element={<DetailPage/>}/>
           <Route path="/beyondhistory" element={<BeyondHistory/>}/>
           <Route path="/localdelights" element={<LocalDelights/>}/>
           <Route path="/services" element={<ServicesPage/>}/>
