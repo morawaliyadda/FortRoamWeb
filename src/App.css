@@ -12,7 +12,7 @@
 }
 
 .GalleFort {
-  margin: 40px 70px; 
+  margin: 40px 120px; 
 }
 
 
@@ -79,6 +79,8 @@
   height: 80%;
   object-fit: cover;
 }
+
+
 
 /* Historical places */
 
@@ -152,6 +154,13 @@
   justify-content: center;
 }
 
+/* all display*/
+.type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
 /*detail page*/
 
 .placeDetail img{

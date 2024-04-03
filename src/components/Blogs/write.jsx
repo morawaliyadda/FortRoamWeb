@@ -4,6 +4,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Context } from '../../context/Context';
+import Footer from '../Footer/Footer';
 
 
 export default function Write() {
@@ -40,6 +41,7 @@ export default function Write() {
     };
 
     return (
+        <div>
         <div className='write'>
 
             {/* {file && (
@@ -78,6 +80,8 @@ export default function Write() {
 
                 </div>
             </form>
+        </div>
+        <Footer/>
         </div>
     )
 }   

@@ -1,6 +1,7 @@
 import React from "react";
 import CardData from "../components/CardStyle/CardStyle";
 import data from "../components/places/places.jsx";
+import Footer from "../components/Footer/Footer.jsx";
 
 const Favourites = () => {
   
@@ -19,6 +20,7 @@ const Favourites = () => {
           />
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };

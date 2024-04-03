@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../App.css";
 import "../components/CardStyle/CardStyle.css";
 import CardData from "../components/CardStyle/CardStyle";
+import Footer from "../components/Footer/Footer";
 
 
 const BeyondHistory = () => {
@@ -43,6 +44,7 @@ const BeyondHistory = () => {
     };
 
     return (
+        <div>
         <div className="Categorical-place">
             <h1 className="Categorical-heading">Beyond <strong>History</strong></h1>
             <div className="Categorical-type">
@@ -67,6 +69,8 @@ const BeyondHistory = () => {
                 ))}
             </div>
         </div>
+         <Footer/>
+         </div>
     );
 };
 

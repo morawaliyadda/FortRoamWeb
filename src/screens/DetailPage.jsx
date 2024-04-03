@@ -6,6 +6,7 @@ import axios from 'axios';
 import detailImage from '../assets/HotelPhoto/fortprinters.jpg';
 import ContactCard from '../components/detailContact/detailContact';
 import StarRating from "../components/StarRating/StarRating";
+import Footer from "../components/Footer/Footer";
 
 const DetailPage = () => {
 
@@ -57,6 +58,7 @@ const DetailPage = () => {
                     <Link to='https://en.wikipedia.org/wiki/Galle_Fort' className="view-more-link">View More Details</Link>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 };

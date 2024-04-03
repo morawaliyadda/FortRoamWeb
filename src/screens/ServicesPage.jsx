@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import Services from '../components/Services/Services';
+import Footer from '../components/Footer/Footer';
 
 
 
@@ -15,6 +16,7 @@ const ServicesPage = () => {
                 </div>
 
             </div>
+            <Footer/>
 
         </div>
     );

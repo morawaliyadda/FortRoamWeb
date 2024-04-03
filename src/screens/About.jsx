@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 import AboutUs from "../components/Aboutcards/Aboutcards";
 import ContactUs from "../components/ContactUsBox/ContactUs";
+import Footer from "../components/Footer/Footer";
 
 
 const AboutPage = () => {
@@ -16,7 +17,7 @@ const AboutPage = () => {
             <div>
                 <ContactUs/>
             </div>
-            
+            <Footer/>
         </div>
 
 

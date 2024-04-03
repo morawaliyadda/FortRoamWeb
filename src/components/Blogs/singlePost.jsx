@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import Posts from './posts'; 
+import Footer from '../Footer/Footer';
 
 export default function SinglePost() {
     const [blog, setBlog] = useState({});
@@ -35,6 +36,7 @@ export default function SinglePost() {
     const recentPosts = allPosts.slice(0, 3);
 
     return (
+        <div>
         <div className="singlePost">
             <div className="singlePostWrapper">
                 {blog.image && (
@@ -61,6 +63,8 @@ export default function SinglePost() {
                 <h2>Recent Posts</h2>
                 <Posts posts={recentPosts} /> 
             </div>
+        </div>
+        <Footer/>
         </div>
     );
 }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "../App.css";
 import "../components/CardStyle/CardStyle.css";
 import CardData from "../components/CardStyle/CardStyle";
+import Footer from "../components/Footer/Footer";
  
 
 const LocalDelights = () => {
@@ -45,6 +46,7 @@ const LocalDelights = () => {
     };
 
     return (
+        <div>
         <div className="Categorical-place">
             <h1 className="Categorical-heading">Local <strong>Delights</strong> </h1>
             <div className="Categorical-type">
@@ -69,6 +71,9 @@ const LocalDelights = () => {
                     </div>
                 ))}
             </div>
+            
+        </div>
+        <Footer/>
         </div>
     );
 };

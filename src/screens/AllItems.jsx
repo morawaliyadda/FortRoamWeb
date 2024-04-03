@@ -1,6 +1,7 @@
 import React from "react";
 import CardData from "../components/CardStyle/CardStyle.jsx";
 import data from "../components/places/places.jsx";
+import Footer from "../components/Footer/Footer.jsx";
 
 const AllItems = () => {
   return (
@@ -17,6 +18,7 @@ const AllItems = () => {
           />
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };

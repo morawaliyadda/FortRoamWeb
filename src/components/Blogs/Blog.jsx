@@ -4,6 +4,7 @@ import Posts from "./posts";
 import axios from "axios";
 import Write from "./write";
 import { Link, Route, Switch } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 function Blog() {
   const[posts,setPosts] = useState([]);
@@ -22,6 +23,7 @@ function Blog() {
   }, []);
 
   return (
+    <div>
     <div className="blog-page">
       <h1>The <strong>Blog</strong></h1>
       <Link to="/write">
@@ -31,6 +33,8 @@ function Blog() {
       <Posts posts={posts}/>
       {/* <Posts/> */}
       
+    </div>
+    <Footer/>
     </div>
   );
 }
