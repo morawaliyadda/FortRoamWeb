@@ -37,10 +37,8 @@ function App() {
           <Route path="/blog" element={<Blog/>}/>
           <Route path="/blog/:id" element={<SinglePost/>}/>
           <Route path="/write" element={<Write/>}/>
-
         </Routes>
       </main>
-      <Footer/>
     </div>
     </BrowserRouter>
   );

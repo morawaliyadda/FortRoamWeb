@@ -37,6 +37,7 @@ const HistoricalPlaces = () => {
         return string.charAt(0).toUpperCase() + string.slice(1);
     };
 
+
     const truncateDescription = (description, maxLength) => {
         if (description.length <= maxLength) {
             return description;
@@ -44,6 +45,7 @@ const HistoricalPlaces = () => {
             return description.substring(0, maxLength) + "...";
         }
     };
+
 
 
     return (
@@ -60,7 +62,11 @@ const HistoricalPlaces = () => {
                                       //  image={require(`../assets/placeImages/${place.image}`)}
                                         heading={place.title}
                                         location= {place.street}
+
                                         description={truncateDescription(place.description, 100)}
+
+                                        // description={place.description}
+
                                         review ={place.review}
                                         id={place._id}
                                     />

@@ -5,8 +5,6 @@ import "../components/CardStyle/CardStyle.css";
 import CardData from "../components/CardStyle/CardStyle";
  
 
-
-
 const LocalDelights = () => {
     const [places, setPlaces] = useState({ place: [] });
 

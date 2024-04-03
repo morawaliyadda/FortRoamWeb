@@ -4,8 +4,6 @@ import "../components/CardStyle/CardStyle.css";
 import CardData from "../components/CardStyle/CardStyle";
 
 
-
-
 const BeyondHistory = () => {
     const [places, setPlaces] = useState({ place: [] });
 

@@ -13,7 +13,7 @@ import Badges from "../components/Badges/Badges";
 import PopularPlaces from "../components/PopularPlaces/PopularPlaces";
 import mainvedio from '../assets/frontvedio.mp4';
 import { motion } from "framer-motion";
-
+import Footer from "../components/Footer/Footer";
 
 const HomeScreen = () => {
 
@@ -33,10 +33,11 @@ const HomeScreen = () => {
         <video className="video-bg" autoPlay loop muted>
           <source src={mainvedio} type="video/mp4" />
         </video>
-        <h1 className="App-main-topic">Galle Fort</h1>
       </div>
 
+<div className="content">
       <div className="GalleFort">
+      <h1 className="App-main-topic">Galle Fort</h1>
         <div class="description-box">
           <motion.p class="description-text"
             variants={variant}
@@ -74,7 +75,6 @@ const HomeScreen = () => {
           images={[LocalDelights1, LocalDelights2]}
           location="/localdelights"
         />
-
         <FeaturesData
           className="main-des"
           heading="Beyond History"
@@ -90,9 +90,10 @@ const HomeScreen = () => {
           location="/services"
 
         />
-
+        
       </div>
-
+      <Footer />
+      </div>
     </div>
   );
 };
