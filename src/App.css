@@ -168,8 +168,14 @@
   height: 40rem;
 
 }
-.placeDetail h1 {
+.placeDetail h1{
   font-size: 3rem;
+  font-weight: 700;
+  margin: 2rem;
+  text-align: center;
+}
+.placeDetail h2{
+  font-size: 2.2rem;
   font-weight: 700;
   margin: 2rem;
   text-align: center;
@@ -181,7 +187,7 @@
   
 }
 .detail-contact-container{
-  margin: 8rem 0;
+  margin: 10rem 0;
 }
 .detail-contact-cards{
   display: flex;

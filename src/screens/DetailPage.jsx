@@ -22,17 +22,11 @@ const DetailPage = () => {
         getPost();
     }, [path]);
 
-
-    return (
-        <div>
-            <div className="placeDetail">
-                <img src={detailImage} />
-                <h1>{place.title}</h1>
-                <div>
-                    <p>{place.description}</p>
-                </div>
+    const renderContactDetails = () => {
+        if (place.type === 'commercial') {
+            return (
                 <div className="detail-contact-container">
-                    <h1>Contact Us</h1>
+                    <h2>Contact Us</h2>
                     <div className="detail-contact-cards">
                         <ContactCard
                             title="Phone Number"
@@ -51,6 +45,22 @@ const DetailPage = () => {
                         />
                     </div>
                 </div>
+            );
+        } else {
+            return null; 
+        }
+    };
+
+
+    return (
+        <div>
+            <div className="placeDetail">
+                <img src={detailImage} />
+                <h1>{place.title}</h1>
+                <div>
+                    <p>{place.description}</p>
+                </div>
+                {renderContactDetails()}
                 <div className="detail-review">
                     <StarRating rating={place.review} />
                 </div>

@@ -1,13 +1,12 @@
 .contact-card {
     display: flex;
-    justify-content: center;
-    padding: 15px;
+    padding: 15px 50px;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     transition: all 0.3s ease;
-    width: 22rem;
+    width: 20rem;
   }
   
   .contact-card:hover {
@@ -17,7 +16,7 @@
   
   .contact-icon {
     flex-shrink: 0;
-    margin-right: 15px;
+    margin-right: 10px;
   }
   
   .contact-icon svg {
@@ -27,13 +26,14 @@
   }
   
   .contact-card h2 {
-    margin: 0;
+    margin: 0px 2px;
+
     font-size: 18px;
     color: #333;
   }
   
   .contact-card p {
-    margin: 5px 0 0;
+    margin: 8px 2px 0;
     font-size: 16px;
     color: #666;
   }
