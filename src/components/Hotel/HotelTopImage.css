@@ -1,4 +1,4 @@
-/* Add or modify styles as needed */
+/* 
 
 .header-detailpage {
     position: relative;
@@ -10,8 +10,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    padding-bottom: 5rem; /* Ensure the image covers the entire container */
-  }
+    padding-bottom: 5rem; }
   
   .title-container-detailpage {
     text-align: center;
@@ -73,4 +72,4 @@
       height: 25rem ;
     }
   } 
-  
+   */

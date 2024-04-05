@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './singlePost.css'
-import { useLocation } from 'react-router-dom';
+import { useLocation  } from 'react-router-dom';
 import axios from 'axios';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import Posts from './posts'; 
@@ -12,6 +12,9 @@ export default function SinglePost() {
     const path = location.pathname.split("/")[2];
     const [allPosts, setAllPosts] = useState([]);
 
+    
+  
+
     useEffect(() => {
         const getPost = async () => {
             const res = await axios.get(`http://localhost:3010/blog/${path}`);
@@ -19,6 +22,9 @@ export default function SinglePost() {
         }
         getPost();
     }, [path]);
+
+
+
 
     useEffect(() => {
         const fetchAllPosts = async () => {
@@ -45,7 +51,7 @@ export default function SinglePost() {
                 <h1 className="singlePostTitle">
                     {blog.title}
                     <div className="singlePostEditndlt">
-                        <FaEdit className="editIcon" />
+                        <FaEdit className="editIcon"  />
                         <FaTrash className="deleteIcon" />
                     </div>
                 </h1>

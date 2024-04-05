@@ -64,8 +64,20 @@
     padding: 0.4rem;
     text-align: justify;
   }
-  .card .star-icon{
-    color: rgb(247, 247, 11);
+  .rating-content  {
+    margin: 1.4rem 0rem;
+  }
+  .rating-content p{
+    padding: 0.1rem;
+  }
+ .rating-content .star-icon{
+    /* color: rgb(247, 247, 11); */
+    color: var(--main-color);
+    font-size: 1rem;
+    margin: 0rem 0.15rem;
+  }
+  .rating-content .star-icon:hover {
+    color: var(--main-color);
   }
   .card button {
     background-color: var(--main-color);

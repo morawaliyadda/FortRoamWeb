@@ -4,7 +4,7 @@ import "./StarRating.css";
 
 const StarRating = ({ initialRating, reviewCount }) => {
   const [rating, setRating] = useState(initialRating);
-  const [name, setName] = useState(""); // State for name input
+  const [name, setName] = useState(""); 
   const maxStars = 5;
 
   const handleStarClick = (clickedIndex) => {
