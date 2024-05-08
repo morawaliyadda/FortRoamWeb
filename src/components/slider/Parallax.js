@@ -1,6 +1,5 @@
 import { Parallax } from 'react-parallax';
 import BackgroundVideo from '../../assets/video.mp4';
-import slider  from './slider.jsx';
 import './slider.css';
 
 

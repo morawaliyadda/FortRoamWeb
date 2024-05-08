@@ -7,6 +7,7 @@ import SearchBar from "../searchBar/search";
 function NavBar() {
   const [active, setActive] = useState("nav-menu");
   const [toggleIcon, setToggleIcon] = useState("nav-toggler");
+  const [searchActive, setSearchActive] = useState(false);
 
   const navToggle = () => {
     setActive(active === "nav-menu" ? "nav-menu nav-active" : "nav-menu");
@@ -15,7 +16,10 @@ function NavBar() {
     );
   };
 
-  
+  const toggleSearch = () => {
+    setSearchActive(!searchActive);
+  };
+
 
   return (
     <nav className="nav">
@@ -27,7 +31,7 @@ function NavBar() {
         </a>
       </div>
 
-      <ul className={active}>
+      <ul className={searchActive ? '' : active}>
         <li className="nav-item">
           <a href="/" className="nav-link">
             <FaHome />
@@ -57,7 +61,7 @@ function NavBar() {
         </li>
 
 
-        <div className="search-bar">
+        <div className={`search-bar ${searchActive ? 'active' : ''}`}>
           <SearchBar />
         </div>
        

@@ -12,7 +12,7 @@
 }
 
 .GalleFort {
-  margin: 40px 120px; 
+  margin: 40px 240px; 
 }
 
 
@@ -36,13 +36,13 @@
 }
 
 .description-text {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.5;
   text-align: center;
   color: black;
   margin-bottom: 4rem;
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 
 @media screen and (max-width: 768px) {
