@@ -1,0 +1,107 @@
+
+.write{
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+
+.writeFormGroupmain{
+    align-items:center ;  
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+
+.fileInputbox{
+
+    border-radius: 2rem;
+    margin: 5rem 0rem 2rem 0rem;
+    
+}
+.addimage-text{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.fileInputbox h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #8d8a8a;
+}
+
+.writeIcon{
+    width: 28px;
+    height: 28px;
+    border-radius:50% ;
+    border: 1px solid rgb(169, 79, 20);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    font-size: 18px;
+    color: rgb(182, 179, 179);
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.writeImg {
+    width: 100%;
+    height: 30rem; 
+    border-radius: 10px;
+    /* object-fit: cover;
+    position: relative; 
+    align-items: center;
+    justify-content: center;
+    background-size: cover; */
+}
+
+.writeFormGroup{
+    display: flex;
+    flex-direction: row;
+    margin: 3rem 12rem;
+    gap: 2rem;
+    align-items: center;
+}
+.writeInput{
+    font-size: 1.4rem;
+    width: 30rem;
+    padding: 1rem;
+
+}
+
+.writeInput:focus{
+    outline-color: #ef9680;
+
+}
+
+.writeTextbox{
+    margin: 0 12rem;
+    width: 68rem;
+ 
+}
+.writeText{
+    line-height: 1.8;
+    border: none;
+    font-size: 1rem;
+}
+.writeText:focus{
+    color: black;
+    outline-color: #ef9680;
+
+    
+}
+
+.writeSubmit {
+    color: white;
+    background-color: var(--main-color);
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+@media screen and (max-width: 768px){
+    .writeImg {
+        padding: 2rem;
+    }
+}
+

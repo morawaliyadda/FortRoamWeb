@@ -2,9 +2,12 @@ import "./CardStyle.css"
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaStar } from "react-icons/fa";
+
 
 class CardData extends Component {
+
+
     constructor(props) {
         super(props);
         this.state = {
@@ -15,9 +18,11 @@ class CardData extends Component {
 
     toggleLike() {
         this.setState(prevState => ({
-            liked: !prevState.liked 
+            liked: !prevState.liked
         }));
     }
+
+    
 
     render() {
         return (
@@ -25,14 +30,25 @@ class CardData extends Component {
                 <div className="card-image">
                     <img src={this.props.image} alt="" />
                 </div>
-                <FaHeart
-                    className={`heart-icon ${this.state.liked ? 'liked' : ''}`}
-                    onClick={this.toggleLike}
-                />
-                <h2>{this.props.heading}</h2>
+                <div className="heading-card">
+                    <h2>{this.props.heading}</h2>
+                    <FaHeart
+                        className={`heart-icon ${this.state.liked ? 'liked' : ''}`}
+                        onClick={this.toggleLike}
+                    />
+
+                </div>
+
                 <p className="location">{this.props.location}</p>
                 <p>{this.props.description}</p>
-                <Link to="/detail-page">
+                <p>
+                    Review :<FaStar className="star-icon" /> {this.props.review}
+                </p>
+
+                {/* <Link to={`/detail-page/${this.props.id}`}>
+                    <button>View More</button>
+                </Link> */}
+                <Link to={`/detail-page/${this.props.id}`} className='link'>
                     <button>View More</button>
                 </Link>
             </div>
@@ -43,7 +59,9 @@ CardData.propTypes = {
     heading: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    images: PropTypes.string.isRequired,
+   images: PropTypes.string.isRequired,
+    review: PropTypes.string.isRequired,
+    id:PropTypes.string.isRequired
 
 };
 export default CardData;

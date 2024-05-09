@@ -1,11 +1,12 @@
 import React from "react";
 import CardData from "../components/CardStyle/CardStyle.jsx";
 import data from "../components/places/places.jsx";
+import Footer from "../components/Footer/Footer.jsx";
 
 const AllItems = () => {
   return (
-    <div className="Categorical-place">
-      <h1 className="Categorical-heading">Most Popular Places</h1>
+    <div>
+      <h1 className="Categorical-heading">Popular <strong>Places</strong></h1>
       <div className="type">
         {data.place.map((place, index) => (
           <CardData
@@ -17,6 +18,7 @@ const AllItems = () => {
           />
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import AppLogo from "../../assets/App-Logo.png";
 import FooterVideo from "../../assets/footer.mp4";
 
 const Footer = () => {
@@ -8,11 +9,15 @@ const Footer = () => {
             <video className="video-bg" autoPlay loop muted>
                 <source src={FooterVideo} type="video/mp4" />
             </video>
-            <div className="overlay"></div>
+            <div className="overlay-footer"></div>
             <div className="container">
                 <div className="rows">
                     <div className="column">
-                        <h5>About FortRoam</h5>
+                        <div className='footer-about-heding'>
+                            <img src={AppLogo} alt=" " height="40" width="40" />
+                            <h5>About FortRoam</h5>
+                        </div>
+
                         <h6>FortRoam is your ultimate guide to exploring Galle Fort and its surrounding attractions. </h6>
                     </div>
                     <div className="column">
@@ -21,7 +26,7 @@ const Footer = () => {
                             <li><a href="/">Home</a></li>
                             <li><a href="/favourites">Favourites</a></li>
                             <li><a href="/about">About</a></li>
-                            <li><a href="/profile">Profile</a></li>
+                            <li><a href="/blog">Blog</a></li>
                         </ul>
                     </div>
                     <div className="column">

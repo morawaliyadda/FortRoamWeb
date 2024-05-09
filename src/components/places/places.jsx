@@ -9,7 +9,8 @@ const data = {
         'longitude': '80.21713256835938',
         'description':
             'Circa-1656 Dutch building now a museum, with artifacts like masks, carvings, ship equipment & armor.',
-        'street': 'Church Street'
+        'street': 'Church Street',
+        'review': '2.5',
       },
       
       {
@@ -21,7 +22,8 @@ const data = {
         'longitude': '80.21805372670991',
         'description':
             'Underwater artifacts, ship models & other marine-centric exhibits in a Dutch warehouse from 1671.',
-        'street': 'Queens Street'
+        'street': 'Queens Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -31,7 +33,8 @@ const data = {
         'latitude': '6.02666626106581',
         'longitude': '80.21889057586961',
         'description': '',
-        'street': 'Leyn Baan Street'
+        'street': 'Leyn Baan Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -41,7 +44,8 @@ const data = {
         'latitude': '6.030071086310414',
         'longitude': '80.21365461771649',
         'description': '',
-        'street': 'Rampart Street'
+        'street': 'Rampart Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -51,7 +55,8 @@ const data = {
         'latitude': '6.028644672267317',
         'longitude': '80.21380349979553',
         'description': '',
-        'street': 'Rampart Street'
+        'street': 'Rampart Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -61,7 +66,8 @@ const data = {
         'latitude': '6.026962637877344',
         'longitude': '80.21396363162945',
         'description': '',
-        'street': 'Rampart Street'
+        'street': 'Rampart Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -71,7 +77,8 @@ const data = {
         'latitude': '6.026418491402381',
         'longitude': '80.2147025802099',
         'description': '',
-        'street': 'Rampart Street'
+        'street': 'Rampart Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -81,7 +88,8 @@ const data = {
         'latitude': '6.02506641008604',
         'longitude': '80.21610755567515',
         'description': '',
-        'street': 'Rampart Street'
+        'street': 'Rampart Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -91,7 +99,8 @@ const data = {
         'latitude': '6.023704985952394',
         'longitude': '80.21748346501165',
         'description': '',
-        'street': 'Rampart Street'
+        'street': 'Rampart Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -101,7 +110,8 @@ const data = {
         'latitude': '6.024534310998068',
         'longitude': '80.21946762074525',
         'description': '',
-        'street': 'Hospital Street'
+        'street': 'Hospital Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -111,7 +121,8 @@ const data = {
         'latitude': '6.026364350440924',
         'longitude': '80.21976243124213',
         'description': '',
-        'street': 'Hospital Street'
+        'street': 'Hospital Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -121,7 +132,8 @@ const data = {
         'latitude': '6.027513024118802',
         'longitude': '80.21981371137203',
         'description': '',
-        'street': 'Hospital Street'
+        'street': 'Hospital Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -131,7 +143,8 @@ const data = {
         'latitude': '6.029146932363322',
         'longitude': '80.21929522519076',
         'description': '',
-        'street': 'Queens Street'
+        'street': 'Queens Street',
+        'review': '2.5',
       },
 
     {
@@ -142,7 +155,8 @@ const data = {
         'latitude': '6.024681642686777',
         'longitude': '80.21936780691149',
         'description': '',
-        'street': 'Hospital Street'
+        'street': 'Hospital Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -152,7 +166,8 @@ const data = {
         'latitude': '6.0280401780587916',
         'longitude': '80.21758876739379',
         'description': '',
-        'street': 'Queens Street'
+        'street': 'Queens Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -162,7 +177,8 @@ const data = {
         'latitude': '6.027845459422394',
         'longitude': '80.2177443354998',
         'description': '',
-        'street': 'Queens Street'
+        'street': 'Queens Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -172,7 +188,8 @@ const data = {
         'latitude': '6.0275893909777905',
         'longitude': '80.21745465692729',
         'description': '',
-        'street': 'Queens Street'
+        'street': 'Queens Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -182,7 +199,8 @@ const data = {
         'latitude': '6.027094591706631',
         'longitude': '80.21535750475037',
         'description': '',
-        'street': 'Rampart Street'
+        'street': 'Rampart Street',
+        'review': '2.5',
       },
       {
         'type': 'historical',
@@ -192,7 +210,8 @@ const data = {
         'latitude': '6.0282946517659095',
         'longitude': '80.21718841201944',
         'description': '',
-        'street': 'Church Street'
+        'street': 'Church Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -202,7 +221,8 @@ const data = {
         'latitude': '6.029058448643519',
         'longitude': '80.21555062388508',
         'description': '',
-        'street': 'Middle Street'
+        'street': 'Middle Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -212,7 +232,8 @@ const data = {
         'latitude': '6.028085523479828',
         'longitude': '80.21498149258059',
         'description': '',
-        'street': 'Rampart Street'
+        'street': 'Rampart Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -222,7 +243,8 @@ const data = {
         'latitude': '6.025706217231935',
         'longitude': '80.21601414305763',
         'description': '',
-        'street': 'Rampart Street'
+        'street': 'Rampart Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -232,7 +254,8 @@ const data = {
         'latitude': '6.0250200308373705',
         'longitude': '80.21731685841294',
         'description': '',
-        'street': 'Church Street'
+        'street': 'Church Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -242,7 +265,8 @@ const data = {
         'latitude': '6.026172343333916',
         'longitude': '80.21799277511255',
         'description': '',
-        'street': 'Pedlar Street'
+        'street': 'Pedlar Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -252,7 +276,8 @@ const data = {
         'latitude': '6.024302835096089',
         'longitude': '80.21787945178211',
         'description': '',
-        'street': 'Rampart Street'
+        'street': 'Rampart Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -262,7 +287,8 @@ const data = {
         'latitude': '6.026159339838067',
         'longitude': '80.21641496568044',
         'description': '',
-        'street': 'Pedlar Street'
+        'street': 'Pedlar Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -272,7 +298,8 @@ const data = {
         'latitude': '6.028352928042274',
         'longitude': '80.21568523716557',
         'description': '',
-        'street': 'Middle Street'
+        'street': 'Middle Street',
+        'review': '2.5',
       },
     
     {
@@ -283,7 +310,8 @@ const data = {
         'latitude': '6.026493620786293',
         'longitude': '80.21865812310297',
         'description': '',
-        'street': 'Pedlar Street'
+        'street': 'Pedlar Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -293,7 +321,8 @@ const data = {
         'latitude': '6.026493620786293',
         'longitude': '80.21865812310297',
         'description': '',
-        'street': 'Pedlar Street'
+        'street': 'Pedlar Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -303,7 +332,8 @@ const data = {
         'latitude': '6.027327987644526',
         'longitude': '80.21617088463546',
         'description': '',
-        'street': 'Lighthouse Street'
+        'street': 'Lighthouse Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -313,7 +343,8 @@ const data = {
         'latitude': '6.027327987644526',
         'longitude': '80.21617088463546',
         'description': '',
-        'street': 'Pedlars Street'
+        'street': 'Pedlars Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -323,7 +354,8 @@ const data = {
         'latitude': '6.0265684502118395',
         'longitude': '80.21605236452451',
         'description': '',
-        'street': 'Parawa Street'
+        'street': 'Parawa Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -333,7 +365,8 @@ const data = {
         'latitude': '6.024453959754429',
         'longitude': '80.21716908550502',
         'description': '',
-        'street': 'Rampart Street'
+        'street': 'Rampart Street',
+        'review': '2.5',
       },
       {
         'type': 'commercial',
@@ -343,7 +376,8 @@ const data = {
         'latitude': '6.026244733663945',
         'longitude': '80.21904795350807',
         'description': '',
-        'street': 'Pedlar Street'
+        'street': 'Pedlar Street',
+        'review': '2.5',
       },
       {
         'type': 'activities',
@@ -353,7 +387,8 @@ const data = {
         'latitude': '6.028464290999751',
         'longitude': '80.21551676088721',
         'description': '',
-        'street': 'Middle Street'
+        'street': 'Middle Street',
+        'review': '2.5',
       },
       {
         'type': 'activities',
@@ -363,7 +398,8 @@ const data = {
         'latitude': '6.025956951780997',
         'longitude': '80.21885342891136',
         'description': '',
-        'street': 'Layne Baan Street'
+        'street': 'Layne Baan Street',
+        'review': '2.5',
       },
       {
         'type': 'activities',
@@ -373,7 +409,8 @@ const data = {
         'latitude': '6.025167921280009',
         'longitude': '80.21942917267361',
         'description': '',
-        'street': 'Hospital Street'
+        'street': 'Hospital Street',
+        'review': '2.5',
       },
     ]
 }

@@ -1,34 +1,44 @@
-.MostPopular{
-margin-top:100px;
+.MostPopular {
+    margin-top: 100px;
+    align-items: center;
+    margin: 20px;
 }
-.MostPopular h1{
+
+.MostPopular h1 {
     padding: 40px;
     font-size: 45px;
     font-weight: 800;
     text-align: center;
 }
-.MostPopular h1 strong{
-    color: #E25E3E;
+
+.MostPopular h1 strong {
+    color: var(--main-color);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    
 }
-.most-popular-btn{
+
+.most-popular-btn {
     background-color: #fff;
-    padding: 20px;
+    padding: 25px 60px;
     cursor: pointer;
-    border-width: 0cap;
+    border-width: 0;
     font-size: large;
     font-weight: 600;
     text-align: center;
     display: flex;
-    justify-content:end;
+    justify-content: flex-end; /* Replaced 'end' with 'flex-end' */
 }
+
 .most-popular-btn:hover {
-    color: #E25E3E;
+    color: var(--main-color);
 }
- 
+
 @media screen and (max-width: 768px) {
-    .most-popular-btn{
+    .MostPopular {
+        margin-top: 60px;
+        margin: 30px;
+    }
+    
+    .most-popular-btn {
         padding-right: 40px;
     }
 }

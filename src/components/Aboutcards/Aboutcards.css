@@ -1,0 +1,37 @@
+.support-center {
+    text-align: center;
+    margin: 0px 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .box {
+    background-color: #fdf7f7;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 25px ;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .box h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .box p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  @media screen and (max-width: 768px) {
+    .support-center{
+      margin: 20px;
+    }
+  }

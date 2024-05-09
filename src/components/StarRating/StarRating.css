@@ -1,0 +1,124 @@
+.star-rating {
+    align-items: center;
+    margin: 10rem 2rem 2rem;
+    justify-content: center;
+  }
+  .star-rating h2{
+    margin: 1rem;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .star-icon {
+    margin: 0.4rem;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ddd;
+  }
+  
+  .star-icon:hover {
+    color: var(--main-color); 
+    
+  }
+  .filled-star {
+    color: var(--main-color); 
+  }
+  
+  .comment-box {
+    padding: 20px; 
+    margin-top: 20px; 
+  }
+  .comment-box {
+    margin: 3rem;
+    
+  }
+  .comment-box input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border: 1px solid var(--main-color);
+    
+  }
+  
+  .comment-box textarea {
+    width: 100%;
+    border: 1px solid var(--main-color);
+    height: 6rem;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding: 15px;
+    resize: none;
+  }
+  
+  .comment-box button {
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .comment-box button:hover {
+    
+    background-color:brown;
+  }
+  
+  .comment-list {
+    margin-top: 4rem;
+
+  }
+  
+  .comment-list ul {
+    display: flex;
+    padding: 10px;
+  }
+  
+  .comment-list li {
+    margin-right: 2rem;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+
+  }
+  
+  .comment-list li:last-child {
+    margin-right: 10px; 
+  }
+
+
+  .review-list {
+    list-style-type: none;
+    
+  }
+  
+  .review-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .review-text {
+    margin-bottom: 0.3rem;
+    font-size: 1.4rem;
+  }
+  
+  .star-rating-display {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6rem;
+  }
+  
+  .star-icon-display {
+    font-size: 1.2rem;
+  }
+  
+  .star-icon-display.filled {
+    color: var(--main-color);
+  }
+  .comment {
+    font-size: 1.2rem;
+  }
