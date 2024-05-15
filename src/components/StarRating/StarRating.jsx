@@ -1,11 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import "./StarRating.css";
+import axios from 'axios';
 
 const StarRating = ({ initialRating, reviewCount }) => {
   const [rating, setRating] = useState(initialRating);
   const [name, setName] = useState(""); 
+  const [comment, setComment] = useState("");
+  const [comments, setComments] = useState([]);
   const maxStars = 5;
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const response = await axios.get(`http://localhost:3010/place/${path}`);
+        if (response.data.reviews) {
+          setComments(response.data.reviews);
+        }
+      } catch (error) {
+        console.error('Error fetching reviews:', error);
+      }
+    };
+
+    fetchReviews();
+  }, [path]);
 
   const handleStarClick = (clickedIndex) => {
     setRating(clickedIndex + 1);
@@ -15,19 +36,29 @@ const StarRating = ({ initialRating, reviewCount }) => {
     setName(e.target.value);
   };
 
-  const [comment, setComment] = useState("");
-  const [comments, setComments] = useState([]);
-
   const handleInputChange = (e) => {
     setComment(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (comment.trim() !== "" && name.trim() !== "") {
-      setComments([...comments, { name: name, text: comment, rating: rating }]);
-      setComment("");
-      setName("");
+      const reviewData = {
+        name: name,
+        text: comment,
+        rating: rating
+      };
+
+      try {
+        const response = await axios.post(`http://localhost:3010/place/review/${path}`, reviewData);
+        console.log(response.data);
+        setComment("");
+        setName("");
+        // Update comments state to include the newly added review
+        setComments([...comments, reviewData]);
+      } catch (error) {
+        console.error('Error adding review:', error);
+      }
     }
   };
 
@@ -49,19 +80,19 @@ const StarRating = ({ initialRating, reviewCount }) => {
             placeholder="Write your review here..."
           ></textarea>
           <div>
-          {[...Array(maxStars)].map((_, index) => (
-            <span
-              key={index}
-              className="star-icon"
-              onClick={() => handleStarClick(index)}
-            >
-              {index < rating ? (
-                <FaStar className="filled-star" />
-              ) : (
-                <FaRegStar />
-              )}
-            </span>
-          ))}
+            {[...Array(maxStars)].map((_, index) => (
+              <span
+                key={index}
+                className="star-icon"
+                onClick={() => handleStarClick(index)}
+              >
+                {index < rating ? (
+                  <FaStar className="filled-star" />
+                ) : (
+                  <FaRegStar />
+                )}
+              </span>
+            ))}
           </div>
           <button type="submit">Submit</button>
         </form>

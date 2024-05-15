@@ -15,6 +15,7 @@ import AllItems from "./screens/AllItems";
 import Blog from "./components/Blogs/Blog";
 import SinglePost from "./components/Blogs/singlePost";
 import Write from "./components/Blogs/write";
+import SearchResults from "./screens/SearchResults";
 
 
 
@@ -37,6 +38,8 @@ function App() {
           <Route path="/blog" element={<Blog/>}/>
           <Route path="/blog/:id" element={<SinglePost/>}/>
           <Route path="/write" element={<Write/>}/>
+          <Route path="/write/:id" element={<Write/>}/>
+          <Route path='/search-results' element={<SearchResults/>}/>
         </Routes>
       </main>
     </div>

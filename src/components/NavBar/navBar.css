@@ -71,7 +71,16 @@ nav{
 
 }
 
-/*login*/
+/*/ login //*/
+
+/* .login-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  } */
+/* 
 .login-container {
     z-index: 999; 
 }
@@ -89,7 +98,7 @@ nav{
 .image-container {
     display: flex;
     float: left;
-    /* margin-right: 20px; */
+    margin-right: 20px;
     
   }
   
@@ -227,7 +236,7 @@ nav{
     background-color: var(--main-color);
     border-color: #fff;
 }
-
+ */
 
 
 @media screen and (max-width: 768px){
