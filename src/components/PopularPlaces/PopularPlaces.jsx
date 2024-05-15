@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./PopularPlaces.css"
 import CardData from "../CardStyle/CardStyle";
 import "../CardStyle/CardStyle.css";
@@ -30,7 +30,22 @@ const PrevArrow = (props) => {
 
 const PopularPlaces = () => {
 
-  
+    const [places, setPlaces] = useState({ place: [] });
+
+    useEffect(() => {
+        fetch("http://localhost:3010/place/review/top")
+            .then(response => response.json())
+            .then(data => {
+                if (Array.isArray(data)) {
+                    setPlaces({ place: data }); // Ensure data is assigned properly
+                } else {
+                    console.error("Data fetched is not an array:", data);
+                }
+            })
+            .catch(error => console.error("Error fetching places:", error));
+    }, []);
+
+    
     const sliderSettings = {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
@@ -56,14 +71,15 @@ const PopularPlaces = () => {
             <h1>Most <strong>Popular</strong> </h1>
             <Link to="/all-items" className="most-popular-btn">View More</Link>
             <Slider {...sliderSettings}>
-                {data.place.map((place, index) => (
+                {places.place.map((place, index) => (
                     <CardData
                         key={index}
-                        image={require(`../../assets/placeImages/${place.image}`)}
+                       // image={require(`../../assets/placeImages/${place.image}`)}
                         heading={place.title}
                         location={place.street}
                         description={place.description}
                         review={place.review}
+                        id={place._id}
                     />
                 ))}
             </Slider>

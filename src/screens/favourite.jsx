@@ -20,7 +20,7 @@ const Favourites = () => {
           />
         ))}
       </div>
-      <Footer/>
+      <Footer/> 
     </div>
   );
 };
