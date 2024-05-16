@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./navBar.css";
 import AppLogo from "../../assets/App-Logo.png";
+<<<<<<< Updated upstream
 import { FaHeart, FaUser, FaHome, FaInfoCircle } from "react-icons/fa";
 import SearchBar from "../searchBar/search";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +9,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import image_slider1 from "../../assets/placeImages/amangalla_hotel.jpg";
 import image_slider2 from "../../assets/placeImages/galleheritage_hotel.jpg";
 import axios from 'axios';
+=======
+import {
+  FaHeart,
+  FaUser,
+  FaHome,
+  FaInfoCircle,
+} from "react-icons/fa";
+import SearchBar from "../searchBar/search";
+>>>>>>> Stashed changes
 
 function NavBar() {
   const [active, setActive] = useState("nav-menu");
@@ -108,6 +118,7 @@ const handleSignupSubmit = (event) => {
         </li>
 
         <li className="nav-item">
+<<<<<<< Updated upstream
           <a className="nav-link" href="/blog">
             <FaUser />
             Blog
@@ -120,6 +131,16 @@ const handleSignupSubmit = (event) => {
         </div>
         <button className="btn" title='Login or Signup' onClick={toggleModal1}>Shop Now</button>
 
+=======
+          <a href="/profile" className="nav-link">
+            <FaUser />
+            Profile
+          </a>
+        </li>
+        <li className="searc-bar">
+          <SearchBar />
+        </li>
+>>>>>>> Stashed changes
       </ul>
       <div onClick={navToggle} className={toggleIcon}>
         <div className="line1"></div>

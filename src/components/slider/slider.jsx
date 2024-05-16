@@ -39,7 +39,7 @@ const SliderPage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
   };
 
   return (
@@ -57,7 +57,11 @@ const SliderPage = () => {
           </div>
         </Slider>
       </div>
+<<<<<<< Updated upstream
        
+=======
+      
+>>>>>>> Stashed changes
     </div>
   );
 };
