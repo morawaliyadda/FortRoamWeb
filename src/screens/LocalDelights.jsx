@@ -57,7 +57,8 @@ const LocalDelights = () => {
                         {places.map((place, index) => (
                                 <div key={index}>
                                     <CardData
-                                      //  image={require(`../assets/placeImages/${place.image}`)}
+                                      
+                                        image={place.image}
                                         heading={place.title}
                                         location= {place.street}
                                         // description={place.description}

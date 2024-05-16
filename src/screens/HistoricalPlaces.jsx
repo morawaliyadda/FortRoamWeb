@@ -62,6 +62,7 @@ const HistoricalPlaces = () => {
                                 <div key={index}>
                                     <CardData
                                       //  image={require(`../assets/placeImages/${place.image}`)}
+                                        image = {place.image}
                                         heading={place.title}
                                         location= {place.street}
 

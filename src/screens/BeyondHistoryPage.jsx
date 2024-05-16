@@ -5,6 +5,7 @@ import CardData from "../components/CardStyle/CardStyle";
 import Footer from "../components/Footer/Footer";
 
 
+
 const BeyondHistory = () => {
     const [places, setPlaces] = useState({ place: [] });
 
@@ -55,7 +56,8 @@ const BeyondHistory = () => {
                         {places.map((place, index) => (
                                 <div key={index}>
                                     <CardData
-                                       // image={require(`../assets/placeImages/${place.image}`)}
+                                       
+                                        image = {place.image}
                                         heading={place.title}
                                         location= {place.street}
                                         description={truncateDescription(place.description, 100)}
