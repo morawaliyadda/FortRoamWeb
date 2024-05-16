@@ -44,7 +44,11 @@ const LocalDelights = () => {
             return "";
         }
     };
-
+    const calculateAverageRating = (reviews) => {
+        if (!reviews || reviews.length === 0) return 0;
+        const totalRating = reviews.reduce((acc, review) => acc + review.rating, 0);
+        return totalRating / reviews.length;
+    };
     return (
         <div>
         <div className="Categorical-place">
@@ -62,7 +66,7 @@ const LocalDelights = () => {
                                         location= {place.street}
                                         // description={place.description}
                                         description={truncateDescription(place.description, 100)}
-                                        review ={place.review}
+                                        averageRating={calculateAverageRating(place.reviews)}
                                         id={place._id}
                                     />
                                 </div>

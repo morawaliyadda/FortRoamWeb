@@ -9,7 +9,7 @@ function truncateText(text, maxLength) {
     return truncated + '...';
 }
 
-function Post({ post }) {
+function Post({ post, userblog }) {
    
     if (!post) {
         return null; 
@@ -25,17 +25,20 @@ function Post({ post }) {
             )}
             <div className='writeten-content'>
                 <div className="postInfo">
-                    <Link to={`/blog/${post._id}`} className='link'>
-                        <span className="postTitle">
+                    {userblog ? <Link to={`/myblogs/${post._id}`} className='link'>                        <span className="postTitle">
                             {truncatedTitle}
-                        </span>
-                    </Link>
+                        </span></Link> 
+                    : <Link to={`/blog/${post._id}`} className='link'>                        <span className="postTitle">
+                            {truncatedTitle}
+                        </span></Link>}
                     <hr />
                     <span className="postDate">{new Date(post.createdAt || '').toDateString()}</span> 
                 </div>
                 <p className='postDescription'>{truncatedDescription}</p>
             </div>
-            <Link to={`/blog/${post._id}`} className='veiw-more'>View More</Link>
+            {userblog ? <Link to={`/myblogs/${post._id}`} className='veiw-more'>View More</Link> 
+            : <Link to={`/blog/${post._id}`} className='veiw-more'>View More</Link>}
+            
         </div>
     );
 }

@@ -7,12 +7,25 @@
 }
 
 .singlePostWrapper{
-    /* margin:20px; */
+    margin: 50px ;
     padding: 10px;
     object-fit: cover;
     width: 70%;
     
 }
+
+.myBlogSinglePost{
+    padding-top:  2rem;
+    justify-content: space-between;
+    margin: 4rem 20rem 5rem 20rem;
+}
+
+.myBlogSinglePostWrapper{
+    padding: 10px;
+    object-fit: cover;
+    width: 100%;    
+}
+
 .singlePostImg{
     border-radius: 0.6rem;
     width: 100%;
@@ -30,16 +43,16 @@
     margin: 0.8rem;
 }
 .editIcon{
-    font-size: 1.4rem;
+    font-size: 1.75rem;
     margin-left: 0.8rem;
     cursor: pointer;
-    color: blue;
+    color: #E25E3E;
 }
 .deleteIcon {
-    font-size: 1.4rem;
+    font-size: 1.65rem;
     margin-left: 0.8rem;
     cursor: pointer;
-    color: red;
+    color: #E25E3E;
 }
 
 .editIcon:hover {

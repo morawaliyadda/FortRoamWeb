@@ -3,16 +3,18 @@ import './write.css';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faImage, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Context } from '../../context/Context';
 import Footer from '../Footer/Footer';
+import { UserContext } from '../../userContext';
+
 
 export default function Write() {
     const { id } = useParams();
     const [title, setTitle] = useState('');
     const [description, setDesc] = useState('');
     const [file, setFile] = useState(null);
-    const { user } = useContext(Context);
+    const {currentUser} = useContext(UserContext);
 
     useEffect(() => {
         if (id) {
@@ -29,23 +31,27 @@ export default function Write() {
         }
     }, [id]);
 
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const newPost = { username: "user.username", title, description };
-        if (file) {
+        //const newPost = {username: 'admin', title, description};
+        const newPost = { username: currentUser.name || 'Anonymous', title, description };
+        //console.log(newPost);
+        if(file){
             const data = new FormData();
             const filename = Date.now() + file.name;
             data.append('name', filename);
             data.append('file', file);
             newPost.image = filename;
-
-            try {
-                await axios.post('http://localhost:3010/blog', data);
-            } catch (err) {
-                console.log(err);
-            }
-        }
+       
         try {
+           await axios.post('http://localhost:3010/upload', data);
+        } catch (err) {
+            console.log(err);
+        }
+         }
+     
+         try {
             if (id) {
                 await axios.put(`http://localhost:3010/blog/update/${id}`, newPost);
                 window.location.replace('/blog');
@@ -67,11 +73,11 @@ export default function Write() {
                     <div className='writeFormGroupmain'>
                         <h1 className='writeTitle'>Write Your Blog Here</h1>
                         <div className='fileInputbox'>
-                            <div className='addimage-text'>
-                                <label htmlFor='fileInput'>
-                                    <FontAwesomeIcon icon={faPlus} className='writeIcon' />
+                            <div >
+                                <label htmlFor='fileInput' className='addimage-text'>
+                                    <FontAwesomeIcon icon={faImage} className='writeIcon' />
+                                    <h4>Add Image</h4>
                                 </label>
-                                <h4>add a image...</h4>
                             </div>
 
                             {file && (
@@ -99,3 +105,4 @@ export default function Write() {
         </div>
     )
 }
+

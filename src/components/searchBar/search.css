@@ -1,9 +1,5 @@
-<<<<<<< Updated upstream
 
  .search-bar {
-=======
-/* .search-bar {
->>>>>>> Stashed changes
     display: flex;
     align-items: center;
     height: 40px;
@@ -48,7 +44,6 @@
   .search-btn:hover {
     background-color: white;
     color: black;
-<<<<<<< Updated upstream
   }
 
   @media screen and (max-width: 768px){
@@ -60,6 +55,3 @@
 
   
 
-=======
-  } */
->>>>>>> Stashed changes

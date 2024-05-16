@@ -7,7 +7,7 @@ import Posts from './posts';
 import Footer from '../Footer/Footer';
 import { Context } from '../../context/Context';
 
-export default function SinglePost() {
+export default function MyBlogsSinglePost() {
     const [blog, setBlog] = useState({});
     const { user } = useContext(Context);
     const location = useLocation();
@@ -23,31 +23,31 @@ export default function SinglePost() {
         getPost();
     }, [path]);
 
-    useEffect(() => {
-        const fetchAllPosts = async () => {
-            try {
-                const res = await axios.get('http://localhost:3010/blog');
-                setAllPosts(res.data);
-            } catch (error) {
-                console.error('Error fetching posts:', error);
-            }
-        };
 
-        fetchAllPosts();
-    }, []);
-
-    const recentPosts = allPosts.slice(allPosts.length-4, allPosts.length-1);
-
+    const handleDelete = async () => {
+        try {
+            await axios.delete(`http://localhost:3010/blog/delete/${blog._id}`);
+            navigate('/myblogs');
+        } catch (error) {
+            console.error('Error deleting post:', error);
+        }
+    };
 
     return (
         <div>
-            <div className="singlePost">
-                <div className="singlePostWrapper">
+            <div className="myBlogSinglePost">
+                <div className="myBlogSinglePostWrapper">
                     {blog.image && (
                         <img src={`http://localhost:3010/src/images/${blog.image}`} alt="Blog" className="singlePostImg" />
                     )}
                     <h1 className="singlePostTitle">
                         {blog.title}
+                        <div className="singlePostEditndlt">
+                            <Link to={`/write/${blog._id}`}>
+                                <FaEdit className="editIcon" />
+                            </Link>
+                            <FaTrash className="deleteIcon" onClick={handleDelete} />
+                        </div>
                     </h1>
 
                     <div className="singlePostInfo">
@@ -58,10 +58,6 @@ export default function SinglePost() {
 
                     </div>
                     <p className="singlePostDesc">{blog.description}</p>
-                </div>
-                <div className="recentPostsContainer">
-                    <h2>Recent Posts</h2>
-                    <Posts posts={recentPosts} userblogs={false}/>
                 </div>
             </div>
             <Footer />

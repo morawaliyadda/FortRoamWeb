@@ -42,6 +42,11 @@ const BeyondHistory = () => {
             return description.substring(0, maxLength) + "...";
         }
     };
+    const calculateAverageRating = (reviews) => {
+        if (!reviews || reviews.length === 0) return 0;
+        const totalRating = reviews.reduce((acc, review) => acc + review.rating, 0);
+        return totalRating / reviews.length;
+    };
 
     return (
         <div>
@@ -59,7 +64,7 @@ const BeyondHistory = () => {
                                         heading={place.title}
                                         location= {place.street}
                                         description={truncateDescription(place.description, 100)}
-                                        review ={place.review}
+                                        averageRating={calculateAverageRating(place.reviews)}
                                         id={place._id}
                                     />
                                 </div>
