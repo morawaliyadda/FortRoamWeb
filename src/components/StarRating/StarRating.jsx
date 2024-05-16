@@ -45,7 +45,7 @@ const StarRating = ({ initialRating, reviewCount }) => {
     if (comment.trim() !== "" && name.trim() !== "") {
       const reviewData = {
         name: name,
-        text: comment,
+        content: comment,
         rating: rating
       };
 
@@ -54,7 +54,7 @@ const StarRating = ({ initialRating, reviewCount }) => {
         console.log(response.data);
         setComment("");
         setName("");
-        // Update comments state to include the newly added review
+        
         setComments([...comments, reviewData]);
       } catch (error) {
         console.error('Error adding review:', error);
@@ -112,7 +112,7 @@ const StarRating = ({ initialRating, reviewCount }) => {
                     ))}
                   </div>
                   <div className="comment">
-                    {comment.text}
+                  {comment.content}
                   </div>
                 </li>
               ))}

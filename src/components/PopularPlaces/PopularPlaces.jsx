@@ -26,6 +26,13 @@ const PrevArrow = (props) => {
         </div>
     );
 };
+const truncateDescription = (description, maxLength) => {
+    if (description.length <= maxLength) {
+        return description;
+    } else {
+        return description.substring(0, maxLength) + "...";
+    }
+};
 
 
 const PopularPlaces = () => {
@@ -73,14 +80,15 @@ const PopularPlaces = () => {
             <Slider {...sliderSettings}>
                 {places.place.map((place, index) => (
                     <CardData
-                        key={index}
-                       // image={require(`../../assets/placeImages/${place.image}`)}
-                        heading={place.title}
-                        location={place.street}
-                        description={place.description}
-                        review={place.review}
-                        id={place._id}
-                    />
+                    key={index}
+                   // image={require(`../../assets/placeImages/${place.image}`)}
+                    heading={place.title}
+                    location={place.street}
+                    description={truncateDescription(place.description, 100)}
+                    review={place.review}
+                    averageRating={place.averageRating}
+                    id={place._id}
+                />
                 ))}
             </Slider>
             
