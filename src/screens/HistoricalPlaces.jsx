@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../App.css";
 import "../components/CardStyle/CardStyle.css";
 import CardData from "../components/CardStyle/CardStyle";
 import Footer from "../components/Footer/Footer";
 
-
-
-
 const HistoricalPlaces = () => {
     const [places, setPlaces] = useState({ place: [] });
-
     useEffect(() => {
-        fetch("http://localhost:3010/place/type/historical")
+        fetch("http://localhost:3010/place/")
             .then(response => response.json())
             .then(data => {
                 if (Array.isArray(data)) {
@@ -38,7 +34,6 @@ const HistoricalPlaces = () => {
         return string.charAt(0).toUpperCase() + string.slice(1);
     };
 
-
     const truncateDescription = (description, maxLength) => {
         if (description.length <= maxLength) {
             return description;
@@ -47,7 +42,11 @@ const HistoricalPlaces = () => {
         }
     };
 
-
+    const calculateAverageRating = (reviews) => {
+        if (!reviews || reviews.length === 0) return 0;
+        const totalRating = reviews.reduce((acc, review) => acc + review.rating, 0);
+        return totalRating / reviews.length;
+    };
 
     return (
         <div>
@@ -61,18 +60,12 @@ const HistoricalPlaces = () => {
                         {places.map((place, index) => (
                                 <div key={index}>
                                     <CardData
-                                      //  image={require(`../assets/placeImages/${place.image}`)}
-                                        image = {place.image}
-                                        heading={place.title}
-                                        location= {place.street}
-
-                                        description={truncateDescription(place.description, 100)}
-
-                                        // description={place.description}
-
-                                        review ={place.review}
-                                        id={place._id}
-                                    />
+                                            heading={place.title}
+                                            location={place.street}
+                                            description={truncateDescription(place.description, 100)}
+                                            averageRating={calculateAverageRating(place.reviews)}
+                                            id={place._id}
+                                        />
                                 </div>
                             ))}
                         </div>
