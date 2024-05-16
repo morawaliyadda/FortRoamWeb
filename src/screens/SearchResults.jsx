@@ -33,7 +33,11 @@ const SearchResults = () => {
         return description.substring(0, maxLength) + "...";
     }
 };
-
+const calculateAverageRating = (reviews) => {
+  if (!reviews || reviews.length === 0) return 0;
+  const totalRating = reviews.reduce((acc, review) => acc + review.rating, 0);
+  return totalRating / reviews.length;
+};
   return (
     <div>
       <h2>Search Results</h2>
@@ -42,12 +46,12 @@ const SearchResults = () => {
           {searchResults.map((place) => (
             <div key={place._id} className="search-result">
               <CardData
-              heading={place.title}
-              description={truncateDescription(place.description, 100)}
-              review={place.review}
-              id={place._id}/>
-              {/* <h3>{place.title}</h3> */}
-              {/* Display other details of the place */}
+                heading={place.title}
+                location={place.street}
+                description={truncateDescription(place.description, 100)}
+                averageRating={calculateAverageRating(place.reviews)}
+                id={place._id}
+              />
               
             </div>
           ))}
