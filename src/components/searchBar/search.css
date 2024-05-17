@@ -1,10 +1,10 @@
 
  .search-bar {
     display: flex;
-    align-items: center;
-    height: 40px;
-
+    
   }
+
+
   
   .search-input {
     padding: 10px 14px;
@@ -45,6 +45,8 @@
     background-color: white;
     color: black;
   }
+
+
 
   @media screen and (max-width: 768px){
     .search-bar{

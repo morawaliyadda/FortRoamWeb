@@ -1,3 +1,4 @@
+import '../App.css';
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
@@ -40,9 +41,10 @@ const calculateAverageRating = (reviews) => {
 };
   return (
     <div>
-      <h2>Search Results</h2>
+    <div className="search-results-container">
+      <h2 className='search-results-container-heading'>Search Results...</h2>
       {searchResults.length > 0 ? (
-        <div>
+        <div className="search-results">
           {searchResults.map((place) => (
             <div key={place._id} className="search-result">
               <CardData
@@ -60,7 +62,9 @@ const calculateAverageRating = (reviews) => {
       ) : (
         <p>No results found.</p>
       )}
-      <Footer />
+      
+    </div>
+    <Footer />
     </div>
   );
 };

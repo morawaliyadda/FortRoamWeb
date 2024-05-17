@@ -220,3 +220,26 @@
   color: black;
 }
 
+
+/* Search result */
+
+.search-results-container {
+  margin-top: 6rem;
+  padding: 20px; 
+}
+.search-results-container-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 8rem;
+  
+}
+.search-results {
+  margin: 40px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.search-result {
+  margin: 10px;
+}
