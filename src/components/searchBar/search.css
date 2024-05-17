@@ -52,6 +52,12 @@
     }
     
   }
+  @media screen and (max-width: 1200px){
+    .search-bar{
+      display: none;
+    }
+    
+  }
 
   
 

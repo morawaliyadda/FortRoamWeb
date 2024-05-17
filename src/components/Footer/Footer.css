@@ -71,7 +71,7 @@
 }
 
 .column h6 {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 400;
     color: #555;
     text-align: justify;
@@ -143,4 +143,16 @@
         margin-left:  3rem;
     }
     
+}
+@media screen and (max-width: 1200px) {
+    .container {
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+    .rows {
+        gap: 60px;
+    }
+    .column {
+        width: 33.33%;
+    }
 }

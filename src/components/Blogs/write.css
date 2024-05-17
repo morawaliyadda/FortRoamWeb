@@ -22,8 +22,7 @@
     flex-direction: row;
     gap: 1rem;
     font-size: 1rem;
-    margin-left: 12rem;
-    margin-bottom: -5rem;
+
 
 }
 .fileInputbox h4{
@@ -45,7 +44,7 @@
 }
 
 .writeImg {
-    width: 40%;
+    width: 16rem;
     height: 20rem; 
     border-radius: 10px;
     align-items: center;
@@ -102,7 +101,7 @@
 }
 @media screen and (max-width: 768px){
     .writeImg {
-        padding: 2rem;
+        padding: 1rem;
     }
 }
 
