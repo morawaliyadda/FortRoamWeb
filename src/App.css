@@ -163,11 +163,28 @@
   margin: 20px;
 }
 /*detail page*/
-
-.placeDetail img{
+.placeDetail-image{
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 47rem;
+  height: 84%;
+  z-index: -1;
 
+}
+.placeDetail-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.placeDetail{
+  position: relative;
+  background-color: white;
+  z-index: 2;
+  margin-top: 84vh;
+  padding-top: 0.5rem;
+  
 }
 .placeDetail h1{
   font-size: 3rem;
@@ -203,7 +220,7 @@
 
 .view-more-button {
   text-align: center;
-  margin: 2rem;
+  padding: 3rem;
 }
 
 .view-more-link {

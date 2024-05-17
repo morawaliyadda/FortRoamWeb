@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from 'react';
-import { useLocation ,Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { FaPhone, FaMapMarkerAlt, FaGlobe } from "react-icons/fa";
 import axios from 'axios';
 import ContactCard from '../components/detailContact/detailContact';
@@ -46,15 +46,17 @@ const DetailPage = () => {
                 </div>
             );
         } else {
-            return null; 
+            return null;
         }
     };
 
 
     return (
         <div>
-            <div className="placeDetail">
+            <div className="placeDetail-image">
                 <img src={`http://localhost:3010/src/${place.image}`} />
+            </div>
+            <div className="placeDetail">
                 <h1>{place.title}</h1>
                 <div>
                     <p>{place.description}</p>
@@ -66,8 +68,10 @@ const DetailPage = () => {
                 <div className="view-more-button">
                     <Link to='https://en.wikipedia.org/wiki/Galle_Fort' className="view-more-link">View More Details</Link>
                 </div>
+
+
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 };
@@ -75,27 +79,3 @@ const DetailPage = () => {
 export default DetailPage;
 
 
-
-// import React from "react";
-// import data from "../components/places/places.jsx";
-
-// const DetailPage = ({ match }) => {
-//     // Extracting place id from URL params
-//     const { id } = match.params;
-//     // Fetching place details based on the id
-//     // For example, you can fetch the details from your data or API
-//     const placeDetails = data.place.find(place => place.id === id);
-
-//     return (
-//         <div className="detail-page">
-//             <h2>{placeDetails.title}</h2>
-//             <img src={require(`../assets/placeImages/${placeDetails.image}`)} alt={placeDetails.title} />
-//             <p>{placeDetails.description}</p>
-//             <p>Location: {placeDetails.street}</p>
-//             <p>Review: {placeDetails.review}</p>
-//             {/* Add more details as needed */}
-//         </div>
-//     );
-// };
-
-// export default DetailPage;
