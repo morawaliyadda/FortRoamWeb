@@ -29,6 +29,7 @@
 .singlePostImg{
     border-radius: 0.6rem;
     width: 100%;
+    height: 700px;
 }
 .singlePostTitle{
     text-align: center;
