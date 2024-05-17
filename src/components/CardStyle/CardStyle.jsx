@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import {  FaStar } from "react-icons/fa";
-
+ 
 const CardData = (props) => {
     //const location = useLocation();
     //const [ setLiked] = useState(false);
@@ -40,7 +40,7 @@ const CardData = (props) => {
             </div>
 
             <p className="location">{props.location}</p>
-            <p>{props.description}</p>
+            {/* <p>{props.description}</p> */}
             <div className="rating-content">
                 {place ? (
                     <>

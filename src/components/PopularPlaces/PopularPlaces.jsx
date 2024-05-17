@@ -95,21 +95,15 @@ const PopularPlaces = () => {
                 {places.place.map((place, index) => (
                     <CardData
                         key={index}
-                       // image={require(`../../assets/placeImages/${place.image}`)}
-
-                       // image= {`http://localhost:3010/src/${place.image}`} 
-
-                        image= {place.image}
-
+                        // image='images/placeImages/56bydeco_hotel.jpg'
+                        image={place.image}
                         heading={place.title}
                         location={place.street}
-                        description={truncateDescription(place.description, 100)}
-                        //review={place.review}
+                        // description={truncateDescription(place.description, 100)}
+                        // review={place.review}
                         averageRating={place.averageRating}
                         id={place._id}
                         totalReviews={place.totalReviews}
-
-
                     />
                 ))}
             </Slider>
