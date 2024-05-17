@@ -3,7 +3,6 @@ import './Blog.css';
 import Posts from "./posts";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
