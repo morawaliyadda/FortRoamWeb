@@ -8,9 +8,8 @@
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-    border-radius: 2rem;
-    margin: 0.8rem;
-    
+    border-radius: 1rem;
+    margin: 1rem;
 }
 
 .card:hover {

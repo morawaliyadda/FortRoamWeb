@@ -10,7 +10,6 @@ const CardData = (props) => {
     //const [ setLiked] = useState(false);
     const [place, setPlace] = useState(null);
 
-
     useEffect(() => {
         const getPlace = async () => {
             try {
