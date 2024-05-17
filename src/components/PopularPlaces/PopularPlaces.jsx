@@ -2,7 +2,6 @@
 import "./PopularPlaces.css"
 import CardData from "../CardStyle/CardStyle";
 import "../CardStyle/CardStyle.css";
-import data from "../places/places";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -66,6 +65,20 @@ const PopularPlaces = () => {
         autoplay: true,
         autoplaySpeed: 2000,
         responsive: [
+            {
+                breakpoint: 1600, 
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 1200, 
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
             {
                 breakpoint: 768,
                 settings: {
