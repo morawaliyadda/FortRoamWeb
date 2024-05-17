@@ -218,7 +218,7 @@
   
 }
 .detail-contact-container{
-  margin: 10rem 0;
+  margin: 6rem 0;
 }
 .detail-contact-cards{
   display: flex;
@@ -227,7 +227,12 @@
   gap: 1.5rem;
   margin: 2rem;
 }
-
+@media screen and (max-width: 768px){
+  .detail-contact-cards{
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .view-more-button {
   text-align: center;
