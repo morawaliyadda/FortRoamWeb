@@ -19,10 +19,7 @@ const AboutPage = () => {
             </div>
             <Footer/>
         </div>
-
-
     );
-
 }
 
 export default AboutPage;

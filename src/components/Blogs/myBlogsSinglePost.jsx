@@ -27,7 +27,7 @@ export default function MyBlogsSinglePost() {
     const handleDelete = async () => {
         try {
             await axios.delete(`http://localhost:3010/blog/delete/${blog._id}`);
-            navigate('/myblogs');
+            navigate('/myblogs', { replace: true });
         } catch (error) {
             console.error('Error deleting post:', error);
         }

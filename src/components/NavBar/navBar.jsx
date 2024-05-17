@@ -5,8 +5,8 @@ import { FaHeart, FaUser, FaHome, FaInfoCircle } from "react-icons/fa";
 import SearchBar from "../searchBar/search";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import image_slider1 from "../../assets/placeImages/amangalla_hotel.jpg";
-import image_slider2 from "../../assets/placeImages/galleheritage_hotel.jpg";
+import image_slider1 from "../../assets/images/placeImages/amangalla_hotel.jpg";
+import image_slider2 from "../../assets/images/placeImages/galleheritage_hotel.jpg";
 import axios from 'axios';
 
 function NavBar() {

@@ -36,14 +36,10 @@ const CardData = (props) => {
     return (
         <div className="card">
             <div className="card-image">
-                <img src={props.image} alt="" />
+                <img src= {`../../assets/${props.image}`} alt=""/>
             </div>
             <div className="heading-card">
                 <h2>{props.heading}</h2>
-                <FaHeart
-                    className={`heart-icon ${liked ? 'liked' : ''}`}
-                    onClick={toggleLike}
-                />
             </div>
 
             <p className="location">{props.location}</p>
@@ -63,7 +59,7 @@ const CardData = (props) => {
                             ))}
                         </p>
                         <p>
-                            {place.averageRating.toFixed(2)}  <strong>rating</strong>  out of {place.totalReviews} reviews
+                            {place.averageRating.toFixed(1)}  <strong>rating</strong>  out of {place.totalReviews} reviews
                         </p>
 
                     </>

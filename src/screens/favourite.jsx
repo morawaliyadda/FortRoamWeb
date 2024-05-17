@@ -12,7 +12,7 @@ const Favourites = () => {
         {data.place.map((place, index) => (
           <CardData
             key={index}
-            image={require(`../assets/placeImages/${place.image}`)}
+            image={place.image}
             heading={place.title}
             location={place.street}
             description={place.description}

@@ -7,15 +7,15 @@
     height: 30rem;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 0.8rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    border-radius: 2rem;
     margin: 0.8rem;
-
+    
 }
 
 .card:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  transform: scale(1.02);
 }
 
 
@@ -39,7 +39,7 @@
 }
 .heading-card{
   display: flex;
-  margin: 1rem 1rem 0 1rem;
+  margin: 1rem 1rem 0.6rem 1rem;
 }
 .card h2 {
     font-size: 1.3rem;
@@ -59,14 +59,14 @@
   
 }
 .card p {
-    margin: 0.01rem 1rem;
+    margin: 0.01rem 1rem 0.5rem 1rem;
     font-size: 0.9rem;
-    padding: 0.4rem;
     text-align: justify;
   }
   .card .star-icon{
-    color: rgb(247, 247, 11);
+    color: #E25E3E;
   }
+
   .card button {
     background-color: var(--main-color);
     color: #fff;
