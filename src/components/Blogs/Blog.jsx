@@ -16,8 +16,8 @@ function Blog() {
   const [modal2, setModal2] = useState(false);
   const [modal3, setModal3] = useState(false);
   const navigate = useNavigate();
-  const {currentUser, setCurrentUser} = useContext(UserContext);
-  const {userCurrent} = useContext(UserContext);
+  const {setCurrentUser} = useContext(UserContext);
+  const {currentUser} = useContext(UserContext);
 
   const [user, setUser] = useState({
     email: '',
@@ -122,7 +122,7 @@ function Blog() {
         <div className="blog-page">
           <h1>The <strong>Blog</strong></h1>
             {
-              currentUser!==null ? (
+              currentUser ? (
                 <div class="blog-btn">
                   <button className="blogwrite-btn" onClick={() => navigate('/write')}>Write Your Blog</button>
                   <button className="blogwrite-btn" onClick={() => navigate('/myblogs')}>My Blogs</button>
