@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { useLocation ,Link } from 'react-router-dom';
 import { FaPhone, FaMapMarkerAlt, FaGlobe } from "react-icons/fa";
 import axios from 'axios';
-import detailImage from '../assets/HotelPhoto/fortprinters.jpg';
 import ContactCard from '../components/detailContact/detailContact';
 import StarRating from "../components/StarRating/StarRating";
 import Footer from "../components/Footer/Footer";
@@ -55,7 +54,7 @@ const DetailPage = () => {
     return (
         <div>
             <div className="placeDetail">
-                <img src={detailImage} />
+                <img src={`http://localhost:3010/src/${place.image}`} />
                 <h1>{place.title}</h1>
                 <div>
                     <p>{place.description}</p>
