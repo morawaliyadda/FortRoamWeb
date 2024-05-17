@@ -20,18 +20,18 @@
   
   .box h2 {
     color: #333;
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 10px;
   }
   
   .box p {
     color: #666;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.6;
     margin: 0;
   }
   @media screen and (max-width: 768px) {
     .support-center{
-      margin: 20px;
+      margin: 0 50px 10px 50px;
     }
   }

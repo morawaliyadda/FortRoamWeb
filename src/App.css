@@ -121,9 +121,22 @@
 .choose-item::-webkit-scrollbar {
   display: none;
 
-
 }
+@media screen and (max-width: 768px) {
+  .choose-item {
+    display: block;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
 
+  .choose-item > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 90%; 
+    margin-right: 15px;
+  }
+}
 .main-container {
   margin-top: 7rem;
 }
@@ -199,7 +212,7 @@
   text-align: center;
 }
 .placeDetail p{
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
   margin: 2rem 9rem;
   
@@ -214,9 +227,7 @@
   gap: 1.5rem;
   margin: 2rem;
 }
-.detail-review{
-  margin: 0rem 20rem;
-}
+
 
 .view-more-button {
   text-align: center;

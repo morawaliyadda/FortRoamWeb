@@ -41,29 +41,28 @@
   margin: 1rem 1rem 0.6rem 1rem;
 }
 .card h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
-.heart-icon{
-  color: black;
-  font-size: 1.3rem;
-  margin-left: auto;
- 
-}
+
 .heart-icon.liked {
   color: var(--main-color); 
 }
 .card .location{
   font-style: italic;
-  font-size: 0.9rem;
-  
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+
 }
 .card p {
-    margin: 0.01rem 1rem 0.5rem 1rem;
-    font-size: 0.9rem;
+    margin: 0.1rem 1rem 0.5rem 1rem;
+    font-size: 1rem;
     text-align: justify;
   }
   .card .star-icon{
     color: #E25E3E;
+    font-size: 1.4rem;
+
   }
 
   .card button {
@@ -76,6 +75,7 @@
     transition: background-color 0.3s ease;
     display: flex;
     margin: 1rem auto;
+    font-size: 1.1rem;
 
   }
   .card button:hover {

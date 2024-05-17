@@ -1,10 +1,10 @@
 .star-rating {
     align-items: center;
-    margin: 10rem 2rem 2rem;
     justify-content: center;
+    padding: 3rem 15rem;
   }
   .star-rating h2{
-    margin: 1rem;
+    margin: 3rem;
     font-size: 2.2rem;
     text-align: center;
   }
@@ -34,7 +34,7 @@
   .comment-box input {
     width: 100%;
     padding: 15px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
     border: 1px solid var(--main-color);
     
@@ -44,7 +44,7 @@
     width: 100%;
     border: 1px solid var(--main-color);
     height: 6rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
     padding: 15px;
     resize: none;
@@ -58,7 +58,7 @@
     padding: 10px 20px;
     cursor: pointer;
     margin-top: 1.5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   
   .comment-box button:hover {
@@ -68,6 +68,8 @@
   
   .comment-list {
     margin-top: 4rem;
+    max-height: 300px; 
+    overflow-y: auto;
 
   }
   
@@ -121,4 +123,15 @@
   }
   .comment {
     font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .star-rating {
+      padding: 1rem;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .star-rating {
+      padding: 4rem;
+    }
   }

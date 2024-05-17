@@ -27,16 +27,16 @@ export default function SinglePost() {
         const fetchAllPosts = async () => {
             try {
                 const res = await axios.get('http://localhost:3010/blog');
-                setAllPosts(res.data);
+                setAllPosts(res.data.filter(post => post._id !== path));
             } catch (error) {
                 console.error('Error fetching posts:', error);
             }
         };
 
         fetchAllPosts();
-    }, []);
+    }, [path]);
 
-    const recentPosts = allPosts.slice(allPosts.length-4, allPosts.length-1);
+    const recentPosts = allPosts.slice(Math.max(allPosts.length - 3, 0));
 
 
     return (

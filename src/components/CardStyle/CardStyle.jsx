@@ -40,7 +40,7 @@ const CardData = (props) => {
             </div>
 
             <p className="location">{props.location}</p>
-            {/* <p>{props.description}</p> */}
+            {/*<p>{props.description}</p>*/} 
             <div className="rating-content">
                 {place ? (
                     <>

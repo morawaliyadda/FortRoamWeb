@@ -1,7 +1,6 @@
-.contact-us-container {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px;
+.contact-us-container { 
+    margin: 6rem 20rem;
+    padding: 2px;
   }
   .contact-us-container h2{
     margin: 2rem;
@@ -43,22 +42,25 @@
   
   .info-item .icon {
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 22px;
     color: var(--main-color);
   }
   
   .info-item p {
     margin: 0;
     color: #555;
+    font-size: 20px;
   }
   .info-item a{
     color: #555;
+    font-size: 20px;
   }
   
   
   .contact-form h2 {
     margin-bottom: 20px;
     color: #333;
+   
   }
   
   .form-group {
@@ -68,6 +70,7 @@
   label {
     display: block;
     font-weight: bold;
+    font-size: 20px;
   }
   
   input[type="text"],
@@ -78,6 +81,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    font-size: 20px;
   }
   
   textarea {
@@ -92,7 +96,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     transition: background-color 0.3s ease;
     
   }
@@ -113,5 +117,18 @@
     .contact-info,
     .contact-form {
       width: 100%;
+    }
+    .contact-us-container { 
+      margin: 6rem 4rem;
+      padding: 1px;
+    }
+  }
+  @media screen and (max-width: 1200px){
+    .Contact-section {
+      gap: 0.5rem;
+    }
+    .contact-us-container { 
+      margin: 6rem 4rem;
+      padding: 1px;
     }
   }

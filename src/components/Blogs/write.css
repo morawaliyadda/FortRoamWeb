@@ -60,7 +60,7 @@
     align-items: center;
 }
 .writeInput{
-    font-size: 1rem;
+    font-size: 1.4rem;
     width: 30rem;
     padding: 0.5rem;
 }
@@ -75,10 +75,11 @@
 }
 
 .writeText{
-    line-height: 3;
+    line-height: 1.5;
     border: none;
-    font-size: 1rem;
+    font-size: 1.3rem;
     border: 0.4px solid #d3d0d0 ;
+    height: 10rem;
 }
 .writeText:focus{
     color: black;
@@ -102,6 +103,12 @@
 @media screen and (max-width: 768px){
     .writeImg {
         padding: 1rem;
+    }
+    .writeFormGroup{  
+        margin: 1rem 5rem; 
+    }
+    .writeTextbox{
+        margin: 0 5rem;
     }
 }
 

@@ -40,12 +40,12 @@ nav{
     display : flex ;
     align-items: center;
     justify-content: space-around;
-    gap: 1.4rem;
+    gap: 3rem;
 
     
 }
 .nav-link{
-    font-size: 15px;
+    font-size: 20px;
     display: flex;
     gap: 8px;
     font-weight: 400;
