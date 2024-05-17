@@ -89,9 +89,9 @@ const PopularPlaces = () => {
                         description={truncateDescription(place.description, 100)}
                         //review={place.review}
                         averageRating={place.averageRating}
-                                            id={place._id}
-                                            totalReviews={place.totalReviews}
-                       
+                        id={place._id}
+                        totalReviews={place.totalReviews}
+                        image={place.image}
 
                     />
                 ))}

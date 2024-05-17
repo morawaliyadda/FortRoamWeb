@@ -11,7 +11,7 @@ const AllItems = () => {
         {data.place.map((place, index) => (
           <CardData
             key={index}
-            image={require(`../assets/placeImages/${place.image}`)}
+            // image={require(`../assets/placeImages/${place.image}`)}
             heading={place.title}
             location={place.street}
             description={place.description}

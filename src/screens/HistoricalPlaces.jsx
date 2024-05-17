@@ -65,6 +65,7 @@ const HistoricalPlaces = () => {
                                             description={truncateDescription(place.description, 100)}
                                             averageRating={calculateAverageRating(place.reviews)}
                                             id={place._id}
+                                            image={place.image}
                                         />
                                 </div>
                             ))}

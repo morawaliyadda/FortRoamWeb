@@ -14,7 +14,6 @@ const ServicesPage = () => {
                 <div >
                     <Services />
                 </div>
-
             </div>
             <Footer/>
 
