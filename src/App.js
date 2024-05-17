@@ -6,13 +6,10 @@ import HomeScreen from './screens/homescreens';
 import NavBar from "./components/NavBar/navBar";
 import HistoricalPlaces from "./screens/HistoricalPlaces";
 import AboutPage from "./screens/About";
-import Footer from "./components/Footer/Footer";
 import DetailPage from "./screens/DetailPage";
 import BeyondHistory from "./screens/BeyondHistoryPage";
 import LocalDelights from "./screens/LocalDelights";
 import ServicesPage from "./screens/ServicesPage";
-import Favourite from "./screens/favourite";
-import AllItems from "./screens/AllItems";
 import Blog from "./components/Blogs/Blog";
 import SinglePost from "./components/Blogs/singlePost";
 import Write from "./components/Blogs/write";
@@ -50,8 +47,6 @@ function App() {
             <Route path="/beyondhistory" element={<BeyondHistory/>}/>
             <Route path="/localdelights" element={<LocalDelights/>}/>
             <Route path="/services" element={<ServicesPage/>}/>
-            <Route path="/favourites" element={<Favourite/>}/>
-            <Route path="/all-items" element={<AllItems/>}/>
             <Route path="/blog" element={<Blog/>}/>
             <Route path="/blog/:id" element={<SinglePost/>}/>
             <Route path="/write/:id" element={<Write/>}/>

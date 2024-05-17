@@ -16,17 +16,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.most-popular-btn {
-    background-color: #fff;
-    padding: 25px 60px;
-    cursor: pointer;
-    border-width: 0;
-    font-size: large;
-    font-weight: 600;
-    text-align: center;
-    display: flex;
-    justify-content: flex-end; /* Replaced 'end' with 'flex-end' */
-}
+
 
 .most-popular-btn:hover {
     color: var(--main-color);
@@ -38,9 +28,7 @@
         margin: 30px;
     }
     
-    .most-popular-btn {
-        padding-right: 40px;
-    }
+    
 }
 
 

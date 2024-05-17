@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import { Link } from "react-router-dom";
+
 
 const NextArrow = (props) => {
     const { onClick } = props;
@@ -91,7 +91,6 @@ const PopularPlaces = () => {
     return (
         <div className="MostPopular">
             <h1>Most <strong>Popular</strong> </h1>
-            <Link to="/all-items" className="most-popular-btn">View More</Link>
             <Slider {...sliderSettings}>
                 {places.place.map((place, index) => (
                     <CardData

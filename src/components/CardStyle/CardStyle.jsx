@@ -1,15 +1,13 @@
-
 import "./CardStyle.css";
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
-import { FaHeart, FaStar } from "react-icons/fa";
+import {  FaStar } from "react-icons/fa";
 
 const CardData = (props) => {
-    const location = useLocation();
-    //const path = location.pathname.split("/")[2];
-    const [liked, setLiked] = useState(false);
+    //const location = useLocation();
+    //const [ setLiked] = useState(false);
     const [place, setPlace] = useState(null);
 
 
@@ -27,16 +25,16 @@ const CardData = (props) => {
 
 
 
-
+/*
     const toggleLike = () => {
         setLiked(prevLiked => !prevLiked);
     };
-
+*/
 
     return (
         <div className="card">
             <div className="card-image">
-                <img src= {`../../assets/${props.image}`} alt=""/>
+                <img src= {`http://localhost:3010/src/${props.image}`} alt=""/>
             </div>
             <div className="heading-card">
                 <h2>{props.heading}</h2>
@@ -44,12 +42,6 @@ const CardData = (props) => {
 
             <p className="location">{props.location}</p>
             <p>{props.description}</p>
-            {/* <div>
-                <FaStar className="star-icon" /> {place ? place.averageRating : 'Loading...'}<p>ratings out of</p>{place ? place.totalReviews : 'Loading...'}
-                <p>
-                    reviews
-                </p>
-            </div> */}
             <div className="rating-content">
                 {place ? (
                     <>
