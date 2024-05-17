@@ -59,7 +59,7 @@ const CardData = (props) => {
                             ))}
                         </p>
                         <p>
-                            {place.averageRating.toFixed(2)}  <strong>rating</strong>  out of {place.totalReviews} reviews
+                            {place.averageRating.toFixed(1)}  <strong>rating</strong>  out of {place.totalReviews} reviews
                         </p>
 
                     </>

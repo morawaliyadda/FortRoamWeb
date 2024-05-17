@@ -24,7 +24,6 @@ const Footer = () => {
                         <h5>Explore Galle Fort</h5>
                         <ul className="list-unstyled">
                             <li><a href="/">Home</a></li>
-                            <li><a href="/favourites">Favourites</a></li>
                             <li><a href="/about">About</a></li>
                             <li><a href="/blog">Blog</a></li>
                         </ul>
