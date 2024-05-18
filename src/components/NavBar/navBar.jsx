@@ -39,14 +39,6 @@ function NavBar() {
           </a>
         </li>
 
-
-        <li className="nav-item">
-          <a href="/about" className="nav-link">
-            <FaInfoCircle />
-            About
-          </a>
-        </li>
-
         <li className="nav-item">
           <a className="nav-link" href="/blog">
             <FaUser />
@@ -54,6 +46,12 @@ function NavBar() {
           </a>
         </li>
 
+        <li className="nav-item">
+          <a href="/about" className="nav-link">
+            <FaInfoCircle />
+            About
+          </a>
+        </li>
 
         <div className="search-bar">
           <SearchBar />

@@ -11,17 +11,15 @@ const SearchResults = () => {
   const searchTerm = location.search ? location.search.split('=')[1] : '';
 
   useEffect(() => {
-    // Fetch places data from your API
     fetch("http://localhost:3010/place/")
       .then((response) => response.json())
       .then((data) => {
-        setPlaces(data); // Set places data received from the API
+        setPlaces(data); 
       })
       .catch((error) => console.error("Error fetching places:", error));
   }, []);
 
   useEffect(() => {
-    // Filter places based on the search term
     const results = places.filter((place) =>
       place.title && place.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -60,7 +58,7 @@ const calculateAverageRating = (reviews) => {
           ))}
         </div>
       ) : (
-        <p>No results found.</p>
+        <p>No results found</p>
       )}
       
     </div>

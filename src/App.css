@@ -19,7 +19,7 @@
 
 .App-main-topic {
   position: absolute;
-  top: -2%;
+  top: -1.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
@@ -43,7 +43,7 @@
   text-align: center;
   color: black;
   margin-bottom: 4rem;
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 
 @media screen and (max-width: 768px) {
