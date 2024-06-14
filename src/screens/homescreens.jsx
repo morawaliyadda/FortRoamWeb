@@ -71,7 +71,7 @@ const HomeScreen = () => {
         <FeaturesData
           className="main-des-reverse"
           heading="Local Delights"
-          description="Explore the world of 'Logical Delights,' where intellect meets inspiration. Dive into thought-provoking ideas and innovative concepts that challenge the mind. From scientific discoveries to philosophical musings, join us on a journey of curiosity and exploration."
+          description="Explore the world of 'Local Delights,' where intellect meets inspiration. Dive into thought-provoking ideas and innovative concepts that challenge the mind. From scientific discoveries to philosophical musings, join us on a journey of curiosity and exploration."
           images={[LocalDelights1, LocalDelights2]}
           location="/localdelights"
         />
