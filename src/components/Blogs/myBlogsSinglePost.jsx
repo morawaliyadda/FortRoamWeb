@@ -38,7 +38,7 @@ export default function MyBlogsSinglePost() {
             <div className="myBlogSinglePost">
                 <div className="myBlogSinglePostWrapper">
                     {blog.image && (
-                        <img src={`http://localhost:3010/src/images/${blog.image}`} alt="Blog" className="singlePostImg" />
+                        <img src={blog.image} alt="Blog" className="singlePostImg" />
                     )}
                     <h1 className="singlePostTitle">
                         {blog.title}

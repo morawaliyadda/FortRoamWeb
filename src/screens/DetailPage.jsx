@@ -54,7 +54,8 @@ const DetailPage = () => {
     return (
         <div>
             <div className="placeDetail-image">
-                <img src={`http://localhost:3010/src/${place.image}`} />
+                {/* <img src={`http://localhost:3010/src/${place.image}`} /> */}
+                <img src={place.image} alt=''/>
             </div>
             <div className="placeDetail">
                 <h1>{place.title}</h1>

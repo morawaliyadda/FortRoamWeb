@@ -23,17 +23,11 @@ const CardData = (props) => {
     }, [props.id]);
 
 
-
-/*
-    const toggleLike = () => {
-        setLiked(prevLiked => !prevLiked);
-    };
-*/
-
     return (
         <div className="card">
             <div className="card-image">
-                <img src= {`http://localhost:3010/src/${props.image}`} alt=""/>
+                {/* <img src= {`http://localhost:3010/src/${props.image}`} alt=""/> */}
+                <img src={props.image} alt=''/>
             </div>
             <div className="heading-card">
                 <h2>{props.heading}</h2>

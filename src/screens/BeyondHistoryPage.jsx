@@ -13,7 +13,7 @@ const BeyondHistory = () => {
             .then(response => response.json())
             .then(data => {
                 if (Array.isArray(data)) {
-                    setPlaces({ place: data }); // Ensure data is assigned properly
+                    setPlaces({ place: data }); 
                 } else {
                     console.error("Data fetched is not an array:", data);
                 }
@@ -66,7 +66,7 @@ const BeyondHistory = () => {
                                         description={truncateDescription(place.description, 100)}
                                         averageRating={calculateAverageRating(place.reviews)}
                                         id={place._id}
-                                        image={place.image}
+                                        image={place.imageURL}
                                     />
                                 </div>
                             ))}

@@ -20,9 +20,9 @@ function Post({ post, userblog }) {
 
     return (
         <div className="post">
-            {post.image && (
-                <img src={`http://localhost:3010/src/images/${post.image}`} alt="Blog" className="post-image" />
-            )}
+
+                <img src={post.imageURL} alt="Blog" className="post-image" />
+            
             <div className='writeten-content'>
                 <div className="postInfo">
                     {userblog ? <Link to={`/myblogs/${post._id}`} className='link'>                        <span className="postTitle">

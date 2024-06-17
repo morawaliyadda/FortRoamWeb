@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './write.css';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Context } from '../../context/Context';
@@ -11,9 +11,11 @@ import { UserContext } from '../../userContext';
 
 export default function Write() {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [title, setTitle] = useState('');
     const [description, setDesc] = useState('');
     const [file, setFile] = useState(null);
+    const [existingImage, setExistingImage] = useState('');
     const {currentUser} = useContext(UserContext);
 
     useEffect(() => {
@@ -23,6 +25,7 @@ export default function Write() {
                     const res = await axios.get(`http://localhost:3010/blog/${id}`);
                     setTitle(res.data.title);
                     setDesc(res.data.description);
+                    setExistingImage(res.data.image);
                 } catch (error) {
                     console.error('Error fetching post:', error);
                 }
@@ -31,40 +34,57 @@ export default function Write() {
         }
     }, [id]);
 
-    
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        //const newPost = {username: 'admin', title, description};
-        const newPost = { username: currentUser.name || 'Anonymous', title, description };
-        //console.log(newPost);
-        if(file){
-            const data = new FormData();
-            const filename = Date.now() + file.name;
-            data.append('name', filename);
-            data.append('file', file);
-            newPost.image = filename;
-       
-        try {
-           await axios.post('http://localhost:3010/upload', data);
-        } catch (err) {
-            console.log(err);
-        }
-         }
-     
-         try {
-            if (id) {
-                await axios.put(`http://localhost:3010/blog/update/${id}`, newPost);
-                window.location.replace('/blog');
-            } else {
-                const res = await axios.post('http://localhost:3010/blog', newPost);
-                window.location.replace('/blog/' + res.data._id);
-            }
-        }
-        catch (err) {
-            console.log(err);
+    const handleFileChange = async (e) => {
+        const selectedFile = e.target.files[0];
+        if (selectedFile) {
+            setFile(selectedFile);
         }
     };
 
+    
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData();
+        formData.append('title', title);
+        formData.append('description', description);
+        formData.append('username', currentUser.name || 'Anonymous');
+        if (file) {
+            formData.append('file', file);
+        }
+    
+        try {
+            let url;
+            if (id) {
+                url = `http://localhost:3010/blog/update/${id}`;
+                const response = await axios.put(url, formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                }).then((result) => {
+                    console.log(result);
+                    alert("Blog successfully updated!");
+                })
+            } else {
+                url = 'http://localhost:3010/blog';
+                const response = await axios.post(url, formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                }).then((result) => {
+                    console.log(result);
+                    alert("Blog successfully added!");
+                })
+            }
+
+            navigate('/myblogs');
+
+        } catch (err) {
+            console.error(err);
+            alert("Blog submission failed!");
+        }
+    };
+    
     return (
         <div>
             <div className='write'>
@@ -80,10 +100,14 @@ export default function Write() {
                                 </label>
                             </div>
 
-                            {file && (
-                                <img className='writeImg' src={URL.createObjectURL(file)} alt='' />
+                            {(file || existingImage) && (
+                                <img
+                                    className='writeImg'
+                                    src={file ? URL.createObjectURL(file) : existingImage}
+                                    alt=''
+                                />
                             )}
-                            <input type='file' id='fileInput' style={{ display: 'none' }} onChange={e => setFile(e.target.files[0])} />
+                            <input type='file' id='fileInput' style={{ display: 'none' }} onChange={handleFileChange} />
 
                         </div>
 
@@ -105,4 +129,6 @@ export default function Write() {
         </div>
     )
 }
+
+
 
