@@ -8,7 +8,7 @@ import Footer from "../components/Footer/Footer";
 const HistoricalPlaces = () => {
     const [places, setPlaces] = useState({ place: [] });
     useEffect(() => {
-        fetch("http://localhost:3010/place/")
+        fetch("https://fortroam-server.onrender.com/place/")
             .then(response => response.json())
             .then(data => {
                 if (Array.isArray(data)) {

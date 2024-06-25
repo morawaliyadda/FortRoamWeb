@@ -16,7 +16,7 @@ const StarRating = ({ initialRating, reviewCount }) => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get(`http://localhost:3010/place/${path}`);
+        const response = await axios.get(`https://fortroam-server.onrender.com/place/${path}`);
         if (response.data.reviews) {
           setComments(response.data.reviews);
         }
@@ -50,7 +50,7 @@ const StarRating = ({ initialRating, reviewCount }) => {
       };
 
       try {
-        const response = await axios.post(`http://localhost:3010/place/review/${path}`, reviewData);
+        const response = await axios.post(`https://fortroam-server.onrender.com/place/review/${path}`, reviewData);
         console.log(response.data);
         setComment("");
         setName("");

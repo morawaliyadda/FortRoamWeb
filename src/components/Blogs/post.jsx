@@ -18,10 +18,24 @@ function Post({ post, userblog }) {
     const truncatedTitle = truncateText(post.title || '', 30); 
     const truncatedDescription = truncateText(post.description || '', 250); 
 
+    console.log("Post data:", post); // Log the entire post object
+    console.log("Post createdAt:", post.createdAt); // Log the createdAt value
+
+    // Check if createdAt is valid and a date
+    let formattedDate = 'Invalid Date';
+    if (post.createdAt) {
+        const postDate = new Date(post.createdAt);
+        if (!isNaN(postDate.getTime())) {
+            formattedDate = postDate.toDateString();
+        } else {
+            console.error("Invalid date format:", post.createdAt);
+        }
+    }
+
     return (
         <div className="post">
 
-                <img src={post.imageURL} alt="Blog" className="post-image" />
+                <img src={post.image} alt="Blog" className="post-image" />
             
             <div className='writeten-content'>
                 <div className="postInfo">
@@ -32,7 +46,8 @@ function Post({ post, userblog }) {
                             {truncatedTitle}
                         </span></Link>}
                     <hr />
-                    <span className="postDate">{new Date(post.createdAt || '').toDateString()}</span> 
+                    <span className="postDate">{new Date(post.createdAt).toDateString()}</span> 
+                     {/* <span className="postDate">{formattedDate}</span> */}
                 </div>
                 <p className='postDescription'>{truncatedDescription}</p>
             </div>

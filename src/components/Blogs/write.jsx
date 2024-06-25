@@ -22,10 +22,10 @@ export default function Write() {
         if (id) {
             const getPost = async () => {
                 try {
-                    const res = await axios.get(`http://localhost:3010/blog/${id}`);
+                    const res = await axios.get(`https://fortroam-server.onrender.com/blog/${id}`);
                     setTitle(res.data.title);
                     setDesc(res.data.description);
-                    setExistingImage(res.data.image);
+                    setExistingImage(res.data.imageURL);
                 } catch (error) {
                     console.error('Error fetching post:', error);
                 }
@@ -56,7 +56,7 @@ export default function Write() {
         try {
             let url;
             if (id) {
-                url = `http://localhost:3010/blog/update/${id}`;
+                url = `https://fortroam-server.onrender.com/blog/update/${id}`;
                 const response = await axios.put(url, formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data',
@@ -66,7 +66,7 @@ export default function Write() {
                     alert("Blog successfully updated!");
                 })
             } else {
-                url = 'http://localhost:3010/blog';
+                url = 'https://fortroam-server.onrender.com/blog';
                 const response = await axios.post(url, formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data',

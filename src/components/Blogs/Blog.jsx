@@ -32,7 +32,7 @@ function Blog() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get('http://localhost:3010/blog');
+        const res = await axios.get('https://fortroam-server.onrender.com/blog');
         setPosts(res.data);
       } catch (error) {
         console.error("Error fetching posts:", error);
@@ -68,7 +68,7 @@ function Blog() {
 
   const handleLoginSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:3010/user/login', user)
+    axios.post('https://fortroam-server.onrender.com/user/login', user)
       .then((response) => {
         if (response.data.message === "Success") {
           setCurrentUser(response.data.data);
@@ -84,7 +84,7 @@ function Blog() {
 
   const handleLoginSubmit2 = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:3010/user/login', user)
+    axios.post('https://fortroam-server.onrender.com/user/login', user)
       .then((response) => {
         if (response.data.message === "Success") {
           setCurrentUser(response.data.data);
@@ -100,7 +100,7 @@ function Blog() {
   
   const handleSignupSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:3010/user/signup', newUser)
+    axios.post('https://fortroam-server.onrender.com/user/signup', newUser)
       .then((response) => {
         if (response.status === 201) {
           setCurrentUser(newUser);

@@ -13,7 +13,7 @@ const CardData = (props) => {
     useEffect(() => {
         const getPlace = async () => {
             try {
-                const response = await axios.get(`http://localhost:3010/place/review/${props.id}`);
+                const response = await axios.get(`https://fortroam-server.onrender.com/place/review/${props.id}`);
                 setPlace(response.data);
             } catch (error) {
                 console.error("Error fetching place data:", error);

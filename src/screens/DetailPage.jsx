@@ -15,7 +15,7 @@ const DetailPage = () => {
 
     useEffect(() => {
         const getPost = async () => {
-            const res = await axios.get(`http://localhost:3010/place/${path}`);
+            const res = await axios.get(`https://fortroam-server.onrender.com/place/${path}`);
             setPlace(res.data);
         }
         getPost();

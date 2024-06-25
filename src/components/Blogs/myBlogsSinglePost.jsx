@@ -17,7 +17,7 @@ export default function MyBlogsSinglePost() {
 
     useEffect(() => {
         const getPost = async () => {
-            const res = await axios.get(`http://localhost:3010/blog/${path}`);
+            const res = await axios.get(`https://fortroam-server.onrender.com/blog/${path}`);
             setBlog(res.data);
         }
         getPost();
@@ -26,7 +26,7 @@ export default function MyBlogsSinglePost() {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:3010/blog/delete/${blog._id}`);
+            await axios.delete(`https://fortroam-server.onrender.com/blog/delete/${blog._id}`);
             navigate('/myblogs', { replace: true });
         } catch (error) {
             console.error('Error deleting post:', error);
@@ -37,8 +37,8 @@ export default function MyBlogsSinglePost() {
         <div>
             <div className="myBlogSinglePost">
                 <div className="myBlogSinglePostWrapper">
-                    {blog.image && (
-                        <img src={blog.image} alt="Blog" className="singlePostImg" />
+                    {blog.imageURL && (
+                        <img src={blog.imageURL} alt="Blog" className="singlePostImg" />
                     )}
                     <h1 className="singlePostTitle">
                         {blog.title}

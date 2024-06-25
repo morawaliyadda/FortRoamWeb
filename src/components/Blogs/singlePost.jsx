@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './singlePost.css';
-import { useLocation, useNavigate, Link } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+//import { useLocation, useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
-import { FaEdit, FaTrash } from 'react-icons/fa';
+//import { FaEdit, FaTrash } from 'react-icons/fa';
 import Posts from './posts';
 import Footer from '../Footer/Footer';
-import { Context } from '../../context/Context';
+//import { Context } from '../../context/Context';
 
 export default function SinglePost() {
     const [blog, setBlog] = useState({});
-    const { user } = useContext(Context);
+    //const { user } = useContext(Context);
     const location = useLocation();
     const path = location.pathname.split("/")[2];
     const [allPosts, setAllPosts] = useState([]);
@@ -17,7 +18,7 @@ export default function SinglePost() {
 
     useEffect(() => {
         const getPost = async () => {
-            const res = await axios.get(`http://localhost:3010/blog/${path}`);
+            const res = await axios.get(`https://fortroam-server.onrender.com/blog/${path}`);
             setBlog(res.data);
         }
         getPost();
@@ -26,7 +27,7 @@ export default function SinglePost() {
     useEffect(() => {
         const fetchAllPosts = async () => {
             try {
-                const res = await axios.get('http://localhost:3010/blog');
+                const res = await axios.get('https://fortroam-server.onrender.com/blog');
                 setAllPosts(res.data.filter(post => post._id !== path));
             } catch (error) {
                 console.error('Error fetching posts:', error);

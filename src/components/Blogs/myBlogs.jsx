@@ -11,7 +11,7 @@ function MyBlogs() {
     useEffect(() => {
         const fetchPosts = async () => {
           try {
-            const res = await axios.get('http://localhost:3010/blog');
+            const res = await axios.get('https://fortroam-server.onrender.com/blog');
             const userPosts = res.data.filter(post => post.username === currentUser?.name);
             setPosts(userPosts);
           } catch (error) {

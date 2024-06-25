@@ -1,5 +1,5 @@
- import React, { useState, useEffect } from "react";
-import "./PopularPlaces.css"
+import React, { useState, useEffect } from "react";
+import "./PopularPlaces.css";
 import CardData from "../CardStyle/CardStyle";
 import "../CardStyle/CardStyle.css";
 import Slider from "react-slick";
@@ -7,12 +7,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
-
 const NextArrow = (props) => {
     const { onClick } = props;
     return (
-        <div className="slick-arrow slick-next " onClick={onClick}>
-            <IoIosArrowForward/>
+        <div className="slick-arrow slick-next" onClick={onClick}>
+            <IoIosArrowForward />
         </div>
     );
 };
@@ -21,31 +20,21 @@ const PrevArrow = (props) => {
     const { onClick } = props;
     return (
         <div className="slick-arrow slick-prev" onClick={onClick}>
-            <IoIosArrowBack/>
+            <IoIosArrowBack />
         </div>
     );
 };
 
-const truncateDescription = (description, maxLength) => {
-    if (description.length <= maxLength) {
-        return description;
-    } else {
-        return description.substring(0, maxLength) + "...";
-    }
-};
-
-
-
 const PopularPlaces = () => {
-
-    const [places, setPlaces] = useState({ place: [] });
+    const [places, setPlaces] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3010/place/review/top")
+        fetch("https://fortroam-server.onrender.com/place/review/top")
             .then(response => response.json())
             .then(data => {
                 if (Array.isArray(data)) {
-                    setPlaces({ place: data }); // Ensure data is assigned properly
+                    console.log("Fetched places:", data); 
+                    setPlaces(data); // Ensure data is assigned properly
                 } else {
                     console.error("Data fetched is not an array:", data);
                 }
@@ -53,7 +42,6 @@ const PopularPlaces = () => {
             .catch(error => console.error("Error fetching places:", error));
     }, []);
 
-    
     const sliderSettings = {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
@@ -66,14 +54,14 @@ const PopularPlaces = () => {
         autoplaySpeed: 2000,
         responsive: [
             {
-                breakpoint: 1600, 
+                breakpoint: 1600,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                 }
             },
             {
-                breakpoint: 1200, 
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -90,35 +78,22 @@ const PopularPlaces = () => {
 
     return (
         <div className="MostPopular">
-            <h1>Most <strong>Popular</strong> </h1>
+            <h1>Most <strong>Popular</strong></h1>
             <Slider {...sliderSettings}>
-                {places.place.map((place, index) => (
+                {places.map((place, index) => (
                     <CardData
                         key={index}
-                       // image={require(`../../assets/placeImages/${place.image}`)}
-
-                       // image= {`http://localhost:3010/src/${place.image}`} 
-
-                        image= {place.image}
-
+                        image={place.imageURL}
                         heading={place.title}
                         location={place.street}
-                        // description={truncateDescription(place.description, 100)}
-                        // review={place.review}
                         averageRating={place.averageRating}
                         id={place._id}
                         totalReviews={place.totalReviews}
-
-
                     />
                 ))}
             </Slider>
-            
         </div>
     );
 };
 
 export default PopularPlaces;
-
-
-
