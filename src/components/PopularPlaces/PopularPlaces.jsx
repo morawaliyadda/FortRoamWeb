@@ -83,7 +83,7 @@ const PopularPlaces = () => {
                 {places.map((place, index) => (
                     <CardData
                         key={index}
-                        image={place.imageURL}
+                        image={place.image}
                         heading={place.title}
                         location={place.street}
                         averageRating={place.averageRating}
