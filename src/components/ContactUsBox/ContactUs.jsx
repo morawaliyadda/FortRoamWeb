@@ -34,24 +34,6 @@ const ContactUs = () => {
         Contact <strong> Us</strong>{" "}
       </h2>
       <div className="Contact-section">
-        {/* <div className="contact-info">
-                    <div className="info-item">
-                        <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
-                        <p>Galle Heritage Foundation, 12 Rampart St, Galle 80000</p>
-                    </div>
-                    <div className="info-item">
-                        <FontAwesomeIcon icon={faPhone} className="icon" />
-                        <p>0912 246 784</p>
-                    </div>
-                    <div className="info-item">
-                        <FontAwesomeIcon icon={faEnvelope} className="icon" />
-                        <p>herifo@sltnet.lk</p>
-                    </div>
-                    <div className="info-item">
-                        <FontAwesomeIcon icon={faGlobe} className="icon" />
-                        <a href="http://www.galleheritage.gov.lk" target="_blank" rel="noopener noreferrer">http://www.galleheritage.gov.lk</a>
-                    </div>
-                </div> */}
         <div className="contact-form">
           <form onSubmit={handleSubmit}>
             <div className="form-group">
